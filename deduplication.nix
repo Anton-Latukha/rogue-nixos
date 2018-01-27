@@ -12,9 +12,9 @@ let
 in {
 
 
-  environment.systemPackages = with pkgs; [
-    unstable.jdupes    # Deduplication utilitie
-  ];
+  #environment.systemPackages = with pkgs; [
+  #  unstable.jdupes    # Deduplication utilitie
+  #];
 
 
   systemd = {

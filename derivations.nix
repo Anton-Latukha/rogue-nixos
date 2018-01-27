@@ -1,100 +1,92 @@
 { config, pkgs, ... }:
 
 let
-  unstable = import <unstable> {};
+  unstable = import <unstable> {
+  # pass the nixpkgs config to the unstable alias
+  # to ensure `allowUnfree = true;` is propagated:
+  config = config.nixpkgs.config;
+};
 in {
   environment.systemPackages = with pkgs; [
+
+    # System
     #linuxPackages_4_14.kernel
    	#linuxPackages_4_4.nvidiabl
     #linuxPackages.acpi_call
-    firmwareLinuxNonfree
 
-    acpitool
-    # Nix
-    ktorrent
+    # acpitool
+
+    ### System CLIs
+    fish
+    zsh
+    dash
+
+    #### System CLIs additions
+
+    mosh
+    tmux
+    htop
+
+    ## System Tools
     dmidecode
+    os-prober
+    nfs-utils
+    strace
+    pciutils
+    file
+    binutils
+
+    ### Security
+    chkrootkit    # FIXME: On launch throws `chkrootkit: can't find 'strings'`, so reqires `binutils` on launch, but does not have that as a requirement in derivation.    # FIXME: Upstream: Also seems to have false-positives and problems
+    clamav    # FIXME: 2018-01-10: ERROR: Can't open/parse the config file /etc/clamav/freshclam.conf 
+
+    ### System Libraries
+    #rng_tools    # Requires hardware random number generators (TRNG)
+    #haveged    # Gather entropy from sources. Not so effective.
+
+
+    # Nix
     nix-repl
     nix-prefetch-git
     nixops
-    stack2nix
-    gparted
 
-    # Libraries
-    hunspell
-    hunspellDicts.en-us
-    mythes
-	  aspell
-    aspellDicts.en
-    aspellDicts.ru
-    aspellDicts.uk
+    ## System Firmware
+    firmwareLinuxNonfree
 
+    ## System Drivers
     mesa
-    #xorg.xf86videointel
+    xorg.xf86videointel
+
+    ## System Libraries
     libdvdcss
     geoclue2
     ntfs3g
     zlib
-	  glibc
-    glibcLocales
 
-    # Fonts
+    # GUI Libraries
+    ffmpegthumbs
+    gnome3.adwaita-icon-theme    # Gnome icons
+
+    ## GUI Libraries: Fonts
     hack-font
     source-code-pro
 
+
     # Console
     emacs
-    nfs-utils
     git
     git-crypt
-    #fwupd
-    fish
-    zsh
-    dash
-    mosh
     sshfs
-    strace
-    memtest86plus
-    haveged
-    os-prober
-    rng_tools
-    pciutils
-    tmux
-    file
-    unoconv
+    unoconv    # Convert between any document format supported by LibreOffice/OpenOffice
     direnv      # For Fish: `echo 'eval (direnv hook fish)' >> /home/pyro/.config/fish/conf.d/direnv.fish`
     whois
-    bind        # For `dig`
     ldns        # For DNS `drill` tool
-    gnumake     # Make
-    eject       # Utils-Linux, like for continious trim
+    bind        # FIXME: For `dig`. Some day Drill going to be better.
+    gnumake
+    eject       # A set of system utilities for Linux, like for continious trim
     lshw
-    ffmpeg
-
-    youtube-dl
     python3
-    ## Haskell
-    ghc
-    cabal-install
-    cabal2nix
-    unstable.stack
-    hlint
-    haskellPackages.apply-refact
-    haskellPackages.stylish-haskell
-    haskellPackages.hasktags
-    haskellPackages.hoogle
-    haskellPackages.ghc-mod
-    haskellPackages.hindent
-    haskellPackages.intero
-    haskellPackages.hakyll    # Static webpage generator
-    haskellPackages.aeson    # Required by hakyll&website
-    haskellPackages.haddock
-
-    ### ALE
-    rocksdb
-    haskellPackages.universum
-    haskellPackages.serokell-util
-    # haskellPackages.cryptonite_0_24
-    haskellPackages.statistics
+    gtypist
 
     ## Configuration management
     ansible
@@ -106,13 +98,46 @@ in {
     qemu
     libvirt
 
+    ### Cloud Virtualization
+    awscli
+    google-cloud-sdk
+
     ## Programming
     shellcheck
+
+    ### C
+	  glibc
+    glibcLocales
+
+    ### Haskell
+    #leksah
+    ghc
+    cabal-install
+    cabal2nix
+    stack2nix
+    hlint
+
+    #### Haskell packages
+    haskellPackages.apply-refact
+    haskellPackages.stylish-haskell
+    haskellPackages.hasktags
+    haskellPackages.hoogle
+    haskellPackages.ghc-mod
+    haskellPackages.hindent
+    haskellPackages.intero
+    haskellPackages.hakyll    # Static webpage generator
+    haskellPackages.aeson    # Required by hakyll&website
+    haskellPackages.haddock
+    haskellPackages.universum
+    haskellPackages.serokell-util
+    haskellPackages.statistics
+
 
     ## Deps
     networkmanager
 
     # GUI
+    gparted
     keepass
     wine
     tilix
@@ -120,19 +145,27 @@ in {
     redshift
     gsmartcontrol
     sqlitebrowser
-    ## libreoffice
-    libreoffice-fresh
     gnome3.cheese
     gnome3.dconf
     wireshark
 
+    ## Office
+    libreoffice-fresh
+    #FIXME: calibre    # Python 2.7 odfpy does not building under NixOS
+    kdeApplications.okular
+
+    ### Office libraries
+    hunspell
+    hunspellDicts.en-us
+    mythes
+    aspell
+    aspellDicts.en
+    aspellDicts.ru
+    aspellDicts.uk
+
     ## Virtualization
-    virtualbox
     virtmanager
 
-    ## Cloud
-    awscli
-    google-cloud-sdk
 
     ## KDE Plasma
     plasma-nm
@@ -150,10 +183,6 @@ in {
     kdeApplications.kcalutils
     kdeFrameworks.kcmutils
 
-    ## Books
-    calibre
-    kdeApplications.okular
-
     ## Internet
     firefox
     chromium
@@ -161,66 +190,68 @@ in {
     tor-browser-bundle-bin
 
     ### Messengers
-    slack
-    #    skype
-    tdesktop
     pidgin
-    franz
-    #viber
 
     ## Remote
     x2goclient
     remmina
 
-    ## Multimedia
+    ## Multimedia & Media
+    ffmpeg
+
+    ### Media Consume
+    youtube-dl
+
+    #### Video
     smplayer
+    mpv
+    kodi
+    vlc
+
+    #### Audio
     deadbeef
     spotify
+    # audaciousQt5
+
+    ### Media Create
     avidemux
-    audaciousQt5
-    kodi
     mkvtoolnix
-    ffmpegthumbs
-    mpv
-    tvheadend
-    #kodiPlugins.pvr-hts
-	  #kodiPlugins.pvr-hdhomerun
-    vlc
     mediainfo-gui
     handbrake
 
     ## Images
-    inkscape
-    gimp
     gnome3.eog
 
-    ## Deps
-    gnome3.adwaita-icon-theme
+    ### Images Create
+    inkscape
+    gimp
+
 
     # Unstable packages
+    unstable.stack    # FIXME: Tune-out from unstable Haskell
     unstable.fwupd
     unstable.jdupes
-    unstable.winusb
-
-    # Custom local packages
-
-    ## Serokell YT time track tool
-    #yt-utilities.yt-utilities
+    unstable.viber # FIXME: Can not instal from unstable, due to `nixpkgs.config.allowUnfree = true` not propagating to it
+    unstable.teamviewer
 
     ## Games
-    wesnoth
-    hedgewars
-    # freeciv
     freeciv_gtk
-    # dwarf-fortress-packages.dwarf-fortress-unfuck
-    # dwarf-fortress-packages.phoebus-theme
-    dwarf-fortress-packages.dfhack
-    dwarf-fortress-packages.dwarf-therapist
     dwarf-fortress
+    dwarf-fortress-packages.dwarf-therapist
     xonotic
     freeorion
-    # quake3game
-    # nethack
+
+    ### Games garage
+    #hedgewars    # FIXME: It does not launch
+    #dwarf-fortress-packages.dwarf-fortress-unfuck    # FIXME: Does not work. Investigate how to use.
+    #dwarf-fortress-packages.phoebus-theme    # FIXME: Does not work. Investigate how to use.
+    #dwarf-fortress-packages.dfhack    # FIXME: Does not work. Investigate how to use.
+    #wesnoth    # Booring game
+    #freeciv    # This packages provides terrible interface
+    #quake3game
+    #nethack
+
+    # Custom local packages
   ];
 }
 

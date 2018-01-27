@@ -32,7 +32,8 @@
 
   };
 
-  nix.package = pkgs.nixUnstable;
+  nix.package = pkgs.nixUnstable;    # Use unstable Nix version from NixOS repo
+  nix.autoOptimiseStore = true;    # Autodeduplicate files in store
 
   nixpkgs.config.allowUnfree = true;
 
@@ -121,7 +122,7 @@
     # networking.firewall.allowedTCPPorts = [ ... ];
     # networking.firewall.allowedUDPPorts = [ ... ];
     # Or disable the firewall altogether.
-    firewall.enable = false;
+    firewall.enable = true;
     hostName = "rogue"; # Define your hostname.
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     networkmanager.enable = true;
@@ -158,11 +159,14 @@
 
     virtualbox.host = {
       enable = true;
-      #headless = true;
+      headless = false;
     };
 
   };
 
+  # HACK: (2017-12-29) Fixes systemd&kernel issue. Make log shut up about 'Specified group 'kvm' unknown'
+  ## Check this after time. This shiuld be fixed in systemd.
+  users.groups = { kvm = {}; };
 
   users.extraUsers.pyro = {
 
@@ -181,6 +185,7 @@
       "libvirtd"
       "vboxusers"
     ];
+
 
   };
 
