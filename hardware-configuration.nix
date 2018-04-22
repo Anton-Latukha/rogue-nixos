@@ -30,6 +30,13 @@
     options = [ "noatime" "nofail" ];
   };
 
+  fileSystems."/btrfs" = {
+    device = "/dev/sda5";
+    fsType = "btrfs";
+    options = [ "noatime" "nofail" "compress=zstd"];
+  };
+
+
   #  fileSystems."/stor" = {
   #    device = "ubu:/mnt/stor";
   #    fsType = "nfs";
