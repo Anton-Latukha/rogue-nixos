@@ -35,10 +35,20 @@ in {
     pciutils
     file
     binutils
+    lsof
+    btrfs-progs
+    zstd
+    python36Packages.glances
+    python27Packages.virtual-display
+    zsync
+    acoustidFingerprinter
+    mc
+    telnet
+
 
     ### Security
     chkrootkit    # FIXME: On launch throws `chkrootkit: can't find 'strings'`, so reqires `binutils` on launch, but does not have that as a requirement in derivation.    # FIXME: Upstream: Also seems to have false-positives and problems
-    clamav    # FIXME: 2018-01-10: ERROR: Can't open/parse the config file /etc/clamav/freshclam.conf 
+    clamav    # FIXME: 2018-01-10: ERROR: Can't open/parse the config file /etc/clamav/freshclam.conf
 
     ### System Libraries
     #rng_tools    # Requires hardware random number generators (TRNG)
@@ -65,6 +75,7 @@ in {
 
     # GUI Libraries
     ffmpegthumbs
+    ffmpegthumbnailer # CLI application
     gnome3.adwaita-icon-theme    # Gnome icons
 
     ## GUI Libraries: Fonts
@@ -87,6 +98,7 @@ in {
     lshw
     python3
     gtypist
+    gitstats    # Generate Git statistics
 
     ## Configuration management
     ansible
@@ -104,6 +116,7 @@ in {
 
     ## Programming
     shellcheck
+    vscode
 
     ### C
 	  glibc
@@ -118,18 +131,19 @@ in {
     hlint
 
     #### Haskell packages
-    haskellPackages.apply-refact
+    #haskellPackages.apply-refact
     haskellPackages.stylish-haskell
+    haskellPackages.hlint
     haskellPackages.hasktags
     haskellPackages.hoogle
-    haskellPackages.ghc-mod
+    #haskellPackages.ghc-mod
     haskellPackages.hindent
     haskellPackages.intero
-    haskellPackages.hakyll    # Static webpage generator
+    #haskellPackages.hakyll    # Static webpage generator
     haskellPackages.aeson    # Required by hakyll&website
-    haskellPackages.haddock
-    haskellPackages.universum
-    haskellPackages.serokell-util
+    #haskellPackages.haddock # FIXME: 2018-04-05 Doesn't compile
+    #haskellPackages.universum
+    #haskellPackages.serokell-util
     haskellPackages.statistics
 
 
@@ -148,10 +162,12 @@ in {
     gnome3.cheese
     gnome3.dconf
     wireshark
+    stellarium
+	  latte-dock
 
     ## Office
     libreoffice-fresh
-    #FIXME: calibre    # Python 2.7 odfpy does not building under NixOS
+    calibre
     kdeApplications.okular
 
     ### Office libraries
@@ -171,7 +187,7 @@ in {
     plasma-nm
     kate
     ksysguard
-    kdeconnect
+    kdeconnect # FIXME: Devices does not find the host
     redshift-plasma-applet
     plasma-pa
     kdeApplications.dolphin-plugins
@@ -182,6 +198,7 @@ in {
     kdeApplications.spectacle
     kdeApplications.kcalutils
     kdeFrameworks.kcmutils
+	  krename
 
     ## Internet
     firefox
@@ -191,6 +208,7 @@ in {
 
     ### Messengers
     pidgin
+    skype
 
     ## Remote
     x2goclient
@@ -211,13 +229,18 @@ in {
     #### Audio
     deadbeef
     spotify
+    picard
+    cmus    # CLI music player
     # audaciousQt5
+    clementine
+    gpodder
 
     ### Media Create
     avidemux
     mkvtoolnix
     mediainfo-gui
     handbrake
+    chromaprint    # For AcoustID fpcalc fingerprinting
 
     ## Images
     gnome3.eog
@@ -227,17 +250,20 @@ in {
     gimp
 
 
-    # Unstable packages
-    unstable.stack    # FIXME: Tune-out from unstable Haskell
-    unstable.fwupd
-    unstable.jdupes
-    unstable.viber # FIXME: Can not instal from unstable, due to `nixpkgs.config.allowUnfree = true` not propagating to it
-    unstable.teamviewer
+    # Previously unstable packages
+    #stack    # fuck stack
+    fwupd    # FIXME: No fwupd.service
+    jdupes
+    #viber
+    teamviewer
 
     ## Games
     freeciv_gtk
     dwarf-fortress
+    dwarf-fortress-packages.dwarf-fortress-unfuck
     dwarf-fortress-packages.dwarf-therapist
+    dwarf-fortress-packages.phoebus-theme
+    dwarf-fortress-packages.dfhack
     xonotic
     freeorion
 
@@ -247,8 +273,6 @@ in {
     #dwarf-fortress-packages.phoebus-theme    # FIXME: Does not work. Investigate how to use.
     #dwarf-fortress-packages.dfhack    # FIXME: Does not work. Investigate how to use.
     #wesnoth    # Booring game
-    #freeciv    # This packages provides terrible interface
-    #quake3game
     #nethack
 
     # Custom local packages
