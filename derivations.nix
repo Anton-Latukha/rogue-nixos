@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 let
+  # You need to update nondefault channel with: `nix-channel --update unstable`
   unstable = import <unstable> {
   # pass the nixpkgs config to the unstable alias
   # to ensure `allowUnfree = true;` is propagated:
@@ -99,6 +100,7 @@ in {
     python3
     gtypist
     gitstats    # Generate Git statistics
+    cowsay
 
     ## Configuration management
     ansible
@@ -125,6 +127,7 @@ in {
     ### Haskell
     #leksah
     ghc
+    #haskell.compiler.ghc802 # FIXME: 2018-04-24 `intero` and `ghc-mod` do not compile/support 8.2.2 still
     cabal-install
     cabal2nix
     stack2nix
@@ -136,11 +139,12 @@ in {
     haskellPackages.hlint
     haskellPackages.hasktags
     haskellPackages.hoogle
-    #haskellPackages.ghc-mod
+    #haskellPackages.ghc-mod # FIXME: 2014-04-24 Does not compile/support with GHC 8.2.2
     haskellPackages.hindent
-    haskellPackages.intero
-    #haskellPackages.hakyll    # Static webpage generator
-    haskellPackages.aeson    # Required by hakyll&website
+    #haskellPackages.dante # FIXME: No Nix package
+    #haskellPackages.intero # Intero is for Stack
+    #haskellPackages.hakyll # Static webpage generator
+    #haskellPackages.aeson # Required by hakyll&website
     #haskellPackages.haddock # FIXME: 2018-04-05 Doesn't compile
     #haskellPackages.universum
     #haskellPackages.serokell-util
@@ -187,7 +191,7 @@ in {
     plasma-nm
     kate
     ksysguard
-    kdeconnect # FIXME: Devices does not find the host
+    kdeconnect
     redshift-plasma-applet
     plasma-pa
     kdeApplications.dolphin-plugins
