@@ -111,7 +111,7 @@
     # Enable CUPS to print documents.
     # services.printing.enable = true;
 
-    # So far not in upstream
+    # Daemon must turn off after not needed
     # fwupd.enable = true;
     # tvheadend.enable = true; # IPTV receiver backend
   };
