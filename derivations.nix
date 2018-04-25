@@ -243,7 +243,7 @@ in {
     avidemux
     mkvtoolnix
     mediainfo-gui
-    handbrake
+    unstable.handbrake
     chromaprint    # For AcoustID fpcalc fingerprinting
 
     ## Images
