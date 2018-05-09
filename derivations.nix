@@ -168,6 +168,7 @@ in {
     wireshark
     stellarium
 	  latte-dock
+    digikam
 
     ## Office
     libreoffice-fresh
