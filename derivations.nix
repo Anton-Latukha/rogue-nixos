@@ -101,6 +101,7 @@ in {
     gtypist
     gitstats    # Generate Git statistics
     cowsay
+    alsaUtils
 
     ## Configuration management
     ansible
