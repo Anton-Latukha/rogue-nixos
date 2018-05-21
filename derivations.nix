@@ -197,6 +197,7 @@ in {
     redshift-plasma-applet
     plasma-pa
     kdeApplications.dolphin-plugins
+    kdeApplications.kdegraphics-thumbnailers
     kdeFrameworks.syntax-highlighting
     kwayland-integration
     filelight
@@ -204,7 +205,8 @@ in {
     kdeApplications.spectacle
     kdeApplications.kcalutils
     kdeFrameworks.kcmutils
-	  krename
+    krename
+    xfce.tumbler
 
     ## Internet
     firefox
