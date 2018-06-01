@@ -103,6 +103,8 @@ in {
     cowsay
     alsaUtils
 
+    dos2unix    # Convert Windows special text symbols to Unix
+
     ## Configuration management
     ansible
     terraform
@@ -120,6 +122,7 @@ in {
     ## Programming
     shellcheck
     vscode
+    meson
 
     ### C
 	  glibc
