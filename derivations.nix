@@ -124,7 +124,7 @@ in {
     shellcheck
     vscode
     meson
-    js # A lightweight and flexible command-line JSON processor
+    jq # A lightweight and flexible command-line JSON processor
 
     ### C
 	  glibc
