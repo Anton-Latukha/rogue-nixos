@@ -86,6 +86,7 @@ in {
 
     # Console
     emacs
+    neovim
     git
     git-crypt
     sshfs
