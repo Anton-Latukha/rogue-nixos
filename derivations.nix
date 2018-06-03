@@ -120,10 +120,11 @@ in {
     awscli
     google-cloud-sdk
 
-    ## Programming
+    ## Development Programming
     shellcheck
     vscode
     meson
+    js # A lightweight and flexible command-line JSON processor
 
     ### C
 	  glibc
