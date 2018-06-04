@@ -125,6 +125,7 @@ in {
     vscode
     meson
     jq # A lightweight and flexible command-line JSON processor
+    bc # GNU software calculator
 
     ### C
 	  glibc
