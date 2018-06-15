@@ -23,7 +23,7 @@
   # Use the systemd-boot EFI boot loader.
   boot = {
 
-    kernelPackages = pkgs.linuxPackages_4_16;
+    kernelPackages = pkgs.linuxPackages_4_15;
     loader.systemd-boot.enable = true;
     loader.grub.extraPrepareConfig = "GRUB_CMDLINE_LINUX_DEFAULT='acpi_osi='";
     loader.efi.canTouchEfiVariables = true;
