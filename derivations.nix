@@ -234,7 +234,7 @@ in {
     skype
 
     ## Remote
-    x2goclient
+    # x2goclient # FIXME: 2018-06-23: Does not compile on nixos-unstable
     remmina
 
     ## Multimedia & Media
