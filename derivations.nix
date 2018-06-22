@@ -155,7 +155,7 @@ in {
     haskellPackages.hlint
     #haskellPackages.hasktags # FIXME: 2018-06-22: Does not compile on nixos-unstable ### Failure in: 2:16.hs:0:these were not found tests/Test.hs:39 expected: ["t2","t3","t4","t5"] but got: []
     haskellPackages.hoogle
-    #haskellPackages.ghc-mod # FIXME: 2014-04-24 Does not compile/support with GHC 8.2.2
+    #haskellPackages.ghc-mod # FIXME: 2017-04-24 Does not compile/support with GHC 8.2.2
     haskellPackages.hindent
     #haskellPackages.dante # FIXME: No Nix package
     #haskellPackages.intero # Intero is for Stack
@@ -288,7 +288,7 @@ in {
     dwarf-fortress-packages.phoebus-theme
     dwarf-fortress-packages.dfhack
     xonotic
-    freeorion
+    # freeorion # FIXME: 2018-06-22: nixos-unstable compile error
 
     ### Games garage
     #hedgewars    # FIXME: It does not launch
