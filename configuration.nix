@@ -23,11 +23,11 @@
   # Use the systemd-boot EFI boot loader.
   boot = {
 
-    kernelPackages = pkgs.linuxPackages_4_15;
+    #kernelPackages = pkgs.linuxPackages_4_15;
     loader.systemd-boot.enable = true;
     loader.grub.extraPrepareConfig = "GRUB_CMDLINE_LINUX_DEFAULT='acpi_osi='";
     loader.efi.canTouchEfiVariables = true;
-    extraModulePackages = with pkgs; [ linuxPackages_4_15.acpi_call ]; # Used to turn-off nvidia
+    # extraModulePackages = with pkgs; [ linuxPackages_4_15.acpi_call ]; # Used to turn-off nvidia
     # kernelPackages = pkgs.linuxPackages_latest; nvidia requires 4.9
 
   };
