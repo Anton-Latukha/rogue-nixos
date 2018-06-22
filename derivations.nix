@@ -65,7 +65,7 @@ in {
     firmwareLinuxNonfree
 
     ## System Drivers
-    mesa
+    libGLU_combined # mesa
     xorg.xf86videointel
 
     ## System Libraries
