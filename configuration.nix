@@ -169,7 +169,7 @@
     enableDefaultFonts = true; # Enable a basic set of fonts providing several font styles and families and reasonable coverage of Unicode.
     enableFontDir = true; # Whether to create a directory with links to all fonts in /run/current-system/sw/share/X11-fonts
     enableGhostscriptFonts = true;
-    fonts = with pkgs; [ hack-font source-code-pro ];
+    fonts = with pkgs; [ hack-font source-code-pro liberation_ttf ];
     fontconfig = {
       enable = true;
       ultimate = { # Formerly known as Infinality. Provides many font-specific rendering tweaks and customizable settings.

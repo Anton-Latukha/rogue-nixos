@@ -80,6 +80,7 @@ in {
     gnome3.adwaita-icon-theme    # Gnome icons
 
     ## GUI Libraries: Fonts
+    liberation_ttf
     hack-font
     source-code-pro
 
