@@ -178,7 +178,7 @@ in {
     catfish
     redshift
     gsmartcontrol
-    sqlitebrowser
+    # sqlitebrowser # FIXME: 2018-06-23: Does not compile on nixos-unstable
     gnome3.cheese
     gnome3.dconf
     wireshark
