@@ -187,7 +187,7 @@ in {
     digikam
 
     ## Office
-    libreoffice-fresh
+    # libreoffice-fresh # FIXME: 2018-06-23: Does not compile on nixos-unstable
     calibre
     kdeApplications.okular
 
