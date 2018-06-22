@@ -174,7 +174,7 @@
       enable = true;
       ultimate = { # Formerly known as Infinality. Provides many font-specific rendering tweaks and customizable settings.
         enable = true;
-        substitutions = combi;
+        substitutions = "combi";
       };
     };
   };
