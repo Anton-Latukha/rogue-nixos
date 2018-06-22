@@ -165,6 +165,19 @@
 
   };
 
+  fonts = {
+    enableDefaultFonts = true; # Enable a basic set of fonts providing several font styles and families and reasonable coverage of Unicode.
+    enableFontDir = true; # Whether to create a directory with links to all fonts in /run/current-system/sw/share/X11-fonts
+    enableGhostscriptFonts = true;
+    fonts = [ pkgs.hack-font pkgs.source-code-pro ];
+    fontconfig = {
+      enable = true;
+      ultimate = { # Formerly known as Infinality. Provides many font-specific rendering tweaks and customizable settings.
+        enable = true;
+      };
+    };
+  };
+
   # HACK: (2017-12-29) Fixes systemd&kernel issue. Make log shut up about 'Specified group 'kvm' unknown'
   ## Check this after time. This shiuld be fixed in systemd.
   users.groups = { kvm = {}; };
