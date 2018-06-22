@@ -91,7 +91,7 @@ in {
     git
     git-crypt
     sshfs
-    unoconv    # Convert between any document format supported by LibreOffice/OpenOffice
+    # unoconv    # Convert between any document format supported by LibreOffice/OpenOffice
     direnv      # For Fish: `echo 'eval (direnv hook fish)' >> /home/pyro/.config/fish/conf.d/direnv.fish`
     whois
     ldns        # For DNS `drill` tool
