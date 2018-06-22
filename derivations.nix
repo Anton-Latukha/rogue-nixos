@@ -83,7 +83,7 @@ in {
     liberation_ttf
     hack-font
     source-code-pro
-
+    inconsolata-lgc	# Fork of Inconsolata font, with proper support of Cyrillic and Greek
 
     # Console
     emacs
