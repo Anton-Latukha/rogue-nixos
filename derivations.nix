@@ -45,6 +45,8 @@ in {
     acoustidFingerprinter
     mc
     telnet
+    winusb
+    unetbootin
 
 
     ### Security
@@ -131,6 +133,9 @@ in {
     ### C
 	  glibc
     glibcLocales
+
+    ### Java
+    openjdk10
 
     ### Haskell
     #leksah
