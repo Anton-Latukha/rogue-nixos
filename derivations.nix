@@ -172,6 +172,8 @@ in {
     #haskellPackages.serokell-util
     haskellPackages.statistics
 
+    ## JS
+    yarn
 
     ## Deps
     networkmanager
