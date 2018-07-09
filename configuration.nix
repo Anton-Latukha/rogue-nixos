@@ -89,7 +89,6 @@
       ];
 
 
-      avahi.enable = true; # For Pulseaudio networking
 
     };
 
@@ -99,6 +98,8 @@
 
     # HACK: dconf bug:
     # dbus.packages = with pkgs; [ gnome3.dconf ];
+
+    avahi.enable = true; # For Pulseaudio networking
 
     xserver = {                       # Enable the X11 windowing system.
       enable = true;
