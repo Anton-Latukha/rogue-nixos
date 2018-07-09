@@ -88,6 +88,9 @@
         }
       ];
 
+
+      avahi.enable = true; # For Pulseaudio networking
+
     };
 
     netdata.enable = true;
@@ -129,7 +132,6 @@
     networkmanager.enable = true;
 
   };
-
 
   hardware = {
 
