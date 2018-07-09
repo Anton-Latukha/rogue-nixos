@@ -88,8 +88,6 @@
         }
       ];
 
-
-
     };
 
     netdata.enable = true;
