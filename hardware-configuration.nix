@@ -47,6 +47,7 @@
 
   nix.maxJobs = lib.mkDefault 8;
   powerManagement.cpuFreqGovernor = "powersave";
-
+  hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.tcp.enable = true;
   hardware.pulseaudio.zeroconf.discovery.enable = true;
 }
