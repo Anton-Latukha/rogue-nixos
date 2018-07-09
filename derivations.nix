@@ -245,6 +245,7 @@ in {
 
     ## Multimedia & Media
     ffmpeg
+    pavucontrol
 
     ### Media Consume
     youtube-dl
