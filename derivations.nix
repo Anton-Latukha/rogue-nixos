@@ -47,6 +47,7 @@ in {
     telnet
     winusb
     unetbootin
+    ripgrep
 
 
     ### Security
@@ -192,7 +193,7 @@ in {
     digikam
 
     ## Office
-    # libreoffice-fresh # FIXME: 2018-06-23: Does not compile on nixos-unstable
+    libreoffice-still # FIXME: 2018-06-23: Does not compile on fresh on nixos-unstable
     calibre
     kdeApplications.okular
 
