@@ -283,7 +283,6 @@ in {
     inkscape
     gimp
 
-
     # Previously unstable packages
     #stack    # fuck stack
     fwupd    # FIXME: No fwupd.service

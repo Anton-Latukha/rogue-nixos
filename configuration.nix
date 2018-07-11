@@ -114,7 +114,7 @@
     # services.printing.enable = true;
 
     # Daemon must turn off after not needed
-    # fwupd.enable = true;
+    fwupd.enable = true;
     # tvheadend.enable = true; # IPTV receiver backend
   };
 
