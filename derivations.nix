@@ -293,11 +293,11 @@ in {
 
     ## Games
     freeciv_gtk
-    dwarf-fortress
-    dwarf-fortress-packages.dwarf-fortress-unfuck
-    dwarf-fortress-packages.dwarf-therapist
-    dwarf-fortress-packages.phoebus-theme
-    dwarf-fortress-packages.dfhack
+    #dwarf-fortress
+    #dwarf-fortress-packages.dwarf-fortress-unfuck
+    #dwarf-fortress-packages.dwarf-therapist
+    #dwarf-fortress-packages.phoebus-theme
+    #dwarf-fortress-packages.dfhack
     xonotic
     # freeorion # FIXME: 2018-06-22: nixos-unstable compile error
 
