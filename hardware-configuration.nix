@@ -51,8 +51,8 @@
   hardware.pulseaudio.tcp.enable = true;
   hardware.pulseaudio.zeroconf.discovery.enable = true;
   hardware.pulseaudio.extraConfig = [
-  "load-module module-null-sink sink_name=rpt"
-  "load-module module-rtp-send source=rtp.monitor"
-  "load-module module-rtp-recv"
-]
+    "load-module module-null-sink sink_name=rpt"
+    "load-module module-rtp-send source=rtp.monitor"
+    "load-module module-rtp-recv"
+  ];
 }
