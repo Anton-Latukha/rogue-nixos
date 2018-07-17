@@ -256,7 +256,7 @@ in {
       pulseSupport = true;
       speechdSupport = true;
       })
-    #mumble_overlay # FIXME: Normal Mumble hangs on start.
+    mumble_overlay # FIXME: Normal Mumble hangs on start.
     libopus
     opusTools
     opusfile
