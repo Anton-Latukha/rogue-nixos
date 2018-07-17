@@ -252,6 +252,7 @@ in {
     ffmpeg
     pavucontrol
     pulseaudioFull
+    mumble
 
     ### Media Consume
     youtube-dl
