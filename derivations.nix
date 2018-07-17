@@ -254,6 +254,9 @@ in {
     pulseaudioFull
     mumble_git
     mumble_overlay # FIXME: Normal Mumble hangs on start.
+    libopus
+    opusTools
+    opusfile
 
     ### Media Consume
     youtube-dl
