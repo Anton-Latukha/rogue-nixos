@@ -252,7 +252,7 @@ in {
     ffmpeg
     pavucontrol
     pulseaudioFull
-    mumble_git
+    mumble
     mumble_overlay # FIXME: Normal Mumble hangs on start.
 
     ### Media Consume
