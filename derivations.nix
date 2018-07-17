@@ -252,7 +252,7 @@ in {
     ffmpeg-full
     pavucontrol
     pulseaudioFull
-    (mumble_git.override {
+    (mumble.override {
       pulseSupport = true;
       speechdSupport = true;
       })
