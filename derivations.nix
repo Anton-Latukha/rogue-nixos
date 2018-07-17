@@ -249,7 +249,7 @@ in {
     remmina
 
     ## Multimedia & Media
-    ffmpeg
+    ffmpeg-full
     pavucontrol
     pulseaudioFull
     mumble_git
@@ -257,6 +257,7 @@ in {
     libopus
     opusTools
     opusfile
+    flac
 
     ### Media Consume
     youtube-dl
