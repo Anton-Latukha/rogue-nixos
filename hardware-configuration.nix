@@ -13,27 +13,21 @@
   # boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/686fba70-397d-44b5-bc44-5cbfae938bab";
+    device = "/dev/disk/by-uuid/d44c2571-b1c7-4c2c-ac76-d0a2d1b3ee37";
+    fsType = "btrfs";
+    options = [ "noatime" "nofail" "compress=zstd"];
+  };
+
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/cb24428c-792e-489a-9c54-a76dec889114";
     fsType = "ext4";
     options = [ "noatime" ];
   };
 
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/162A-4BBC";
-    fsType = "vfat";
-    options = [ "noatime" ];
-  };
-
   fileSystems."/win" = {
-    device = "/dev/sda4";
+    device = "/dev/disk/by-uuid/01D443E2FABF7BF0";
     fsType = "ntfs";
     options = [ "noatime" "nofail" ];
-  };
-
-  fileSystems."/btrfs" = {
-    device = "/dev/sda5";
-    fsType = "btrfs";
-    options = [ "noatime" "nofail" "compress=zstd"];
   };
 
 
