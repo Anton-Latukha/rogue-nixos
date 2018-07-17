@@ -253,7 +253,7 @@ in {
     pavucontrol
     pulseaudioFull
     mumble
-    #mumble_overlay # FIXME: Normal Mumble hangs on start.
+    mumble_overlay # FIXME: Normal Mumble hangs on start.
 
     ### Media Consume
     youtube-dl
