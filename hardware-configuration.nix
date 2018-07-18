@@ -5,12 +5,10 @@
 
 {
   imports =
-    [ <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
-    ];
+    [ <nixpkgs/nixos/modules/installer/scan/not-detected.nix> ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" "sr_mod" ];
   boot.kernelModules = [ "kvm-intel" ];
-  # boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/d44c2571-b1c7-4c2c-ac76-d0a2d1b3ee37";
@@ -29,13 +27,6 @@
     fsType = "ntfs";
     options = [ "noatime" "nofail" ];
   };
-
-
-  #  fileSystems."/stor" = {
-  #    device = "ubu:/mnt/stor";
-  #    fsType = "nfs";
-  #    options = [ "nolock" "async" "noacl" "nocto" "noatime" "nodiratime" "nofail"];
-  #  };
 
   swapDevices = [ ];
 
