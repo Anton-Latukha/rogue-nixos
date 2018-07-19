@@ -30,9 +30,9 @@
 
   swapDevices = [ ];
 
-  nix.maxJobs = lib.mkDefault 8;
   powerManagement.cpuFreqGovernor = "powersave";
   hardware.pulseaudio.package = pkgs.pulseaudioFull;
+  nix.maxJobs = lib.mkDefault 2;
   hardware.pulseaudio.enable = true;
   hardware.pulseaudio.systemWide = true;
   hardware.pulseaudio.tcp.enable = true;
