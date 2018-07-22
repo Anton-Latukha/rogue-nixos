@@ -25,10 +25,15 @@
 
     #kernelPackages = pkgs.linuxPackages_4_15;
     loader.systemd-boot.enable = true;
+    loader.grub.enable = true;
+    loader.grub.version = 2;
+
     loader.grub.extraPrepareConfig = "GRUB_CMDLINE_LINUX_DEFAULT='acpi_osi='";
-    loader.efi.canTouchEfiVariables = true;
     # extraModulePackages = with pkgs; [ linuxPackages_4_15.acpi_call ]; # Used to turn-off nvidia
     # kernelPackages = pkgs.linuxPackages_latest; nvidia requires 4.9
+    loader.grub.useOSProber = true;
+
+    loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
   };
 
