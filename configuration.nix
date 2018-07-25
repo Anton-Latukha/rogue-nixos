@@ -43,7 +43,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  security.rngd.enable = true;
   #security.hideProcessInformation = true;
 
   # Select internationalisation properties.
