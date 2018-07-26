@@ -132,8 +132,8 @@
     # networking.firewall.allowedUDPPorts = [ ... ];
     # Or disable the firewall altogether.
     firewall.enable = false;
-    hostName = "rogue"; # Define your hostname.
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+    hostName = "homer"; # Define your hostname.
     networkmanager.enable = true;
 
   };
