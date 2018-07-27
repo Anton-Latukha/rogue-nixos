@@ -94,14 +94,12 @@
 
     };
 
-    netdata.enable = true;
     geoclue2.enable = true;
-    rpcbind.enable = true;
 
     # HACK: dconf bug:
     # dbus.packages = with pkgs; [ gnome3.dconf ];
 
-    avahi.enable = true; # For Pulseaudio networking
+#    rpcbind.enable = true;    # NOTE: For NTS
 
     xserver = {                       # Enable the X11 windowing system.
       enable = true;
