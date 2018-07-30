@@ -153,6 +153,7 @@
       enable = true;
       liveRestore = true;
       extraOptions = "--experimental=true";
+      listenOptions = [ "/var/run/docker.sock" "tcp://127.0.0.1:2376/" ];
     };
 
     libvirtd = {
