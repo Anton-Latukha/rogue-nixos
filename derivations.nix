@@ -173,8 +173,6 @@ in {
     #haskellPackages.serokell-util
     haskellPackages.statistics
 
-	  haskellPackages.adb
-
     ## JS
     yarn
 
