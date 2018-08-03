@@ -114,6 +114,7 @@ in {
     ## Configuration management
     ansible
     terraform
+    terraform-provider-libvirt
 
     ## Virtualization
     docker
