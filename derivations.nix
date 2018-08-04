@@ -48,6 +48,7 @@ in {
     winusb
     unetbootin
     ripgrep
+    sqlite
 
 
     ### Security
