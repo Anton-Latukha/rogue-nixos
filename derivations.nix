@@ -49,6 +49,7 @@ in {
     unetbootin
     ripgrep
     sqlite
+    sqliteman
 
 
     ### Security
