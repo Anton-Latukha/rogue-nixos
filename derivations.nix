@@ -115,7 +115,7 @@ in {
 
     ## Configuration management
     ansible
-    (terraform_0_11 {
+    (terraform {
     withPlugins = "terraform-provider-libvirt";
     }
     )
