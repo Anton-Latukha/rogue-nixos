@@ -115,8 +115,10 @@ in {
 
     ## Configuration management
     ansible
-    terraform-full
-    terraform-provider-libvirt
+    (terraform_0_11 {
+    withPlugins = "terraform-provider-libvirt";
+    }
+    )
 
     ## Virtualization
     docker
