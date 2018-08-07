@@ -51,6 +51,7 @@ in {
     sqlite
     sqliteman
     cdrtools # Highly portable CD/DVD/BluRay command line recording software
+    lzma
 
     ### Security
     chkrootkit    # FIXME: On launch throws `chkrootkit: can't find 'strings'`, so reqires `binutils` on launch, but does not have that as a requirement in derivation.    # FIXME: Upstream: Also seems to have false-positives and problems
