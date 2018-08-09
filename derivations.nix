@@ -59,9 +59,6 @@ in {
     clamav    # FIXME: 2018-01-10: ERROR: Can't open/parse the config file /etc/clamav/freshclam.conf
 
     ### System Libraries
-    #rng_tools    # Requires hardware random number generators (TRNG)
-    #haveged    # Gather entropy from sources. Not so effective.
-
 
     # Nix
     nix-repl
