@@ -107,7 +107,7 @@
       displayManager.sddm.enable = true;
       #desktopManager.plasma5.enable = true; # Enable the KDE Desktop Environment.
       windowManager.xmonad.enable = true;
-      services.xserver.windowManager.xmonad.enableContribAndExtras = true;
+      windowManager.xmonad.enableContribAndExtras = true;
     };
 
     fstrim.enable = true;             # Periodic trim of the filesystem with util-linux fstrim service
