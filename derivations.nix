@@ -61,7 +61,6 @@ in {
     ### System Libraries
 
     # Nix
-    nix-repl
     nix-prefetch-git
     nixops
 
