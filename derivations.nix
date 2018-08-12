@@ -134,6 +134,8 @@ in {
     meson
     jq # A lightweight and flexible command-line JSON processor
     bc # GNU software calculator
+    ag    # New grep for code
+    zeal    #	A simple offline API documentation browser
 
     ### C
 	  glibc
