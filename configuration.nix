@@ -153,21 +153,21 @@
 
   virtualisation = {
 
-    docker = {
-      enable = true;
-      liveRestore = true;
-      extraOptions = "--experimental=true";
-      listenOptions = [ "/var/run/docker.sock" "0.0.0.0:2376" ];
-    };
+#    docker = {
+#      enable = true;
+#      liveRestore = true;
+#      extraOptions = "--experimental=true";
+#      listenOptions = [ "/var/run/docker.sock" "0.0.0.0:2376" ];
+#    };
 
-    libvirtd = {
-      enable = true;
-    };
+#    libvirtd = {
+#      enable = true;
+#    };
 
-    virtualbox.host = {
-      enable = true;
-      headless = false;
-    };
+#    virtualbox.host = {
+#      enable = true;
+#      headless = false;
+#    };
 
   };
 
