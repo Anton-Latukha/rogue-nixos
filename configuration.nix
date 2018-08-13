@@ -20,7 +20,6 @@
 
   ];
 
-  # Use the systemd-boot EFI boot loader.
   boot = {
 
     #kernelPackages = pkgs.linuxPackages_4_15;
@@ -29,28 +28,16 @@
     loader.grub.version = 2;
 
     loader.grub.extraPrepareConfig = "GRUB_CMDLINE_LINUX_DEFAULT='acpi_osi='";
-    # extraModulePackages = with pkgs; [ linuxPackages_4_15.acpi_call ]; # Used to turn-off nvidia
-    # kernelPackages = pkgs.linuxPackages_latest; nvidia requires 4.9
     loader.grub.useOSProber = true;
 
     loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
   };
 
-  # nix.package = pkgs.nixStable2;    # Use unstable Nix version from NixOS repo
   nix.autoOptimiseStore = true;    # Autodeduplicate files in store
   nix.useSandbox = true;
 
   nixpkgs.config.allowUnfree = true;
-
-  #security.hideProcessInformation = true;
-
-  # Select internationalisation properties.
-  # i18n = {
-  #   consoleFont = "Lat2-Terminus16";
-  #   consoleKeyMap = "us";
-  #   defaultLocale = "en_US.UTF-8";
-  # };
 
   # Set your time zone.
   time.timeZone = "Europe/Kiev";
@@ -65,7 +52,6 @@
     bash.enableCompletion = true;
     mtr.enable = true;
     fish.enable = true;
-    # gnupg.agent = { enable = true; enableSSHSupport = true; };
 
   };
 
@@ -95,21 +81,13 @@
     };
 
     geoclue2.enable = true;
-
-    # HACK: dconf bug:
-    # dbus.packages = with pkgs; [ gnome3.dconf ];
-
-#    rpcbind.enable = true;    # NOTE: For NTS
+#    rpcbind.enable = true;    # NOTE: For NFS
 
     xserver = {                       # Enable the X11 windowing system.
       enable = true;
       layout = "us";
-      videoDrivers = [ "nvidia" ];    # Proprietary nVidia driver
-      libinput.enable = true;         # Enable touchpad support.
       displayManager.sddm.enable = true;
       desktopManager.plasma5.enable = true; # Enable the KDE Desktop Environment.
-      #windowManager.xmonad.enable = true;
-      #windowManager.xmonad.enableContribAndExtras = true;
     };
 
     fstrim.enable = true;             # Periodic trim of the filesystem with util-linux fstrim service
@@ -119,7 +97,6 @@
 
     # Daemon must turn off after not needed
     fwupd.enable = true;
-    # tvheadend.enable = true; # IPTV receiver backend
   };
 
 
@@ -130,7 +107,6 @@
     # networking.firewall.allowedUDPPorts = [ ... ];
     # Or disable the firewall altogether.
     firewall.enable = false;
-    # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     hostName = "homer"; # Define your hostname.
     networkmanager.enable = true;
 
@@ -138,10 +114,6 @@
 
   hardware = {
 
-    #bumblebee = {
-    #  enable = true;
-    #  group = "video";
-    #};
     cpu.intel.updateMicrocode = true;
     enableAllFirmware = true;
     # Enable 32bit acceleration
