@@ -90,7 +90,6 @@ in {
     inconsolata-lgc	# Fork of Inconsolata font, with proper support of Cyrillic and Greek
 
     # Console
-    emacs
     neovim
     git
     git-crypt
