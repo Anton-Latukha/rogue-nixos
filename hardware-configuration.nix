@@ -32,5 +32,4 @@
 
   nix.maxJobs = lib.mkDefault 2;
   powerManagement.cpuFreqGovernor = "performance";
-  hardware.pulseaudio.enable = true;
 }
