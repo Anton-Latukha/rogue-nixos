@@ -35,7 +35,7 @@
   };
 
   nix.autoOptimiseStore = true;    # Autodeduplicate files in store
-  nix.useSandbox = true;
+  #nix.useSandbox = true;
 
   nixpkgs.config.allowUnfree = true;
 
