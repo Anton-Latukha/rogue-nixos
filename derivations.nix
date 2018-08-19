@@ -91,6 +91,7 @@ in {
 
     # Console
     emacs
+    gnuplot
     neovim
     git
     git-crypt
