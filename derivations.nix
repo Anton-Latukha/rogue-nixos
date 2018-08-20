@@ -91,7 +91,8 @@ in {
 
     # Console
     emacs
-    gnuplot
+    gnuplot    # Org+GNU Plot
+    tetex    # Org export to LaTeX -> PDF
     neovim
     git
     git-crypt
