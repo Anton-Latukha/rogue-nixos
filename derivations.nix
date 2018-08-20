@@ -24,7 +24,7 @@ in {
 
     #### System CLIs additions
 
-    mosh
+    mosh    # remote delta shell
     tmux
     htop
 
@@ -99,7 +99,7 @@ in {
     unzip     # Was requested for Org -> ODT
     neovim
     git
-    git-crypt
+    git-crypt    # store secrets inside
     sshfs
     # unoconv    # Convert between any document format supported by LibreOffice/OpenOffice
     direnv      # For Fish: `echo 'eval (direnv hook fish)' >> /home/pyro/.config/fish/conf.d/direnv.fish`
@@ -110,7 +110,7 @@ in {
     eject       # A set of system utilities for Linux, like for continious trim
     lshw
     python3
-    gtypist
+    gtypist    # GNU typist
     gitstats    # Generate Git statistics
     cowsay
     alsaUtils
@@ -120,7 +120,7 @@ in {
     ## Configuration management
     ansible
     terraform-full
-    terraform-provider-libvirt
+    terraform-provider-libvirt    # -plugin-dir /run/current-system/bin/
 
     ## Virtualization
     docker
@@ -135,7 +135,7 @@ in {
 
     ## Development Programming
     shellcheck
-    vscode
+    # vscode
     meson
     jq # A lightweight and flexible command-line JSON processor
     bc # GNU software calculator
