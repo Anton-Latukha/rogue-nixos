@@ -95,7 +95,8 @@ in {
     #tetex    # FIXME: Org export to LaTeX -> PDF
     texlive.combined.scheme-full    # FIXME: Trying troubleshoot Org -> LaTeX -> PDF
     pandoc
-    zip
+    zip    # Was requested for Org -> ODT
+    unxip     # Was requested for Org -> ODT
     neovim
     git
     git-crypt
