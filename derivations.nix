@@ -93,6 +93,7 @@ in {
     emacs
     gnuplot    # Org+GNU Plot
     tetex    # Org export to LaTeX -> PDF
+    texlive.combined.scheme-full
     neovim
     git
     git-crypt
