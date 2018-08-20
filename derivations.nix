@@ -96,7 +96,7 @@ in {
     texlive.combined.scheme-full    # FIXME: Trying troubleshoot Org -> LaTeX -> PDF
     pandoc
     zip    # Was requested for Org -> ODT
-    unxip     # Was requested for Org -> ODT
+    unzip     # Was requested for Org -> ODT
     neovim
     git
     git-crypt
