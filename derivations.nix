@@ -92,8 +92,9 @@ in {
     # Console
     emacs
     gnuplot    # Org+GNU Plot
-    tetex    # Org export to LaTeX -> PDF
-    texlive.combined.scheme-full
+    #tetex    # FIXME: Org export to LaTeX -> PDF
+    texlive.combined.scheme-full    # FIXME: Trying troubleshoot Org -> LaTeX -> PDF
+    pandoc
     neovim
     git
     git-crypt
