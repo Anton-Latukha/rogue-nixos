@@ -30,7 +30,7 @@
 
   swapDevices = [ {
     device = "/var/swapfile";
-    size = "4096";
+    size = 4096;
   } ];
 
   nix.maxJobs = lib.mkDefault 2;
