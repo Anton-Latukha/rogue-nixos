@@ -204,6 +204,7 @@ in {
     stellarium
 	  latte-dock
     digikam
+    cloudcross
 
     ## Office
     libreoffice-fresh
