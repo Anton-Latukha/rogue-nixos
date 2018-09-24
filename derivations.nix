@@ -205,7 +205,7 @@ in {
     stellarium
 	  latte-dock
     digikam
-    gitkraken
+    #gitkraken
 
     ## Office
     libreoffice-fresh
