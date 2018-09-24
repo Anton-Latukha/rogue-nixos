@@ -208,7 +208,7 @@ in {
     #gitkraken
 
     ## Office
-    libreoffice-fresh
+    libreoffice-still
     calibre
     kdeApplications.okular
 
