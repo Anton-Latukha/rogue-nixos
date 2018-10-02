@@ -212,7 +212,7 @@
   };
 
   users.motd = ''
-#!/bin/sh
+#!/run/current-system/sw/bin/sh
  
 upSeconds="$($(command -v) cut -d. -f1 /proc/uptime)"
 secs=$((${upSeconds}%60))
