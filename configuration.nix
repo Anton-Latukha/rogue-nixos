@@ -214,7 +214,7 @@
   users.motd = ''
 #!/run/current-system/sw/bin/sh
  
-upSeconds="$($(command -v) cut -d. -f1 /proc/uptime)"
+upSeconds="$("$(command -v)" cut -d. -f1 /proc/uptime)"
 secs=$((${upSeconds}%60))
 mins=$((${upSeconds}/60%60))
 hours=$((${upSeconds}/3600%24))
