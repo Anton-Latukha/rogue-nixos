@@ -184,7 +184,7 @@
         monospace = [ "Inconsolata LGC" "Iconsolata" ];
       };
     };
-  };-
+  };
 
   # HACK: (2017-12-29) Fixes systemd&kernel issue. Make log shut up about 'Specified group 'kvm' unknown'
   ## Check this after time. This shiuld be fixed in systemd.
