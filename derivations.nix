@@ -41,6 +41,8 @@ in {
     zstd
     python36Packages.glances
     python27Packages.virtual-display
+    python27Packages.namebench
+
     zsync
     acoustidFingerprinter
     mc
