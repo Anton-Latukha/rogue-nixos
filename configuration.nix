@@ -116,7 +116,6 @@
   fonts.enableFontDir = true; # Whether to create a directory with links to all fonts in /run/current-system/sw/share/X11-fonts
   fonts.enableGhostscriptFonts = true;
   fonts.fonts = with pkgs; [ hack-font source-code-pro liberation_ttf inconsolata-lgc ];
-  fonts.fontconfig = {
   fonts.fontconfig.enable = true;
   fonts.fontconfig.ultimate.enable = true;
   fonts.fontconfig.ultimate.substitutions = "combi";
