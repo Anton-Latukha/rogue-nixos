@@ -92,8 +92,8 @@
     netdata.enable = true;
     geoclue2.enable = true;
     redshift.enable = true;
-    redshift.latitude = 50.4;
-    redshift.longitude = 30.5;
+    redshift.latitude = "50.4";
+    redshift.longitude = "30.5";
     rpcbind.enable = true;
 
     # HACK: dconf bug:
