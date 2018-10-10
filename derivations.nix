@@ -169,7 +169,7 @@ in {
     hlint
 
     #### Haskell packages
-    #haskellPackages.apply-refact
+    haskellPackages.apply-refact
     haskellPackages.stylish-haskell
     haskellPackages.hlint
     haskellPackages.hspec
@@ -177,7 +177,7 @@ in {
     haskellPackages.hoogle
     #haskellPackages.ghc-mod # FIXME: 2017-04-24 Does not compile/support with GHC 8.2.2
     haskellPackages.hindent
-    #haskellPackages.dante # FIXME: No Nix package
+    haskellPackages.dante # FIXME: No Nix package
     #haskellPackages.intero # Intero is for Stack
     #haskellPackages.hakyll # Static webpage generator
     #haskellPackages.aeson # Required by hakyll&website
@@ -307,19 +307,19 @@ in {
 
     # Previously unstable packages
     #stack    # fuck stack
-    fwupd    # FIXME: No fwupd.service
+    #fwupd
     jdupes
     #viber
     teamviewer
 
     ## Games
-    freeciv_gtk
+    #freeciv_gtk
     #dwarf-fortress
     #dwarf-fortress-packages.dwarf-fortress-unfuck
     #dwarf-fortress-packages.dwarf-therapist
     #dwarf-fortress-packages.phoebus-theme
     #dwarf-fortress-packages.dfhack
-    xonotic
+    #xonotic
     # freeorion # FIXME: 2018-06-22: nixos-unstable compile error
 
     ### Games garage
