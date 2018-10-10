@@ -177,7 +177,7 @@ in {
     haskellPackages.hoogle
     #haskellPackages.ghc-mod # FIXME: 2017-04-24 Does not compile/support with GHC 8.2.2
     haskellPackages.hindent
-    haskellPackages.dante # FIXME: No Nix package
+    #haskellPackages.dante # FIXME: No Nix package
     #haskellPackages.intero # Intero is for Stack
     #haskellPackages.hakyll # Static webpage generator
     #haskellPackages.aeson # Required by hakyll&website
