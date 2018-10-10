@@ -21,16 +21,12 @@
   ];
 
   # Use the systemd-boot EFI boot loader.
-  boot = {
-
-    #kernelPackages = pkgs.linuxPackages_4_15;
-    loader.systemd-boot.enable = true;
-    loader.grub.extraPrepareConfig = "GRUB_CMDLINE_LINUX_DEFAULT='acpi_osi='";
-    loader.efi.canTouchEfiVariables = true;
-    # extraModulePackages = with pkgs; [ linuxPackages_4_15.acpi_call ]; # Used to turn-off nvidia
-    # kernelPackages = pkgs.linuxPackages_latest; nvidia requires 4.9
-
-  };
+  #boot.kernelPackages = pkgs.linuxPackages_4_15;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.grub.extraPrepareConfig = "GRUB_CMDLINE_LINUX_DEFAULT='acpi_osi='";
+  boot.loader.efi.canTouchEfiVariables = true;
+  #boot.extraModulePackages = with pkgs; [ linuxPackages_4_15.acpi_call ]; # Used to turn-off nvidia
+  #boot.kernelPackages = pkgs.linuxPackages_latest; nvidia requires 4.9
 
   # nix.package = pkgs.nixStable2;    # Use unstable Nix version from NixOS repo
   nix.autoOptimiseStore = true;    # Autodeduplicate files in store
@@ -48,79 +44,51 @@
   #   defaultLocale = "en_US.UTF-8";
   # };
 
-  # Set your time zone.
   time.timeZone = "Europe/Kiev";
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  programs = {
+  programs.bash.enableCompletion = true;
+  programs.mtr.enable = true;
+  programs.fish.enable = true;
+  # programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
 
-    bash.enableCompletion = true;
-    mtr.enable = true;
-    fish.enable = true;
-    # gnupg.agent = { enable = true; enableSSHSupport = true; };
+  services.haveged.enable = true;
 
-  };
+  services.openssh.enable = true;
+  services.openssh.allowSFTP = false;
+  services.openssh.passwordAuthentication = false;
+  services.openssh.hostKeys = [
+    {
+      path = "/home/pyro/.ssh/id_rsa";
+      type = "rsa";
+      bits = 4096;
+    }
+    {
+      path = "/home/pyro/.ssh/id_ed25519";
+      type = "ed25519";
+    }
+  ];
 
-
-  # List services that you want to enable:
-  services = {
-
-    haveged.enable = true;
-
-    # Enable the OpenSSH daemon.
-    openssh = {
-      enable = true;
-      allowSFTP = false;
-      passwordAuthentication = false;
-      hostKeys = [
-        {
-          path = "/home/pyro/.ssh/id_rsa";
-          type = "rsa";
-          bits = 4096;
-        }
-        {
-          path = "/home/pyro/.ssh/id_ed25519";
-          type = "ed25519";
-        }
-      ];
-    };
-
-    netdata.enable = true;
-    geoclue2.enable = true;
-    redshift.enable = true;
-    redshift.latitude = "50.4";
-    redshift.longitude = "30.5";
-    rpcbind.enable = true;
-
-    # HACK: dconf bug:
-    # dbus.packages = with pkgs; [ gnome3.dconf ];
-
-    avahi.enable = true; # For Pulseaudio networking
-
-    xserver = {                       # Enable the X11 windowing system.
-      enable = true;
-      layout = "us";
-      videoDrivers = [ "nvidia" ];    # Proprietary nVidia driver
-      libinput.enable = true;         # Enable touchpad support.
-      displayManager.sddm.enable = true;
-      desktopManager.plasma5.enable = true; # Enable the KDE Desktop Environment.
-      #windowManager.xmonad.enable = true;
-      #windowManager.xmonad.enableContribAndExtras = true;
-    };
-
-    fstrim.enable = true;             # Periodic trim of the filesystem with util-linux fstrim service
-
-    # Enable CUPS to print documents.
-    # services.printing.enable = true;
-
-    # Daemon must turn off after not needed
-    fwupd.enable = true;
-    # tvheadend.enable = true; # IPTV receiver backend
-  };
+  services.netdata.enable = true;
+  services.geoclue2.enable = true;
+  services.redshift.enable = true;
+  services.redshift.latitude = "50.4";
+  services.redshift.longitude = "30.5";
+  services.rpcbind.enable = true;
+  services.avahi.enable = true; # For Pulseaudio networking
+  services.xserver.enable = true;
+  services.xserver.layout = "us";
+  services.xserver.videoDrivers = [ "nvidia" ];    # Proprietary nVidia driver
+  services.xserver.libinput.enable = true;         # Enable touchpad support.
+  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.desktopManager.plasma5.enable = true; # Enable the KDE Desktop Environment.
+  #services.xserver.windowManager.xmonad.enable = true;
+  #services.xserver.windowManager.xmonad.enableContribAndExtras = true;
+  services.fstrim.enable = true;             # Periodic trim of the filesystem with util-linux fstrim service
+  # services.printing.enable = true; # Enable CUPS to print documents.
+  services.fwupd.enable = true;
 
 
   networking = {
