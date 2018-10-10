@@ -185,6 +185,7 @@ in {
     #haskellPackages.universum
     #haskellPackages.serokell-util
     haskellPackages.statistics
+    haskellPackages.ghc-mod
 
     ## JS
     yarn
