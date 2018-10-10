@@ -55,7 +55,6 @@
   # programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
 
   services.haveged.enable = true;
-
   services.openssh.enable = true;
   services.openssh.allowSFTP = false;
   services.openssh.passwordAuthentication = false;
@@ -70,7 +69,6 @@
       type = "ed25519";
     }
   ];
-
   services.netdata.enable = true;
   services.geoclue2.enable = true;
   services.redshift.enable = true;
@@ -87,99 +85,61 @@
   #services.xserver.windowManager.xmonad.enable = true;
   #services.xserver.windowManager.xmonad.enableContribAndExtras = true;
   services.fstrim.enable = true;             # Periodic trim of the filesystem with util-linux fstrim service
-  # services.printing.enable = true; # Enable CUPS to print documents.
+  #services.printing.enable = true; # Enable CUPS to print documents.
   services.fwupd.enable = true;
 
+  networking.firewall.enable = true;
+  networking.firewall.allowedTCPPorts = [ 22 ];
+  networking.firewall.allowedUDPPorts = [ 22 ];
+  networking.hostName = "rogue"; # Define your hostname.
+  networking.networkmanager.enable = true;
 
-  networking = {
+  #hardware.bumblebee = {
+  #  enable = true;
+  #  group = "video";
+  #};
+  hardware.cpu.intel.updateMicrocode = true;
+  hardware.enableAllFirmware = true;
+  hardware.opengl.driSupport32Bit = true; # Enable 32bit acceleration
+  pulseaudio.enable = true;
 
-    # Open ports in the firewall.
-    # networking.firewall.allowedTCPPorts = [ ... ];
-    # networking.firewall.allowedUDPPorts = [ ... ];
-    # Or disable the firewall altogether.
-    firewall.enable = false;
-    hostName = "rogue"; # Define your hostname.
-    # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-    networkmanager.enable = true;
+  virtualisation.docker.enable = true;
+  virtualisation.docker.liveRestore = true;
+  virtualisation.docker.extraOptions = "--experimental=true";
+  virtualisation.docker.listenOptions = [ "/var/run/docker.sock" "0.0.0.0:2376" ];
+  virtualisation.libvirtd.enable = true;
 
-  };
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.headless = false;
 
-  hardware = {
-
-    #bumblebee = {
-    #  enable = true;
-    #  group = "video";
-    #};
-    cpu.intel.updateMicrocode = true;
-    enableAllFirmware = true;
-    # Enable 32bit acceleration
-    opengl.driSupport32Bit = true;
-    pulseaudio.enable = true;
-
-  };
-
-
-  virtualisation = {
-
-    docker = {
-      enable = true;
-      liveRestore = true;
-      extraOptions = "--experimental=true";
-      listenOptions = [ "/var/run/docker.sock" "0.0.0.0:2376" ];
-    };
-
-    libvirtd = {
-      enable = true;
-    };
-
-    virtualbox.host = {
-      enable = true;
-      headless = false;
-    };
-
-  };
-
-  fonts = {
-    enableDefaultFonts = true; # Enable a basic set of fonts providing several font styles and families and reasonable coverage of Unicode.
-    enableFontDir = true; # Whether to create a directory with links to all fonts in /run/current-system/sw/share/X11-fonts
-    enableGhostscriptFonts = true;
-    fonts = with pkgs; [ hack-font source-code-pro liberation_ttf inconsolata-lgc ];
-    fontconfig = {
-      enable = true;
-      ultimate = { # Formerly known as Infinality. Provides many font-specific rendering tweaks and customizable settings.
-        enable = true;
-        substitutions = "combi";
-      };
-      defaultFonts = {
-        monospace = [ "Inconsolata LGC" "Iconsolata" ];
-      };
-    };
-  };
+  fonts.enableDefaultFonts = true; # Enable a basic set of fonts providing several font styles and families and reasonable coverage of Unicode.
+  fonts.enableFontDir = true; # Whether to create a directory with links to all fonts in /run/current-system/sw/share/X11-fonts
+  fonts.enableGhostscriptFonts = true;
+  fonts.fonts = with pkgs; [ hack-font source-code-pro liberation_ttf inconsolata-lgc ];
+  fonts.fontconfig = {
+  fonts.fontconfig.enable = true;
+  fonts.fontconfig.ultimate.enable = true;
+  fonts.fontconfig.ultimate.substitutions = "combi";
+  fonts.fontconfig.defaultFonts.monospace = [ "Inconsolata LGC" "Iconsolata" ];
 
   # HACK: (2017-12-29) Fixes systemd&kernel issue. Make log shut up about 'Specified group 'kvm' unknown'
   ## Check this after time. This shiuld be fixed in systemd.
   users.groups = { kvm = {}; };
 
-  users.extraUsers.pyro = {
-
-    isNormalUser = true;
-    uid = 1000;
-    home = "/home/pyro";
-    description = "Anton Latukha";
-
-    extraGroups = [
-      "wheel"
-      "networkmanager"
-      "users"
-      "audio"
-      "docker"
-      "video"
-      "libvirtd"
-      "vboxusers"
-    ];
-
-
-  };
+  users.extraUsers.pyro.isNormalUser = true;
+  users.extraUsers.pyro.uid = 1000;
+  users.extraUsers.pyro.home = "/home/pyro";
+  users.extraUsers.pyro.description = "Anton Latukha";
+  users.extraUsers.pyro.extraGroups = [
+    "wheel"
+    "networkmanager"
+    "users"
+    "audio"
+    "docker"
+    "video"
+    "libvirtd"
+    "vboxusers"
+  ];
 
   users.motd = ''
 
