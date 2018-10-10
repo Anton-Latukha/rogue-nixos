@@ -231,7 +231,7 @@ in {
     kate
     ksysguard
     kdeconnect
-    redshift-plasma-applet
+    #redshift-plasma-applet # Use the service setting
     plasma-pa
     kdeApplications.dolphin-plugins
     kdeApplications.kdegraphics-thumbnailers

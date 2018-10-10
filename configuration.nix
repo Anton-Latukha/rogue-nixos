@@ -87,11 +87,11 @@
           type = "ed25519";
         }
       ];
-
     };
 
     netdata.enable = true;
     geoclue2.enable = true;
+    redshift.enable = true;
     rpcbind.enable = true;
 
     # HACK: dconf bug:
