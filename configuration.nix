@@ -89,8 +89,16 @@
   services.fwupd.enable = true;
 
   networking.firewall.enable = true;
-  networking.firewall.allowedTCPPorts = [ 22 ];
-  networking.firewall.allowedUDPPorts = [ 22 ];
+  networking.firewall.allowedTCPPorts = [
+    22
+    ]
+    ++ range 1714 1764 # KDE Connect
+    ;
+  networking.firewall.allowedUDPPorts = [
+    22
+    ]
+    ++ range 1714 1764 # KDE Connect
+    ;
   networking.hostName = "rogue"; # Define your hostname.
   networking.networkmanager.enable = true;
 

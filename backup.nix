@@ -2,7 +2,10 @@
 
 let
 
-  backupFolders = "/root /tmp";
+  backupRepos = ''/home/pyro/org/dictionary
+    /home/pyro/org/journal
+    /home/pyro/org/word
+  '';
 
 in {
 
@@ -14,11 +17,10 @@ in {
 
   systemd = {
 
-
     # Timer for file deduplication
-      timers.deduplication = {
+      timers.backupGitPush = {
 
-        description = "Git backup of commits in ${dedupFolders}";
+        description = "Git backup of commits in ${backupRepos}";
 
         timerConfig = {
           # Time to wait after boot before trigger first time
@@ -33,13 +35,13 @@ in {
 
 
     # This service should be run by the timer. Not by itself, not by NixOS.
-    services.deduplication = {
+    services.backupGitPush = {
 
-      description = "Deduplication of files in ${dedupFolders}";
+      description = "Git backup of commits in ${backupRepos}";
 
         serviceConfig = {
           Type = "oneshot";    # Service designed to run by timer once at a time.git
-          ExecStart = "/run/current-system/sw/bin/jdupes -q -L -r ${dedupFolders}";    # Runs deduplications for mentioned folders
+          ExecStart = "echo ${backupRepos} | xargs I'{!}' cd '{!}'&&/run/current-system/sw/bin/git push --all";    # Runs backup for mentioned folders
       };
 
 
