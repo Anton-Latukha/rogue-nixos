@@ -88,7 +88,7 @@
   #services.printing.enable = true; # Enable CUPS to print documents.
   services.fwupd.enable = true;
 
-  networking.firewall.enable = true;
+  networking.firewall.enable = false;
   networking.firewall.allowedTCPPorts = [
     22
     ]
