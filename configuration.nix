@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, ... }:{
+{ config, pkgs, ... }:{
 
   imports = [
 
@@ -92,12 +92,12 @@
   networking.firewall.allowedTCPPorts = [
     22
     ]
-    ++ (range 1714 1764) # KDE Connect
+    ++ (lib.range 1714 1764) # KDE Connect
     ;
   networking.firewall.allowedUDPPorts = [
     22
     ]
-    ++ (range 1714 1764) # KDE Connect
+    ++ (lib.range 1714 1764) # KDE Connect
     ;
   networking.hostName = "rogue"; # Define your hostname.
   networking.networkmanager.enable = true;
