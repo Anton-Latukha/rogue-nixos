@@ -255,6 +255,7 @@ in {
     ### Messengers
     pidgin
     skype
+    zoom-us
 
     ## Remote
     # x2goclient # FIXME: 2018-06-23: Does not compile on nixos-unstable
