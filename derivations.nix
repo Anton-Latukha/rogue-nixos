@@ -130,7 +130,7 @@ in {
     docker_compose
     qemu
     libvirt
-    libguestfs    # Tools for accessing and modifying virtual machine disk images
+    #libguestfs    # Tools for accessing and modifying virtual machine disk images NOTE: Compiles every time
 
     ### Cloud Virtualization
     awscli
