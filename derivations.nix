@@ -249,7 +249,7 @@ in {
     ## Internet
     firefox
     chromium
-    # qbittorrent # FIXME: 2018-06-23: Does not compile on nixos-unstable
+    qbittorrent # FIXME: 2018-06-23: Does not compile on nixos-unstable
     tor-browser-bundle-bin
 
     ### Messengers
