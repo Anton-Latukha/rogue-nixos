@@ -103,8 +103,8 @@
   networking.networkmanager.enable = true;
 
   networking.hosts = {
-    "192.168.122.195" = [ srv ];
-    "192.168.122.251" = [ clt ];
+    "192.168.122.195" = [ "srv" ];
+    "192.168.122.251" = [ "clt" ];
   };
   #hardware.bumblebee = {
   #  enable = true;
