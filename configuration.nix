@@ -88,7 +88,7 @@
   #services.printing.enable = true; # Enable CUPS to print documents.
   services.fwupd.enable = true;
 
-  networking.firewall.enable = false;
+  networking.firewall.enable = true;
   networking.firewall.allowedTCPPorts = [
     22
     ]
@@ -102,6 +102,10 @@
   networking.hostName = "rogue"; # Define your hostname.
   networking.networkmanager.enable = true;
 
+  networking.hosts = {
+    "192.168.122.195" = [ srv ];
+    "192.168.122.251" = [ clt ]
+  }
   #hardware.bumblebee = {
   #  enable = true;
   #  group = "video";
