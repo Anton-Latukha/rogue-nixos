@@ -93,7 +93,7 @@ in {
     emacs
     gnuplot    # Org+GNU Plot
     #tetex    # FIXME: Org export to LaTeX -> PDF
-    texlive.combined.scheme-full    # FIXME: Trying troubleshoot Org -> LaTeX -> PDF
+    texlive.combined.scheme-small    # FIXME: Trying troubleshoot Org -> LaTeX -> PDF
     pandoc
     zip    # Was requested for Org -> ODT
     unzip     # Was requested for Org -> ODT
