@@ -248,6 +248,7 @@ in {
 
     ## Internet
     firefox
+    shadowfox    # Dark theme for whole Firefox
     chromium
     qbittorrent # FIXME: 2018-06-23: Does not compile on nixos-unstable
     tor-browser-bundle-bin
