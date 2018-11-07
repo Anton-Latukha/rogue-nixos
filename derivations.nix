@@ -39,6 +39,7 @@ in {
     lsof
     btrfs-progs
     zstd
+    python36Packages.pylint
     python36Packages.glances
     python27Packages.virtual-display
     python27Packages.namebench
