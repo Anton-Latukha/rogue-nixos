@@ -150,7 +150,7 @@ in {
     glibcLocales
 
     ### Java
-    openjdk10
+    #openjdk10
 
     ### Haskell
     #leksah
