@@ -39,7 +39,6 @@ in {
     lsof
     btrfs-progs
     zstd
-    python36Packages.pylint
     python36Packages.glances
     python27Packages.virtual-display
     python27Packages.namebench
@@ -145,6 +144,10 @@ in {
     bc # GNU software calculator
     ag    # New grep for code
     zeal    #	A simple offline API documentation browser
+
+    ### Python
+    python36Packages.pylint
+    jetbrains.pycharm-community
 
     ### C
 	  glibc
