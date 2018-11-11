@@ -155,7 +155,8 @@ in {
     glibcLocales
 
     ### Java
-    #openjdk10
+    openjdk1o
+    gradle
 
     ### Haskell
     #leksah
