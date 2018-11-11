@@ -147,6 +147,7 @@ in {
 
     ### Python
     python36Packages.pylint
+    python36Packages.flake8    # Syntax checking
     jetbrains.pycharm-community
 
     ### C
