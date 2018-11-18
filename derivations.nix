@@ -120,6 +120,7 @@ in {
 
     dos2unix    # Convert Windows special text symbols to Unix
 
+    gdrivefs    # Google Drive FUSE mounter
     ## Configuration management
     ansible
     terraform-full
