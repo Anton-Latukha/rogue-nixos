@@ -57,6 +57,7 @@ in {
     tree
     testdisk-photorec
 
+    bleachbit
     ### Security
     chkrootkit    # FIXME: On launch throws `chkrootkit: can't find 'strings'`, so reqires `binutils` on launch, but does not have that as a requirement in derivation.    # FIXME: Upstream: Also seems to have false-positives and problems
     clamav    # FIXME: 2018-01-10: ERROR: Can't open/parse the config file /etc/clamav/freshclam.conf
@@ -314,10 +315,7 @@ in {
     gimp
 
     # Previously unstable packages
-    #stack    # fuck stack
-    #fwupd
     jdupes
-    #viber
     teamviewer
 
     ## Games
