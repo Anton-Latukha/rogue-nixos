@@ -21,12 +21,13 @@
   ];
 
   # Use the systemd-boot EFI boot loader.
-  #boot.kernelPackages = pkgs.linuxPackages_4_15;
   boot.loader.systemd-boot.enable = true;
   boot.loader.grub.extraPrepareConfig = "GRUB_CMDLINE_LINUX_DEFAULT='acpi_osi='";
   boot.loader.efi.canTouchEfiVariables = true;
-  #boot.extraModulePackages = with pkgs; [ linuxPackages_4_15.acpi_call ]; # Used to turn-off nvidia
+  #boot.kernelPackages = pkgs.linuxPackages_4_15;
   #boot.kernelPackages = pkgs.linuxPackages_latest; nvidia requires 4.9
+  #boot.extraModulePackages = with pkgs; [ linuxPackages_4_15.acpi_call ]; # Used to turn-off nvidia
+  boot.kernelPackages = [ "pti=off" "spectre_v2=off" "l1tf=off" "nospec_store_bypass_disable" "no_stf_barrier" ];
 
   # nix.package = pkgs.nixStable2;    # Use unstable Nix version from NixOS repo
   nix.autoOptimiseStore = true;    # Autodeduplicate files in store
