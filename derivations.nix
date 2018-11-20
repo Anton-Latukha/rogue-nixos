@@ -146,6 +146,7 @@ in {
     zeal    #	A simple offline API documentation browser
 
     ### Python
+    python27Packages.setuptools
     python27Packages.geeknote
     python36Packages.pylint
     python36Packages.flake8    # Syntax checking
