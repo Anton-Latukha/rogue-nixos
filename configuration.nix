@@ -27,7 +27,9 @@
   #boot.kernelPackages = pkgs.linuxPackages_4_15;
   #boot.kernelPackages = pkgs.linuxPackages_latest; nvidia requires 4.9
   #boot.extraModulePackages = with pkgs; [ linuxPackages_4_15.acpi_call ]; # Used to turn-off nvidia
-  boot.kernelPackages = [ "pti=off" "spectre_v2=off" "l1tf=off" "nospec_store_bypass_disable" "no_stf_barrier" ];
+  boot.kernelParams = [
+    "pti=off" "spectre_v2=off" "l1tf=off" "nospec_store_bypass_disable" "no_stf_barrier"
+  ];
 
   # nix.package = pkgs.nixStable2;    # Use unstable Nix version from NixOS repo
   nix.autoOptimiseStore = true;    # Autodeduplicate files in store
