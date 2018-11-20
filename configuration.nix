@@ -31,7 +31,6 @@
     "pti=off" "spectre_v2=off" "l1tf=off" "nospec_store_bypass_disable" "no_stf_barrier"
   ];
 
-  # nix.package = pkgs.nixStable2;    # Use unstable Nix version from NixOS repo
   nix.autoOptimiseStore = true;    # Autodeduplicate files in store
   nix.useSandbox = true;
 
