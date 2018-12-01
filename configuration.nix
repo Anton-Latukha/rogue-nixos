@@ -89,6 +89,8 @@
   services.fstrim.enable = true;             # Periodic trim of the filesystem with util-linux fstrim service
   #services.printing.enable = true; # Enable CUPS to print documents.
   services.fwupd.enable = true;
+  services.teamviewer.enable = true;
+
 
   networking.firewall.enable = false;
   networking.firewall.allowedTCPPorts = [
