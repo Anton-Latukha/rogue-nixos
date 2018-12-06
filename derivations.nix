@@ -211,9 +211,9 @@ in {
     kdeApplications.okular
 
     ### Office libraries
-    hunspell
-    hunspellDicts.en-us
-    mythes
+    #hunspell
+    #hunspellDicts.en-us
+    #mythes # FIXME: 2018-12-06: Does not compile on nixos-unstable
     aspell
     aspellDicts.en
     aspellDicts.ru
