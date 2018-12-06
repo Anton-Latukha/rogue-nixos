@@ -206,12 +206,12 @@ in {
     digikam
 
     ## Office
-    libreoffice-fresh
+    #libreoffice-fresh # FIXME: 2018-12-06: Does not compile on nixos-unstable
     calibre
     kdeApplications.okular
 
     ### Office libraries
-    #hunspell
+    #hunspell # FIXME: 2018-12-06: Does not compile on nixos-unstable
     #hunspellDicts.en-us
     #mythes # FIXME: 2018-12-06: Does not compile on nixos-unstable
     aspell
