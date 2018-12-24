@@ -30,6 +30,8 @@
   boot.kernelParams = [
     "pti=off" "spectre_v2=off" "l1tf=off" "nospec_store_bypass_disable" "no_stf_barrier"
   ];
+  boot.cleanTmpDir = true;  # Clean /tmp on boot
+  boot.tmpOnTmpfs = true;  # /tmp on ram drive
 
   nix.autoOptimiseStore = true;    # Autodeduplicate files in store
   nix.useSandbox = true;
