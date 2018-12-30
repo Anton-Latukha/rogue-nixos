@@ -66,6 +66,7 @@ in {
     # Nix
     nix-prefetch-git
     nixops
+    cachix
 
     ## System Firmware
     firmwareLinuxNonfree
@@ -159,7 +160,7 @@ in {
     gradle
 
     ### Haskell
-    leksah
+    #leksah    # FIXME: 2018-12-31: Broken
     ghc
     #haskell.compiler.ghc802 # FIXME: 2018-04-24 `intero` and `ghc-mod` do not compile/support 8.2.2 still
     cabal-install
