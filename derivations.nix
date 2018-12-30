@@ -159,7 +159,7 @@ in {
     gradle
 
     ### Haskell
-    #leksah
+    leksah
     ghc
     #haskell.compiler.ghc802 # FIXME: 2018-04-24 `intero` and `ghc-mod` do not compile/support 8.2.2 still
     cabal-install
