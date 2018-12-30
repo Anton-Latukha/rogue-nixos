@@ -39,7 +39,7 @@ in {
     lsof
     btrfs-progs
     zstd
-    python36Packages.glances
+    #python36Packages.glances    # NOTE: 2018-12-31: Dep is broken
     python27Packages.virtual-display
     python27Packages.namebench
 
