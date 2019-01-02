@@ -66,7 +66,7 @@ in {
     # Nix
     nix-prefetch-git
     nixops
-    cachix
+    # cachix    # FIXME: 2019-01-02: Broken build
 
     ## System Firmware
     firmwareLinuxNonfree
