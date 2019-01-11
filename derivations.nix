@@ -118,6 +118,7 @@ in {
     gitstats    # Generate Git statistics
     cowsay
     alsaUtils
+    alsaTools    # Additional Tools to Utils
 
     dos2unix    # Convert Windows special text symbols to Unix
 
