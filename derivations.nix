@@ -119,6 +119,7 @@ in {
     cowsay
     alsaUtils
     alsaTools    # Additional Tools to Utils
+    psmisc    # A set of small useful utilities that use the proc filesystem (such as fuser, killall and pstree)
 
     dos2unix    # Convert Windows special text symbols to Unix
 
