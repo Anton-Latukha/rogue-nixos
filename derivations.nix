@@ -158,7 +158,7 @@ in {
     glibcLocales
 
     ### Java
-    jdk
+    jdk11
     gradle
 
     ### Haskell
