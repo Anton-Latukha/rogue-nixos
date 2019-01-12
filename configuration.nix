@@ -35,7 +35,7 @@
 
   nix.autoOptimiseStore = true;    # Autodeduplicate files in store
   nix.nixPath =
-    options.nix.nixPath.default ++
+    cfg.nix.nixPath.default ++
     # Append our nixpkgs-overlays.
     [ "nixpkgs-overlays=/etc/nixos/overlays-compat/" ];
   nix.useSandbox = true;
