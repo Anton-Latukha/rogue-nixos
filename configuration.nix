@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, ... }:{
+{ config, pkgs, lib, options, ... }:{
 
   imports = [
 
@@ -34,10 +34,7 @@
   boot.tmpOnTmpfs = true;  # /tmp on ram drive
 
   nix.autoOptimiseStore = true;    # Autodeduplicate files in store
-  nix.nixPath =
-    cfg.nix.nixPath.default ++
-    # Append our nixpkgs-overlays.
-    [ "nixpkgs-overlays=/etc/nixos/overlays-compat/" ];
+  nix.nixPath = options.nix.nixPath.default;
   nix.useSandbox = true;
 
   nixpkgs.config.allowUnfree = true;
