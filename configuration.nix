@@ -34,7 +34,9 @@
   boot.tmpOnTmpfs = true;  # /tmp on ram drive
 
   nix.autoOptimiseStore = true;    # Autodeduplicate files in store
-  nix.nixPath = options.nix.nixPath.default;
+  nix.nixPath =
+    options.nix.nixPath.default ++
+    [ "nixpkgs-overlays=/etc/nixos/overlays/" ];
   nix.useSandbox = true;
 
   nixpkgs.config.allowUnfree = true;
