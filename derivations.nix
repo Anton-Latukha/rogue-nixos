@@ -255,6 +255,7 @@ in {
     krename
     xfce.tumbler
     kdeFrameworks.kdesu
+    akregator
 
     ## Internet
     firefox
