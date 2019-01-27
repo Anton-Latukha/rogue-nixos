@@ -101,6 +101,7 @@ in {
     pandoc
     zip    # Was requested for Org -> ODT
     unzip     # Was requested for Org -> ODT
+    fcrackzip    # Well, to sprinkle crack on it
     neovim
     git
     git-crypt    # store secrets inside
