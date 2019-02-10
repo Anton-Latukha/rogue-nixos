@@ -24,9 +24,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.grub.extraPrepareConfig = "GRUB_CMDLINE_LINUX_DEFAULT='acpi_osi='";
   boot.loader.efi.canTouchEfiVariables = true;
-  #boot.kernelPackages = pkgs.linuxPackages_4_15;
-  #boot.kernelPackages = pkgs.linuxPackages_latest; nvidia requires 4.9
-  #boot.extraModulePackages = with pkgs; [ linuxPackages_4_15.acpi_call ]; # Used to turn-off nvidia
+  # boot.kernelPackages = pkgs.linuxPackages_4_15;
+  # boot.kernelPackages = pkgs.linuxPackages_latest; nvidia requires 4.9
+  # boot.extraModulePackages = with pkgs; [ linuxPackages_4_15.acpi_call ]; # Used to turn-off nvidia
   boot.kernelParams = [
     "pti=off" "spectre_v2=off" "l1tf=off" "nospec_store_bypass_disable" "no_stf_barrier"
   ];
@@ -42,7 +42,7 @@
   nixpkgs.config.allowUnfree = true;
 
   security.rngd.enable = true;
-  #security.hideProcessInformation = true;
+  # security.hideProcessInformation = true;
 
   # Select internationalisation properties.
   # i18n = {
@@ -89,13 +89,14 @@
   services.xserver.libinput.enable = true;         # Enable touchpad support.
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true; # Enable the KDE Desktop Environment.
-  #services.xserver.windowManager.xmonad.enable = true;
-  #services.xserver.windowManager.xmonad.enableContribAndExtras = true;
+  # services.xserver.windowManager.xmonad.enable = true;
+  # services.xserver.windowManager.xmonad.enableContribAndExtras = true;
   services.fstrim.enable = true;             # Periodic trim of the filesystem with util-linux fstrim service
   #services.printing.enable = true; # Enable CUPS to print documents.
   services.fwupd.enable = true;
   services.teamviewer.enable = true;
-
+  # services.ipfs.enable = true;
+  # services.ipfs.autoMount = true;
 
   networking.firewall.enable = false;
   networking.firewall.allowedTCPPorts = [
