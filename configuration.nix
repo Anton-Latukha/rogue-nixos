@@ -143,10 +143,6 @@
   fonts.fontconfig.ultimate.substitutions = "combi";
   fonts.fontconfig.defaultFonts.monospace = [ "Inconsolata LGC" "Iconsolata" ];
 
-  # HACK: (2017-12-29) Fixes systemd&kernel issue. Make log shut up about 'Specified group 'kvm' unknown'
-  ## Check this after time. This shiuld be fixed in systemd.
-  users.groups = { kvm = {}; };
-
   users.extraUsers.pyro.isNormalUser = true;
   users.extraUsers.pyro.uid = 1000;
   users.extraUsers.pyro.home = "/home/pyro";
