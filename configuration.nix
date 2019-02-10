@@ -156,6 +156,8 @@
     "video"
     "libvirtd"
     "vboxusers"
+    "kvm"
+    "ipfs"
   ];
 
   users.motd = ''
