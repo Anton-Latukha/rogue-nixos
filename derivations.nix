@@ -11,9 +11,9 @@ in {
   environment.systemPackages = with pkgs; [
 
     # System
-    #linuxPackages_4_14.kernel
-   	#linuxPackages_4_4.nvidiabl
-    #linuxPackages.acpi_call
+    # linuxPackages_4_14.kernel
+   	# linuxPackages_4_4.nvidiabl
+    # linuxPackages.acpi_call
 
     # acpitool
 
@@ -39,7 +39,7 @@ in {
     lsof
     btrfs-progs
     zstd
-    #python36Packages.glances    # NOTE: 2018-12-31: Dep is broken
+    # python36Packages.glances    # NOTE: 2018-12-31: Dep is broken
     python27Packages.virtual-display
     python27Packages.namebench
 
@@ -75,6 +75,7 @@ in {
     libGL # mesa
     libGLU # mesa tools
     xorg.xf86videointel
+    # xorg.xf86videonouveau
 
     ## System Libraries
     libdvdcss
@@ -96,7 +97,7 @@ in {
     # Console
     emacs
     gnuplot    # Org+GNU Plot
-    #tetex    # FIXME: Org export to LaTeX -> PDF
+    # tetex    # FIXME: Org export to LaTeX -> PDF
     texlive.combined.scheme-full    # FIXME: Trying troubleshoot Org -> LaTeX -> PDF
     pandoc
     zip    # Was requested for Org -> ODT
@@ -163,9 +164,9 @@ in {
     gradle
 
     ### Haskell
-    #leksah    # FIXME: 2018-12-31: Broken
+    # leksah    # FIXME: 2018-12-31: Broken
     ghc
-    #haskell.compiler.ghc802 # FIXME: 2018-04-24 `intero` and `ghc-mod` do not compile/support 8.2.2 still
+    # haskell.compiler.ghc802 # FIXME: 2018-04-24 `intero` and `ghc-mod` do not compile/support 8.2.2 still
     cabal-install
     cabal2nix
     # FIXME: 2018-06-22: Dows not compile in nixos-unstable:
@@ -181,20 +182,20 @@ in {
 
     #### Haskell packages
     haskellPackages.apply-refact
-    #haskellPackages.stylish-haskell    # Haskell code prettifier     # FIXME: 2019-01-03: Build broken
+    # haskellPackages.stylish-haskell    # Haskell code prettifier     # FIXME: 2019-01-03: Build broken
     haskellPackages.hlint
     haskellPackages.hspec
-    #haskellPackages.hasktags # FIXME: 2018-06-22: Does not compile on nixos-unstable ### Failure in: 2:16.hs:0:these were not found tests/Test.hs:39 expected: ["t2","t3","t4","t5"] but got: []
+    # haskellPackages.hasktags # FIXME: 2018-06-22: Does not compile on nixos-unstable ### Failure in: 2:16.hs:0:these were not found tests/Test.hs:39 expected: ["t2","t3","t4","t5"] but got: []
     haskellPackages.hoogle
-    #haskellPackages.ghc-mod # FIXME: 2017-04-24 Does not compile/support with GHC 8.2.2
+    # haskellPackages.ghc-mod # FIXME: 2017-04-24 Does not compile/support with GHC 8.2.2
     haskellPackages.hindent
-    #haskellPackages.dante # FIXME: No Nix package
-    #haskellPackages.intero # Intero is for Stack
-    #haskellPackages.hakyll # Static webpage generator
-    #haskellPackages.aeson # Required by hakyll&website
-    #haskellPackages.haddock # FIXME: 2018-04-05 Doesn't compile
-    #haskellPackages.universum
-    #haskellPackages.serokell-util
+    # haskellPackages.dante # FIXME: No Nix package
+    # haskellPackages.intero # Intero is for Stack
+    # haskellPackages.hakyll # Static webpage generator
+    # haskellPackages.aeson # Required by hakyll&website
+    # haskellPackages.haddock # FIXME: 2018-04-05 Doesn't compile
+    # haskellPackages.universum
+    # haskellPackages.serokell-util
     haskellPackages.statistics
 
     ## JS
@@ -221,7 +222,7 @@ in {
     #gitkraken
 
     ## Office
-    #libreoffice-still
+    libreoffice-still
     calibre
     kdeApplications.okular
 
@@ -242,7 +243,7 @@ in {
     kate
     ksysguard
     kdeconnect
-    #redshift-plasma-applet # Use the service setting
+    # redshift-plasma-applet # Use the service setting
     plasma-pa
     kdeApplications.dolphin-plugins
     kdeApplications.kdegraphics-thumbnailers
@@ -324,22 +325,22 @@ in {
     teamviewer
 
     ## Games
-    #freeciv_gtk
-    #dwarf-fortress
-    #dwarf-fortress-packages.dwarf-fortress-unfuck
-    #dwarf-fortress-packages.dwarf-therapist
-    #dwarf-fortress-packages.phoebus-theme
-    #dwarf-fortress-packages.dfhack
-    #xonotic
+    # freeciv_gtk
+    # dwarf-fortress
+    # dwarf-fortress-packages.dwarf-fortress-unfuck
+    # dwarf-fortress-packages.dwarf-therapist
+    # dwarf-fortress-packages.phoebus-theme
+    # dwarf-fortress-packages.dfhack
+    # xonotic
     # freeorion # FIXME: 2018-06-22: nixos-unstable compile error
 
     ### Games garage
-    #hedgewars    # FIXME: It does not launch
-    #dwarf-fortress-packages.dwarf-fortress-unfuck    # FIXME: Does not work. Investigate how to use.
-    #dwarf-fortress-packages.phoebus-theme    # FIXME: Does not work. Investigate how to use.
-    #dwarf-fortress-packages.dfhack    # FIXME: Does not work. Investigate how to use.
-    #wesnoth    # Booring game
-    #nethack
+    # hedgewars    # FIXME: It does not launch
+    # dwarf-fortress-packages.dwarf-fortress-unfuck    # FIXME: Does not work. Investigate how to use.
+    # dwarf-fortress-packages.phoebus-theme    # FIXME: Does not work. Investigate how to use.
+    # dwarf-fortress-packages.dfhack    # FIXME: Does not work. Investigate how to use.
+    # wesnoth    # Booring game
+    # nethack
 
     # Custom local packages
 
