@@ -342,6 +342,9 @@ in {
     #nethack
 
     # Custom local packages
+
+    # Tiling life time
+    # xmonad-with-packages
   ];
 }
 
