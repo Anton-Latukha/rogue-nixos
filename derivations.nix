@@ -287,6 +287,7 @@ in {
     opusTools
     opusfile
     flac
+    audacity
 
     ### Media Consume
     youtube-dl
