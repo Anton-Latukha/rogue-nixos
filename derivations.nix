@@ -288,6 +288,7 @@ in {
     opusfile
     flac
     audacity
+    wavegain
 
     ### Media Consume
     youtube-dl
