@@ -218,7 +218,7 @@ in {
     gnome3.dconf
     wireshark
     stellarium
-	  latte-dock
+	  # latte-dock
     digikam
     #gitkraken
 
