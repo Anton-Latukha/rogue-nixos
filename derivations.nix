@@ -41,7 +41,7 @@ in {
     zstd
     # python36Packages.glances    # NOTE: 2018-12-31: Dep is broken
     # python27Packages.virtual-display    # FIXME: 2019-03-10: Fix build
-    python27Packages.namebench    # FIXME: 2019-03-10: Fix build
+    python27Packages.namebench
 
     zsync
     acoustidFingerprinter
@@ -97,7 +97,6 @@ in {
     # Console
     emacs
     gnuplot    # Org+GNU Plot
-    # tetex    # FIXME: Org export to LaTeX -> PDF
     texlive.combined.scheme-full    # FIXME: Trying troubleshoot Org -> LaTeX -> PDF
     pandoc
     zip    # Was requested for Org -> ODT
@@ -115,7 +114,7 @@ in {
     gnumake
     eject       # A set of system utilities for Linux, like for continious trim
     lshw
-    python3    # FIXME: 2019-03-10: Fix build
+    python3
     gtypist    # GNU typist
     gitstats    # Generate Git statistics
     cowsay
@@ -152,9 +151,9 @@ in {
     zeal    #	A simple offline API documentation browser
 
     ### Python
-    # python36Packages.pylint    # FIXME: 2019-03-10: Fix build
-    # python36Packages.flake8    # Syntax checking    # FIXME: 2019-03-10: Fix build
-    # jetbrains.pycharm-community    # FIXME: 2019-03-10: Fix build
+    python36Packages.pylint    # FIXME: 2019-03-10: Fix build
+    python36Packages.flake8    # Syntax checking    # FIXME: 2019-03-10: Fix build
+    jetbrains.pycharm-community    # FIXME: 2019-03-10: Fix build
 
     ### C
 	  glibc
