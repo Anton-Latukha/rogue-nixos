@@ -151,7 +151,7 @@ in {
     zeal    #	A simple offline API documentation browser
 
     ### Python
-    # python36Packages.pylint    # FIXME: 2019-03-10: Fix build
+    # python36Packages.pylint    # FIXME: 2019-03-10: Not passing self-test
     python36Packages.flake8    # Syntax checking
     # jetbrains.pycharm-community
 
@@ -186,13 +186,13 @@ in {
     haskellPackages.hspec
     # haskellPackages.hasktags # FIXME: 2018-06-22: Does not compile on nixos-unstable ### Failure in: 2:16.hs:0:these were not found tests/Test.hs:39 expected: ["t2","t3","t4","t5"] but got: []
     haskellPackages.hoogle
-    # haskellPackages.ghc-mod # FIXME: 2017-04-24 Does not compile/support with GHC 8.2.2
+    haskellPackages.ghc-mod # FIXME: 2017-04-24 Does not compile/support with GHC 8.2.2
     haskellPackages.hindent
     # haskellPackages.dante # FIXME: No Nix package
     # haskellPackages.intero # Intero is for Stack
     # haskellPackages.hakyll # Static webpage generator
     # haskellPackages.aeson # Required by hakyll&website
-    # haskellPackages.haddock # FIXME: 2018-04-05 Doesn't compile
+    haskellPackages.haddock # FIXME: 2018-04-05 Doesn't compile
     # haskellPackages.universum
     # haskellPackages.serokell-util
     haskellPackages.statistics
