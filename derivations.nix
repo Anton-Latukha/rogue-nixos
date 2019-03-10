@@ -168,13 +168,6 @@ in {
     # haskell.compiler.ghc802 # FIXME: 2018-04-24 `intero` and `ghc-mod` do not compile/support 8.2.2 still
     cabal-install
     cabal2nix
-    # FIXME: 2018-06-22: Dows not compile in nixos-unstable:
-    # [7 of 7] Compiling Stack2nix        ( src/Stack2nix.hs, dist/build/Stack2nix.o )
-    # src/Stack2nix.hs:37:48: error:
-    # Module ‘Nix.Parser’ does not export ‘parseNixString’
-    #    |
-    # 37 |                                                parseNixString)
-    #    |                                                ^^^^^^^^^^^^^^
     stack2nix
 
     hlint
@@ -186,7 +179,6 @@ in {
     haskellPackages.hspec
     # haskellPackages.hasktags # FIXME: 2018-06-22: Does not compile on nixos-unstable ### Failure in: 2:16.hs:0:these were not found tests/Test.hs:39 expected: ["t2","t3","t4","t5"] but got: []
     haskellPackages.hoogle
-    haskellPackages.ghc-mod # FIXME: 2017-04-24 Does not compile/support with GHC 8.2.2
     haskellPackages.hindent
     # haskellPackages.dante # FIXME: No Nix package
     # haskellPackages.intero # Intero is for Stack
