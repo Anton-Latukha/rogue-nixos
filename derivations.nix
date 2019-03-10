@@ -40,8 +40,8 @@ in {
     btrfs-progs
     zstd
     # python36Packages.glances    # NOTE: 2018-12-31: Dep is broken
-    python27Packages.virtual-display
-    python27Packages.namebench
+    # python27Packages.virtual-display    # FIXME: 2019-03-10: Fix build
+    # python27Packages.namebench    # FIXME: 2019-03-10: Fix build
 
     zsync
     acoustidFingerprinter
@@ -115,7 +115,7 @@ in {
     gnumake
     eject       # A set of system utilities for Linux, like for continious trim
     lshw
-    python3
+    # python3    # FIXME: 2019-03-10: Fix build
     gtypist    # GNU typist
     gitstats    # Generate Git statistics
     cowsay
@@ -152,9 +152,9 @@ in {
     zeal    #	A simple offline API documentation browser
 
     ### Python
-    python36Packages.pylint
-    python36Packages.flake8    # Syntax checking
-    jetbrains.pycharm-community
+    # python36Packages.pylint    # FIXME: 2019-03-10: Fix build
+    # python36Packages.flake8    # Syntax checking    # FIXME: 2019-03-10: Fix build
+    # jetbrains.pycharm-community    # FIXME: 2019-03-10: Fix build
 
     ### C
 	  glibc
