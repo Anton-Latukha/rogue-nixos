@@ -164,7 +164,6 @@ in {
     gradle
 
     ### Haskell
-    # leksah    # FIXME: 2018-12-31: Broken
     ghc
     # haskell.compiler.ghc802 # FIXME: 2018-04-24 `intero` and `ghc-mod` do not compile/support 8.2.2 still
     cabal-install
@@ -176,7 +175,7 @@ in {
     #    |
     # 37 |                                                parseNixString)
     #    |                                                ^^^^^^^^^^^^^^
-    #stack2nix
+    stack2nix
 
     hlint
 
