@@ -115,7 +115,7 @@ in {
     gnumake
     eject       # A set of system utilities for Linux, like for continious trim
     lshw
-    # python3    # FIXME: 2019-03-10: Fix build
+    python3    # FIXME: 2019-03-10: Fix build
     gtypist    # GNU typist
     gitstats    # Generate Git statistics
     cowsay
