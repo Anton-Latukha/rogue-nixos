@@ -279,11 +279,11 @@ in {
     ffmpeg-full
     pavucontrol
     pulseaudioFull
-    (mumble_git.override {
-      pulseSupport = true;
-      speechdSupport = true;
-      })
-    mumble_overlay # FIXME: Normal Mumble hangs on start.
+    # (mumble_git.override {
+    #   pulseSupport = true;
+    #   speechdSupport = true;
+    #   })
+    # mumble_overlay # FIXME: Normal Mumble hangs on start.
     libopus
     opusTools
     opusfile
