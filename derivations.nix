@@ -184,7 +184,7 @@ in {
     # haskellPackages.intero # Intero is for Stack
     # haskellPackages.hakyll # Static webpage generator
     # haskellPackages.aeson # Required by hakyll&website
-    haskellPackages.haddock # FIXME: 2018-04-05 Doesn't compile
+    # haskellPackages.haddock # FIXME: 2018-04-05 Doesn't compile
     # haskellPackages.universum
     # haskellPackages.serokell-util
     haskellPackages.statistics
