@@ -151,9 +151,9 @@ in {
     zeal    #	A simple offline API documentation browser
 
     ### Python
-    python36Packages.pylint    # FIXME: 2019-03-10: Fix build
-    python36Packages.flake8    # Syntax checking    # FIXME: 2019-03-10: Fix build
-    jetbrains.pycharm-community    # FIXME: 2019-03-10: Fix build
+    # python36Packages.pylint    # FIXME: 2019-03-10: Fix build
+    python36Packages.flake8    # Syntax checking
+    jetbrains.pycharm-community
 
     ### C
 	  glibc
