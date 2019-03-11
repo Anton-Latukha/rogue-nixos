@@ -42,17 +42,18 @@
   nixpkgs.config.allowUnfree = true;
 
   security.rngd.enable = true;
-  security.sudo.extraRules = [
-    {
-      users = [ "pyro" ];
-      commands = [
-        {
-          command = "mount.nfs 192.168.88.50:/mnt/stor /home/pyro/hosts/ubu/stor -o nolock,async,noacl,nocto,noatime,nodiratime";
-          options = [ "SETENV" "NOPASSWD" ];
-        }
-      ];
-    }
-  ];
+  # NOTE: 2019-03-11: Somehow does not parse sudoers file
+  # security.sudo.extraRules = [
+  #   {
+  #     users = [ "pyro" ];
+  #     commands = [
+  #       {
+  #         command = "mount.nfs 192.168.88.50:/mnt/stor /home/pyro/hosts/ubu/stor -o nolock,async,noacl,nocto,noatime,nodiratime";
+  #         options = [ "SETENV" "NOPASSWD" ];
+  #       }
+  #     ];
+  #   }
+  # ];
   # security.sudo.extraConfig = "pyro ALL=(ALL:ALL) SETENV: ALL NOPASSWD: /run/current-system/sw/bin/mount.nfs 192.168.88.50:/mnt/stor";
   # security.hideProcessInformation = true;
 
