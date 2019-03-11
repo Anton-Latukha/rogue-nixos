@@ -42,7 +42,7 @@
   nixpkgs.config.allowUnfree = true;
 
   security.rngd.enable = true;
-  security.sudo.extraConfig = "pyro ALL=(ALL:ALL) SETENV: ALL NOPASSWD: /run/current-system/sw/bin/mount.nfs 192.168.88.50:/mnt/stor"
+  security.sudo.extraConfig = "pyro ALL=(ALL:ALL) SETENV: ALL NOPASSWD: /run/current-system/sw/bin/mount.nfs 192.168.88.50:/mnt/stor";
   # security.hideProcessInformation = true;
 
   # Select internationalisation properties.
