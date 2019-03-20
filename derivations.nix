@@ -30,7 +30,7 @@ in {
     fzf
     bat
     prettyping
-    diff-so-fancy
+    gitAndTools.diff-so-fancy
     fd
     ncdu
     tldr
