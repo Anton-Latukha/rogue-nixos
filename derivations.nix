@@ -27,6 +27,14 @@ in {
     mosh    # remote delta shell
     tmux
     htop
+    fzf
+    bat
+    prettyping
+    diff-so-fancy
+    fd
+    ncdu
+    tldr
+    noti
 
     ## System Tools
     dmidecode
