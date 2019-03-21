@@ -64,6 +64,7 @@ in {
     lzma
     tree
     testdisk-photorec
+    asciinema
 
     ### Security
     chkrootkit    # FIXME: On launch throws `chkrootkit: can't find 'strings'`, so reqires `binutils` on launch, but does not have that as a requirement in derivation.    # FIXME: Upstream: Also seems to have false-positives and problems
