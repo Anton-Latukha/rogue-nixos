@@ -64,7 +64,7 @@ in {
     lzma
     tree
     testdisk-photorec
-    asciinema
+    # asciinema    # FIXME: 2019-03-21: error: aiohttp-3.5.4 not supported for interpreter python2.7
 
     ### Security
     chkrootkit    # FIXME: On launch throws `chkrootkit: can't find 'strings'`, so reqires `binutils` on launch, but does not have that as a requirement in derivation.    # FIXME: Upstream: Also seems to have false-positives and problems
@@ -158,6 +158,7 @@ in {
     bc # GNU software calculator
     ag    # New grep for code
     zeal    #	A simple offline API documentation browser
+    plantuml
 
     ### Python
     # python36Packages.pylint    # FIXME: 2019-03-10: Not passing self-test
