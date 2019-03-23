@@ -158,7 +158,7 @@ in {
     bc # GNU software calculator
     ag    # New grep for code
     zeal    #	A simple offline API documentation browser
-    # plantuml
+    plantuml
 
     ### Python
     # python36Packages.pylint    # FIXME: 2019-03-10: Not passing self-test
