@@ -208,7 +208,7 @@ in {
     catfish
     redshift
     gsmartcontrol
-    sqlitebrowser # FIXME: 2018-06-23: Does not compile on nixos-unstable
+    sqlitebrowser
     gnome3.cheese
     gnome3.dconf
     wireshark
@@ -246,7 +246,7 @@ in {
     kdeFrameworks.syntax-highlighting
     kwayland-integration
     filelight
-    ark    p7zip    	unar # does not compile ATM
+    ark    p7zip    	unar
     kdeApplications.spectacle
     kdeApplications.kcalutils
     kdeFrameworks.kcmutils
@@ -267,7 +267,7 @@ in {
     zoom-us
 
     ## Remote
-    x2goclient # FIXME: 2018-06-23: Does not compile on nixos-unstable
+    x2goclient
     remmina
 
     ## Multimedia & Media
