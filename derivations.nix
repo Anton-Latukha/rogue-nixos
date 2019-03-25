@@ -74,7 +74,7 @@ in {
 
     # Nix
     nix-prefetch-git
-    nixops
+    # nixops
     # cachix    # FIXME: 2019-01-02: Broken build
 
     ## System Firmware
