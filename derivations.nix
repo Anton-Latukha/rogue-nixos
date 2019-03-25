@@ -10,11 +10,6 @@ let
 in {
   environment.systemPackages = with pkgs; [
 
-    # System
-    # linuxPackages_4_14.kernel
-   	# linuxPackages_4_4.nvidiabl
-    # linuxPackages.acpi_call
-
     # acpitool
 
     ### System CLIs
@@ -24,7 +19,7 @@ in {
 
     #### System CLIs additions
 
-    mosh    # remote delta shell
+    mosh    # Remote delta shell
     tmux
     htop
     fzf
@@ -74,7 +69,7 @@ in {
 
     # Nix
     nix-prefetch-git
-    # nixops
+    # nixops    # FIXME: 2019-03-05: aiohttp-3.5.4 not supported for interpreter python2.7
     # cachix    # FIXME: 2019-01-02: Broken build
 
     ## System Firmware
@@ -137,8 +132,8 @@ in {
 
     ## Configuration management
     ansible
-    # terraform-full    # FIXME: 2019-03-05: aiohttp-3.5.4 not supported for interpreter python2.7
-    # terraform-provider-libvirt    # -plugin-dir /run/current-system/bin/
+    terraform-full
+    terraform-provider-libvirt    # -plugin-dir /run/current-system/bin/
 
     ## Virtualization
     docker
@@ -162,7 +157,7 @@ in {
     plantuml
 
     ### Python
-    # python36Packages.pylint    # FIXME: 2019-03-10: Not passing self-test
+    python36Packages.pylint    # FIXME: 2019-03-10: Not passing self-test
     python36Packages.flake8    # Syntax checking
     # jetbrains.pycharm-community
 
