@@ -171,7 +171,6 @@ in {
 
     ### Haskell
     ghc
-    # haskell.compiler.ghc802 # FIXME: 2018-04-24 `intero` and `ghc-mod` do not compile/support 8.2.2 still
     cabal-install
     cabal2nix
     stack2nix
@@ -180,7 +179,7 @@ in {
 
     #### Haskell packages
     haskellPackages.apply-refact
-    haskellPackages.stylish-haskell    # Haskell code prettifier     # FIXME: 2019-01-03: Build broken
+    haskellPackages.stylish-haskell    # Haskell code prettifier
     haskellPackages.hlint
     haskellPackages.hspec
     # haskellPackages.hasktags # FIXME: 2018-06-22: Does not compile on nixos-unstable ### Failure in: 2:16.hs:0:these were not found tests/Test.hs:39 expected: ["t2","t3","t4","t5"] but got: []
@@ -209,14 +208,14 @@ in {
     catfish
     redshift
     gsmartcontrol
-    # sqlitebrowser # FIXME: 2018-06-23: Does not compile on nixos-unstable
+    sqlitebrowser # FIXME: 2018-06-23: Does not compile on nixos-unstable
     gnome3.cheese
     gnome3.dconf
     wireshark
     stellarium
 	  # latte-dock
     digikam
-    #gitkraken
+    # gitkraken
 
     ## Office
     libreoffice-still
@@ -247,7 +246,7 @@ in {
     kdeFrameworks.syntax-highlighting
     kwayland-integration
     filelight
-    ark    p7zip    	# unar # does not compile ATM
+    ark    p7zip    	unar # does not compile ATM
     kdeApplications.spectacle
     kdeApplications.kcalutils
     kdeFrameworks.kcmutils
@@ -268,7 +267,7 @@ in {
     zoom-us
 
     ## Remote
-    # x2goclient # FIXME: 2018-06-23: Does not compile on nixos-unstable
+    x2goclient # FIXME: 2018-06-23: Does not compile on nixos-unstable
     remmina
 
     ## Multimedia & Media
