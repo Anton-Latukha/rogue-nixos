@@ -137,8 +137,8 @@ in {
 
     ## Configuration management
     ansible
-    terraform-full
-    # terraform-provider-libvirt    # -plugin-dir /run/current-system/bin/ # FIXME: 2019-03-05: aiohttp-3.5.4 not supported for interpreter python2.7
+    # terraform-full    # FIXME: 2019-03-05: aiohttp-3.5.4 not supported for interpreter python2.7
+    # terraform-provider-libvirt    # -plugin-dir /run/current-system/bin/
 
     ## Virtualization
     docker
