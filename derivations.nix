@@ -114,6 +114,7 @@ in {
     neovim
     git
     git-crypt    # store secrets inside
+    mr    # Myrepos tool
     sshfs
     # unoconv    # Convert between any document format supported by LibreOffice/OpenOffice
     direnv      # For Fish: `echo 'eval (direnv hook fish)' >> /home/pyro/.config/fish/conf.d/direnv.fish`
