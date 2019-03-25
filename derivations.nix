@@ -157,7 +157,7 @@ in {
     plantuml
 
     ### Python
-    python36Packages.pylint    # FIXME: 2019-03-10: Not passing self-test
+    # python36Packages.pylint    # FIXME: 2019-03-10: Not passing self-test
     python36Packages.flake8    # Syntax checking
     # jetbrains.pycharm-community
 
