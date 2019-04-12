@@ -12,11 +12,11 @@
     # Include all derivations
     ./derivations.nix
 
-    # Deduplication
     ./deduplication.nix
 
-    # Rollback
     # ./rollback.nix
+
+    ./cachix.nix
 
   ];
 
