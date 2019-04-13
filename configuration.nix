@@ -39,6 +39,13 @@
     [ "nixpkgs-overlays=/etc/nixos/overlays/" ];
   nix.useSandbox = true;
 
+  nix.binaryCaches = nix.binaryCaches ++
+    [ "https://hie-nix.cachix.org" # haskell-ide-engine cache
+    ];
+  nix.binaryCachePublicKeys = nix.binaryCachePublicKeys ++
+    [ "hie-nix.cachix.org-1:EjBSHzF6VmDnzqlldGXbi0RM3HdjfTU3yDRi9Pd0jTY=" # haskell-ide-engine cache key
+    ];
+
   nixpkgs.config.allowUnfree = true;
 
   security.rngd.enable = true;
