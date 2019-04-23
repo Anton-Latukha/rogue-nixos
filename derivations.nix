@@ -176,6 +176,7 @@ in {
     cabal-install
     cabal2nix
     stack2nix
+    ghcid
 
     hlint
 
