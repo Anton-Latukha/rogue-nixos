@@ -176,11 +176,11 @@ in {
     cabal-install
     cabal2nix
     stack2nix
-    ghcid
 
     hlint
 
     #### Haskell packages
+    haskellPackages.ghcid    # Mini IDE for Haskell
     haskellPackages.apply-refact
     haskellPackages.stylish-haskell    # Haskell code prettifier
     haskellPackages.hlint
