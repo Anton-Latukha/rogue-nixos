@@ -204,6 +204,7 @@ in {
     networkmanager
 
     # GUI
+    anki
     gparted
     keepass
     wine
