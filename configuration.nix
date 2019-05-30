@@ -112,6 +112,15 @@
   # services.ipfs.enable = true;
   # services.ipfs.autoMount = true;
 
+  # services.nextcloud.enable = true;
+  # services.nextcloud.home = "/btrfs/midimportant/nextcloud";
+  # services.nextcloud.config.overwriteProtocol = "https";
+  # services.nextcloud.https = true;
+  # services.nextcloud.config.dbtype = "pgsql";
+  # services.nextcloud.caching.apcu = true;
+  # services.nextcloud.caching.redis = true;
+  # services.nextcloud.config.adminpassFile = "/btrfs/important/Personal/Technical/Files/Secure/nextcloud.txt";
+
   networking.firewall.enable = false;
   networking.firewall.allowedTCPPorts = [
     22
