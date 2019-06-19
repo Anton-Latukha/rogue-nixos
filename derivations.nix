@@ -11,58 +11,58 @@ in {
   environment.systemPackages = with pkgs; [
 
     # System
-    #linuxPackages_4_14.kernel
-   	#linuxPackages_4_4.nvidiabl
-    #linuxPackages.acpi_call
+    # linuxPackages_4_14.kernel
+   	# linuxPackages_4_4.nvidiabl
+    # linuxPackages.acpi_call
 
     # acpitool
 
     ### System CLIs
     fish
-#    zsh
+    # zsh
     dash
 
     #### System CLIs additions
 
-#    mosh    # remote delta shell
-#    tmux
-#    htop
+    # mosh    # remote delta shell
+    # tmux
+    # htop
 
     ## System Tools
-#    dmidecode
+    # dmidecode
     os-prober
-#    nfs-utils
-#    strace
-#    pciutils
-#    file
+    # nfs-utils
+    # strace
+    # pciutils
+    # file
     binutils
-#    lsof
+    # lsof
     btrfs-progs
-#    zstd
-#    python36Packages.glances
-#    python27Packages.virtual-display
-#    zsync
-#    acoustidFingerprinter
-#    mc
-#    telnet
-#    winusb
-#    unetbootin
-#    ripgrep
-#    sqlite
-#    sqliteman
-#    cdrtools # Highly portable CD/DVD/BluRay command line recording software
+    # zstd
+    # python36Packages.glances
+    # python27Packages.virtual-display
+    # zsync
+    # acoustidFingerprinter
+    # mc
+    # telnet
+    # winusb
+    # unetbootin
+    # ripgrep
+    # sqlite
+    # sqliteman
+    # cdrtools # Highly portable CD/DVD/BluRay command line recording software
     lzma
     tree
 
     ### Security
-#    chkrootkit    # FIXME: On launch throws `chkrootkit: can't find 'strings'`, so reqires `binutils` on launch, but does not have that as a requirement in derivation.    # FIXME: Upstream: Also seems to have false-positives and problems
-#    clamav    # FIXME: 2018-01-10: ERROR: Can't open/parse the config file /etc/clamav/freshclam.conf
+    # chkrootkit    # FIXME: On launch throws `chkrootkit: can't find 'strings'`, so reqires `binutils` on launch, but does not have that as a requirement in derivation.    # FIXME: Upstream: Also seems to have false-positives and problems
+    # clamav    # FIXME: 2018-01-10: ERROR: Can't open/parse the config file /etc/clamav/freshclam.conf
 
     ### System Libraries
 
     # Nix
     nix-prefetch-git
-#    nixops
+    # nixops
 
     ## System Firmware
     firmwareLinuxNonfree
@@ -97,48 +97,48 @@ in {
     pandoc
     zip    # Was requested for Org -> ODT
     unzip     # Was requested for Org -> ODT
-#    neovim
+    # neovim
     git
-#    git-crypt    # store secrets inside
+    # git-crypt    # store secrets inside
     sshfs
     # unoconv    # Convert between any document format supported by LibreOffice/OpenOffice
     direnv      # For Fish: `echo 'eval (direnv hook fish)' >> /home/pyro/.config/fish/conf.d/direnv.fish`
     whois
-#    ldns        # For DNS `drill` tool
-#    bind        # FIXME: For `dig`. Some day Drill going to be better.
-#    gnumake
-#    eject       # A set of system utilities for Linux, like for continious trim
-#    lshw
-#    python3
-#    gtypist    # GNU typist
-#    gitstats    # Generate Git statistics
-#    cowsay
+    # ldns        # For DNS `drill` tool
+    # bind        # FIXME: For `dig`. Some day Drill going to be better.
+    # gnumake
+    # eject       # A set of system utilities for Linux, like for continious trim
+    # lshw
+    # python3
+    # gtypist    # GNU typist
+    # gitstats    # Generate Git statistics
+    # cowsay
     alsaUtils
 
-#    dos2unix    # Convert Windows special text symbols to Unix
+    # dos2unix    # Convert Windows special text symbols to Unix
 
     ## Configuration management
-#    ansible
-#    terraform-full
-#    terraform-provider-libvirt    # -plugin-dir /run/current-system/bin/
+    # ansible
+    # terraform-full
+    # terraform-provider-libvirt    # -plugin-dir /run/current-system/bin/
 
     ## Virtualization
-#    docker
-#    docker_compose
-#    qemu
-#    libvirt
-#    libguestfs    # Tools for accessing and modifying virtual machine disk images
+    # docker
+    # docker_compose
+    # qemu
+    # libvirt
+    # libguestfs    # Tools for accessing and modifying virtual machine disk images
 
     ### Cloud Virtualization
-#    awscli
-#    google-cloud-sdk
+    # awscli
+    # google-cloud-sdk
 
     ## Development Programming
     shellcheck
     # vscode
     meson
-#    jq # A lightweight and flexible command-line JSON processor
-#    bc # GNU software calculator
+    # jq # A lightweight and flexible command-line JSON processor
+    # bc # GNU software calculator
     ag    # New grep for code
     zeal    #	A simple offline API documentation browser
 
@@ -147,12 +147,12 @@ in {
     glibcLocales
 
     ### Java
-#    openjdk10
+    # openjdk10
 
     ### Haskell
-    #leksah
+    # leksah
     ghc
-    #haskell.compiler.ghc802 # FIXME: 2018-04-24 `intero` and `ghc-mod` do not compile/support 8.2.2 still
+    # haskell.compiler.ghc802 # FIXME: 2018-04-24 `intero` and `ghc-mod` do not compile/support 8.2.2 still
     cabal-install
     cabal2nix
     # FIXME: 2018-06-22: Dows not compile in nixos-unstable:
@@ -162,43 +162,43 @@ in {
     #    |
     # 37 |                                                parseNixString)
     #    |                                                ^^^^^^^^^^^^^^
-    #stack2nix
+    # stack2nix
 
     hlint
 
     #### Haskell packages
-    #haskellPackages.apply-refact
+    # haskellPackages.apply-refact
     haskellPackages.stylish-haskell
     haskellPackages.hlint
-    #haskellPackages.hasktags # FIXME: 2018-06-22: Does not compile on nixos-unstable ### Failure in: 2:16.hs:0:these were not found tests/Test.hs:39 expected: ["t2","t3","t4","t5"] but got: []
+    # haskellPackages.hasktags # FIXME: 2018-06-22: Does not compile on nixos-unstable ### Failure in: 2:16.hs:0:these were not found tests/Test.hs:39 expected: ["t2","t3","t4","t5"] but got: []
     haskellPackages.hoogle
-    #haskellPackages.ghc-mod # FIXME: 2017-04-24 Does not compile/support with GHC 8.2.2
+    # haskellPackages.ghc-mod # FIXME: 2017-04-24 Does not compile/support with GHC 8.2.2
     haskellPackages.hindent
-    #haskellPackages.dante # FIXME: No Nix package
-    #haskellPackages.intero # Intero is for Stack
-    #haskellPackages.hakyll # Static webpage generator
-    #haskellPackages.aeson # Required by hakyll&website
-    #haskellPackages.haddock # FIXME: 2018-04-05 Doesn't compile
-    #haskellPackages.universum
-    #haskellPackages.serokell-util
+    # haskellPackages.dante # FIXME: No Nix package
+    # haskellPackages.intero # Intero is for Stack
+    # haskellPackages.hakyll # Static webpage generator
+    # haskellPackages.aeson # Required by hakyll&website
+    # haskellPackages.haddock # FIXME: 2018-04-05 Doesn't compile
+    # haskellPackages.universum
+    # haskellPackages.serokell-util
     haskellPackages.statistics
 
     ## JS
-#    yarn
+    # yarn
 
     ## Deps
     networkmanager
 
     # GUI
     gparted
-#    keepass
+    # keepass
     wine
     tilix
     catfish
     redshift
     gsmartcontrol
     # sqlitebrowser # FIXME: 2018-06-23: Does not compile on nixos-unstable
-#    gnome3.cheese
+    # gnome3.cheese
     gnome3.dconf
     wireshark
     stellarium
@@ -206,21 +206,21 @@ in {
     digikam
 
     ## Office
-    #libreoffice-fresh # FIXME: 2018-12-06: Does not compile on nixos-unstable
+    # libreoffice-fresh # FIXME: 2018-12-06: Does not compile on nixos-unstable
     calibre
     kdeApplications.okular
 
     ### Office libraries
-    #hunspell # FIXME: 2018-12-06: Does not compile on nixos-unstable
-    #hunspellDicts.en-us
-    #mythes # FIXME: 2018-12-06: Does not compile on nixos-unstable
+    # hunspell # FIXME: 2018-12-06: Does not compile on nixos-unstable
+    # hunspellDicts.en-us
+    # mythes # FIXME: 2018-12-06: Does not compile on nixos-unstable
     aspell
     aspellDicts.en
     aspellDicts.ru
     aspellDicts.uk
 
     ## Virtualization
-#    virtmanager
+    # virtmanager
 
 
     ## KDE Plasma
@@ -249,23 +249,23 @@ in {
     # tor-browser-bundle-bin
 
     ### Messengers
-#    pidgin
-#    skype
+    # pidgin
+    # skype
 
     ## Remote
     # x2goclient # FIXME: 2018-06-23: Does not compile on nixos-unstable
-#    remmina
+    # remmina
 
     ## Multimedia & Media
     ffmpeg-full
     pavucontrol
     pulseaudioFull
-#    (mumble_git.override {
-#      pulseSupport = true;
-#      speechdSupport = true;
-#      })
-#    mumble_overlay # FIXME: Normal Mumble hangs on start.
-    libopus
+    # (mumble_git.override {
+    #   pulseSupport = true;
+    #   speechdSupport = true;
+    #   })
+    # mumble_overlay # FIXME: Normal Mumble hangs on start.
+    # libopus
     opusTools
     opusfile
     flac
@@ -282,18 +282,18 @@ in {
     #### Audio
     deadbeef
     spotify
-#    picard
-#    cmus    # CLI music player
+    # picard
+    # cmus    # CLI music player
     # audaciousQt5
-#    clementine
-#    gpodder
+    # clementine
+    # gpodder
 
     ### Media Create
-#    avidemux
+    # avidemux
     mkvtoolnix
     mediainfo-gui
-#    unstable.handbrake
-#    chromaprint    # For AcoustID fpcalc fingerprinting
+    # unstable.handbrake
+    # chromaprint    # For AcoustID fpcalc fingerprinting
 
     ## Images
     gnome3.eog
@@ -306,27 +306,27 @@ in {
     #stack    # fuck stack
     fwupd    # FIXME: No fwupd.service
     jdupes
-    #viber
-#    teamviewer
+    # viber
+    # teamviewer
 
     ## Games
-    openmw
-#    freeciv_gtk
-    #dwarf-fortress
-    #dwarf-fortress-packages.dwarf-fortress-unfuck
-    #dwarf-fortress-packages.dwarf-therapist
-    #dwarf-fortress-packages.phoebus-theme
-    #dwarf-fortress-packages.dfhack
-#    xonotic
+    # openmw
+    # freeciv_gtk
+    # dwarf-fortress
+    # dwarf-fortress-packages.dwarf-fortress-unfuck
+    # dwarf-fortress-packages.dwarf-therapist
+    # dwarf-fortress-packages.phoebus-theme
+    # dwarf-fortress-packages.dfhack
+    # xonotic
     # freeorion # FIXME: 2018-06-22: nixos-unstable compile error
 
     ### Games garage
-    #hedgewars    # FIXME: It does not launch
-    #dwarf-fortress-packages.dwarf-fortress-unfuck    # FIXME: Does not work. Investigate how to use.
-    #dwarf-fortress-packages.phoebus-theme    # FIXME: Does not work. Investigate how to use.
-    #dwarf-fortress-packages.dfhack    # FIXME: Does not work. Investigate how to use.
-    #wesnoth    # Booring game
-    #nethack
+    # hedgewars    # FIXME: It does not launch
+    # dwarf-fortress-packages.dwarf-fortress-unfuck    # FIXME: Does not work. Investigate how to use.
+    # dwarf-fortress-packages.phoebus-theme    # FIXME: Does not work. Investigate how to use.
+    # dwarf-fortress-packages.dfhack    # FIXME: Does not work. Investigate how to use.
+    # wesnoth    # Booring game
+    # nethack
 
     # Custom local packages
   ];
