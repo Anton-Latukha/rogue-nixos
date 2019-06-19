@@ -189,7 +189,7 @@
   users.extraUsers.valera = {
 
     isNormalUser = true;
-    uid = 1000;
+    uid = 1001;
     home = "/home/valera";
     description = "Valera Latukha";
 
