@@ -183,6 +183,24 @@
     ];
 
 
+  users.extraUsers.valera = {
+
+    isNormalUser = true;
+    uid = 1000;
+    home = "/home/valera";
+    description = "Valera Latukha";
+
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "users"
+      "audio"
+      "video"
+      "libvirtd"
+      "vboxusers"
+    ];
+
+
   };
 
 
