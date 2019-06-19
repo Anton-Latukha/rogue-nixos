@@ -183,6 +183,9 @@
     ];
 
 
+  };
+
+
   users.extraUsers.valera = {
 
     isNormalUser = true;
