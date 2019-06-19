@@ -93,7 +93,7 @@ in {
     emacs
     gnuplot    # Org+GNU Plot
     #tetex    # FIXME: Org export to LaTeX -> PDF
-    texlive.combined.scheme-small    # FIXME: Trying troubleshoot Org -> LaTeX -> PDF
+    # texlive.combined.scheme-small    # FIXME: Trying troubleshoot Org -> LaTeX -> PDF
     pandoc
     zip    # Was requested for Org -> ODT
     unzip     # Was requested for Org -> ODT
@@ -246,7 +246,7 @@ in {
     firefox
     chromium
     qbittorrent # FIXME: 2018-06-23: Does not compile on nixos-unstable
-    tor-browser-bundle-bin
+    # tor-browser-bundle-bin
 
     ### Messengers
 #    pidgin
@@ -310,6 +310,7 @@ in {
 #    teamviewer
 
     ## Games
+    openmw
 #    freeciv_gtk
     #dwarf-fortress
     #dwarf-fortress-packages.dwarf-fortress-unfuck
