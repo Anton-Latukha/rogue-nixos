@@ -272,6 +272,7 @@ in {
 
     ### Media Consume
     youtube-dl
+    googleearth
 
     #### Video
     smplayer
@@ -310,7 +311,7 @@ in {
     # teamviewer
 
     ## Games
-    # openmw
+    openmw
     # freeciv_gtk
     # dwarf-fortress
     # dwarf-fortress-packages.dwarf-fortress-unfuck
