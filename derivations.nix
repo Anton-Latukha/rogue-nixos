@@ -241,6 +241,7 @@ in {
     kdeFrameworks.kcmutils
     krename
     xfce.tumbler
+    k3b
 
     ## Internet
     firefox
