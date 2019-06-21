@@ -177,7 +177,7 @@ in {
     ghc
     cabal-install
     cabal2nix
-    stack2nix
+    # stack2nix    # 2019-06-21: FIXME: Does not compile.
 
     hlint
 
