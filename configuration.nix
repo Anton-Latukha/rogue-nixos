@@ -82,7 +82,7 @@
     };
 
     geoclue2.enable = true;
-#    rpcbind.enable = true;    # NOTE: For NFS
+    # rpcbind.enable = true;    # NOTE: For NFS
 
     avahi.enable = true; # For Pulseaudio networking
 
