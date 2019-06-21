@@ -71,6 +71,7 @@ in {
     libGL # mesa
     libGLU # mesa tools
     xorg.xf86videointel
+    xorg.xf86videoati
 
     ## System Libraries
     libdvdcss

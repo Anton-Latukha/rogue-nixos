@@ -35,4 +35,18 @@
 
   nix.maxJobs = lib.mkDefault 2;
   powerManagement.cpuFreqGovernor = "performance";
+
+  hardware.pulseaudio.package = pkgs.pulseaudioFull;
+  hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.systemWide = true;
+  hardware.pulseaudio.tcp.enable = true;
+  security.rtkit.enable = true;
+  sound.enableOSSEmulation = true;
+  hardware.pulseaudio.zeroconf.discovery.enable = true;
+#  hardware.pulseaudio.extraConfig = ''
+#    load-module module-null-sink sink_name=rtp
+#    load-module module-rtp-send source=rtp.monitor
+#    load-module module-rtp-recv
+#  '';
+
 }
