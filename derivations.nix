@@ -146,7 +146,7 @@ in {
     ### C
 	  glibc
     glibcLocales
-	  gcc6
+	  gcc6   # Just for Factorio installer
 
     ### Java
     # openjdk10
