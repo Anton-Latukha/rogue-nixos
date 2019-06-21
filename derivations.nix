@@ -19,38 +19,38 @@ in {
 
     ### System CLIs
     fish
-    # zsh
+    zsh
     dash
 
     #### System CLIs additions
 
-    # mosh    # remote delta shell
-    # tmux
-    # htop
+    mosh    # remote delta shell
+    tmux
+    htop
 
     ## System Tools
-    # dmidecode
+    dmidecode
     os-prober
-    # nfs-utils
-    # strace
-    # pciutils
-    # file
+    nfs-utils
+    strace
+    pciutils
+    file
     binutils
-    # lsof
+    lsof
     btrfs-progs
-    # zstd
+    zstd
     # python36Packages.glances
     # python27Packages.virtual-display
-    # zsync
+    zsync
     # acoustidFingerprinter
     # mc
     # telnet
-    # winusb
+    winusb
     # unetbootin
-    # ripgrep
+    ripgrep
     # sqlite
     # sqliteman
-    # cdrtools # Highly portable CD/DVD/BluRay command line recording software
+    cdrtools # Highly portable CD/DVD/BluRay command line recording software
     lzma
     tree
 
