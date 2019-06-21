@@ -121,6 +121,8 @@
   # services.nextcloud.caching.redis = true;
   # services.nextcloud.config.adminpassFile = "/btrfs/important/Personal/Technical/Files/Secure/nextcloud.txt";
 
+  services.hoogle.enable = true;
+
   networking.firewall.enable = false;
   networking.firewall.allowedTCPPorts = [
     22
