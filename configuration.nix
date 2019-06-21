@@ -52,6 +52,7 @@
     bash.enableCompletion = true;
     mtr.enable = true;
     fish.enable = true;
+    java.enable = true;
 
   };
 
