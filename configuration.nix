@@ -122,6 +122,7 @@
   # services.nextcloud.config.adminpassFile = "/btrfs/important/Personal/Technical/Files/Secure/nextcloud.txt";
 
   services.hoogle.enable = true;
+  services.hoogle.port = 8080;
 
   networking.firewall.enable = false;
   networking.firewall.allowedTCPPorts = [
