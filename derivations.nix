@@ -242,7 +242,7 @@ in {
     kdeFrameworks.kcmutils
     krename
     xfce.tumbler
-    k3b
+    k3b    # CD burner
     kmix    # 2019-06-21: NOTE: plasma audio applet does not treats xonar volume range right, only mutes.
 
     ## Internet
