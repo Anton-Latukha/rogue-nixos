@@ -43,7 +43,7 @@ in {
     # python27Packages.virtual-display
     zsync
     # acoustidFingerprinter
-    # mc
+    mc
     # telnet
     winusb
     # unetbootin
