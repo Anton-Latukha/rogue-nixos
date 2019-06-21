@@ -83,6 +83,8 @@
     geoclue2.enable = true;
 #    rpcbind.enable = true;    # NOTE: For NFS
 
+    avahi.enable = true; # For Pulseaudio networking
+
     xserver = {                       # Enable the X11 windowing system.
       enable = true;
       layout = "us";
@@ -180,6 +182,7 @@
       "video"
       "libvirtd"
       "vboxusers"
+      "pulse"
     ];
 
 
@@ -201,6 +204,7 @@
       "video"
       "libvirtd"
       "vboxusers"
+      "pulse"
     ];
 
 
