@@ -146,6 +146,7 @@ in {
     ### C
 	  glibc
     glibcLocales
+	  gcc6
 
     ### Java
     # openjdk10
