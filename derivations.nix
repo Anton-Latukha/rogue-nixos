@@ -208,9 +208,10 @@ in {
     digikam
 
     ## Office
-    # libreoffice-fresh # FIXME: 2018-12-06: Does not compile on nixos-unstable
+    libreoffice # FIXME: 2018-12-06: -fresh Does not compile on nixos-unstable
     calibre
     kdeApplications.okular
+    kdeApplications.kcalcore
 
     ### Office libraries
     # hunspell # FIXME: 2018-12-06: Does not compile on nixos-unstable
