@@ -12,7 +12,7 @@ let
   all-hies = import (fetchTarball "https://github.com/infinisil/all-hies/tarball/master") {};  # Hasakell IDE Engine prebuild
 
   # Import overrrides:
-  pkgs = import <nixpkgs> { config = import ./config.nix; };
+  # pkgs = import <nixpkgs> { config = import ./config.nix; };
 
 in {
   environment.systemPackages = with pkgs; [
