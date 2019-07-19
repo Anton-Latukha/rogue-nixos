@@ -3,12 +3,16 @@
 let
   # You need to update nondefault channel with: `nix-channel --update unstable`
   unstable = import <unstable> {
-  # pass the nixpkgs config to the unstable alias
+
+  # Pass the nixpkgs config to the unstable alias
   # to ensure `allowUnfree = true;` is propagated:
   config = config.nixpkgs.config;
 };
 
   all-hies = import (fetchTarball "https://github.com/infinisil/all-hies/tarball/master") {};  # Hasakell IDE Engine prebuild
+
+  # Import overrrides:
+  pkgs = import <nixpkgs> { config = import ./config.nix; }
 
 in {
   environment.systemPackages = with pkgs; [
@@ -213,7 +217,6 @@ in {
     gparted
     keepass
     wine
-    # wine.override { gstreamerSupport = false; }
     tilix
     catfish
     redshift

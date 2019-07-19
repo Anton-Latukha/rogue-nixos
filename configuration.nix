@@ -38,7 +38,7 @@
     options.nix.nixPath.default ++
     [ "nixpkgs-overlays=/etc/nixos/overlays/" ];
   nix.useSandbox = true;
-  nix.buildCores = 1;
+  # nix.buildCores = 1;    # Multithreading
 
   nixpkgs.config.allowUnfree = true;
 
