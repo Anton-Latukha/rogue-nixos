@@ -212,7 +212,8 @@ in {
     anki
     gparted
     keepass
-    wine
+    # wine
+    wine.override { gstreamerSupport = false; }
     tilix
     catfish
     redshift
