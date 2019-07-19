@@ -1,5 +1,5 @@
 {
   packageOverrides = pkgs: {
-    wine = pkgs.wine.override { gstreamerSupport = false; }
+    wine = pkgs.wine.override { gstreamerSupport = false; };
   };
 }
