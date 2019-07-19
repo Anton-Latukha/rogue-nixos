@@ -185,7 +185,7 @@ in {
     cabal-install
     cabal2nix
     # stack2nix    # 2019-06-21: FIXME: Does not compile.
-    (all-hies.selection { selector = p: { inherit (p) ghc865; }; })
+    (all-hies.selection { selector = p: { inherit (p) ghc865 ghc864; }; })
     hlint
 
     #### Haskell packages
