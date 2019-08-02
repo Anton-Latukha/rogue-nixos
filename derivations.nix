@@ -277,7 +277,7 @@ in {
     ### Messengers
     pidgin
     skype
-    zoom-us
+    ## zoom-us
 
     ## Remote
     x2goclient
