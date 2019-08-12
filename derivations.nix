@@ -119,6 +119,7 @@ in {
     neovim
     git
     git-crypt    # store secrets inside
+    gitstats
     mr    # Myrepos tool
     sshfs
     # unoconv    # Convert between any document format supported by LibreOffice/OpenOffice
