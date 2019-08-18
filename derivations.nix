@@ -217,7 +217,7 @@ in {
     anki
     gparted
     keepass
-    # wine    # FIXME: 2019-07-16: qt-base i632 does not compile https://github.com/NixOS/nixpkgs/issues/63829
+    wine    # FIXME: 2019-07-16: qt-base i632 does not compile https://github.com/NixOS/nixpkgs/issues/63829
     tilix
     catfish
     redshift
