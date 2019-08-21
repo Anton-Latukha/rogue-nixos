@@ -312,7 +312,7 @@ in {
     fwupd    # FIXME: No fwupd.service
     jdupes
     # viber
-    # teamviewer
+    teamviewer
 
     ## Games
     openmw
