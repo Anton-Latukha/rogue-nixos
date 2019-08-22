@@ -205,6 +205,7 @@ in {
     # haskellPackages.universum
     # haskellPackages.serokell-util
     haskellPackages.statistics
+    haskellPackages.structured-haskell-mode
 
     ## JS
     yarn
