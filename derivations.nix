@@ -331,6 +331,7 @@ in {
     ### Images Create
     inkscape
     gimp
+    imagemagick
 
     # Previously unstable packages
     jdupes
