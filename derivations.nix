@@ -79,7 +79,7 @@ in {
 
     # Nix
     nix-prefetch-git
-    # nixops    # FIXME: 2019-03-05: aiohttp-3.5.4 not supported for interpreter python2.7
+    nixops    # FIXME: 2019-03-05: aiohttp-3.5.4 not supported for interpreter python2.7
     # cachix    # FIXME: 2019-01-02: Broken build
 
     ## System Firmware
