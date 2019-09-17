@@ -213,7 +213,7 @@
   services.nextcloud.enable = true;
   services.nextcloud.hostName = "test";
   services.nextcloud.config.adminpass = "test01091939";
-  # services.nextcloud.nginx.enable = true;
+  services.nextcloud.nginx.enable = true;
   # networking.firewall.enable = false;
   # services.nginx.virtualHosts = {
   #   "vb-nextcloud" = {};
