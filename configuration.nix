@@ -210,4 +210,13 @@
   # should.
   system.stateVersion = "18.03"; # Did you read the comment?
 
+  config.services.nextcloud.enable = true;
+  config.services.nextcloud.hostName = "test";
+  config.services.nextcloud.config.adminpass = "test01091939";
+  # config.services.nextcloud.nginx.enable = true;
+  config.networking.firewall.enable = false;
+  # config.services.nginx.virtualHosts = {
+  #   "vb-nextcloud" = {};
+  # };
+
 }
