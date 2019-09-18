@@ -106,8 +106,9 @@ in {
     liberation_ttf
     hack-font
     source-code-pro
-    inconsolata-lgc	# Fork of Inconsolata font, with proper support of Cyrillic and Greek
+    inconsolata-lgc	   # Fork of Inconsolata font, with proper support of Cyrillic and Greek
     fira-code
+    symbola    #	Basic Latin, Greek, Cyrillic and many Symbol blocks of Unicode
 
     # Console
     emacs

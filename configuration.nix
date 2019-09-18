@@ -161,10 +161,28 @@
   virtualisation.virtualbox.host.enable = true;
   virtualisation.virtualbox.host.headless = false;
 
+  services.kmscon.enable = true;
+  services.urxvtd.package = true;
+
   fonts.enableDefaultFonts = true; # Enable a basic set of fonts providing several font styles and families and reasonable coverage of Unicode.
   fonts.enableFontDir = true; # Whether to create a directory with links to all fonts in /run/current-system/sw/share/X11-fonts
   fonts.enableGhostscriptFonts = true;
-  fonts.fonts = with pkgs; [ hack-font source-code-pro liberation_ttf inconsolata-lgc ];
+  fonts.fonts = with pkgs; [
+
+    ## GUI Libraries: Fonts
+    inconsolata-lgc	   # Fork of Inconsolata font, with proper support of Cyrillic and Greek
+    liberation_ttf
+    hack-font
+    source-code-pro
+    fira-code
+    symbola    #	Basic Latin, Greek, Cyrillic and many Symbol blocks of Unicode
+    dejavu_fonts
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    noto-fonts-extra
+
+    ];
   fonts.fontconfig.enable = true;
   fonts.fontconfig.ultimate.enable = true;
   fonts.fontconfig.ultimate.substitutions = "combi";
