@@ -230,6 +230,7 @@ in {
     libreoffice-still
     calibre
     scribus
+    djvu2pdf
     kdeApplications.okular
 
     ### Office libraries
