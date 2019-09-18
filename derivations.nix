@@ -229,6 +229,7 @@ in {
     ## Office
     libreoffice-still
     calibre
+    scribusUnstable
     kdeApplications.okular
 
     ### Office libraries

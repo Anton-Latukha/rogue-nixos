@@ -181,6 +181,8 @@
     noto-fonts-cjk
     noto-fonts-emoji
     noto-fonts-extra
+    unidings    #  Glyphs and Icons for blocks of The Unicode Standard
+
 
     ];
   fonts.fontconfig.enable = true;
