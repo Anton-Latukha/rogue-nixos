@@ -102,13 +102,6 @@ in {
     ffmpegthumbnailer # CLI application
     gnome3.adwaita-icon-theme    # Gnome icons
 
-    ## GUI Libraries: Fonts
-    liberation_ttf
-    hack-font
-    source-code-pro
-    inconsolata-lgc	   # Fork of Inconsolata font, with proper support of Cyrillic and Greek
-    fira-code
-    symbola    #	Basic Latin, Greek, Cyrillic and many Symbol blocks of Unicode
 
     # Console
     emacs
