@@ -230,4 +230,40 @@
   # should.
   system.stateVersion = "18.03"; # Did you read the comment?
 
+  services.postgresql.enable = true;
+  services.postgresql.package = pkgs.postgresql_10;
+  services.postgresql.authentication = lib.mkForce ''
+    # "local" is for Unix domain socket connections only
+    local   all             all                                     trust
+    local   all             all                                     md5
+    # IPv4 local connections:
+    host    all             all             127.0.0.1/32            trust
+    # IPv6 local connections:
+    host    all             all             ::1/128                 trust
+    # Allow replication connections from localhost, by a user with the
+    # replication privilege.
+    local   replication     all                                     trust
+    host    replication     all             127.0.0.1/32            trust
+    host    replication     all             ::1/128                 trust
+  '';
+
+  services.nextcloud.enable = true;
+  services.nextcloud.hostName = "testing";
+  services.nextcloud.config.adminpassFile = /etc/nixos/private/secrets/nextcloud-admin.pass;
+  services.nextcloud.nginx.enable = true;
+  services.nextcloud.home = "/var/www/nextcloud";
+  services.nextcloud.nginx.enable = true;
+  services.nextcloud.autoUpdateApps.enable = true;
+  services.nextcloud.config.dbtype = "pgsql";
+  services.nextcloud.config.dbname = "nextcloud";
+  services.nextcloud.config.dbhost = "localhost";
+  services.nextcloud.config.dbport = 5432;
+  services.nextcloud.config.dbuser = "nextcloud";
+  services.nextcloud.config.dbpassFile = "/etc/nixos/private/secrets/nextcloud-db.pass";
+  services.nextcloud.config.dbtableprefix = "oc_";
+  services.nextcloud.config.adminuser = "aborsu";
+  services.nextcloud.config.adminpassFile = "/etc/nixos/private/secrets/nextcloud-admin.pass";
+  # services.nextcloud.config.extraTrustedDomains = [
+  # ];
+
 }
