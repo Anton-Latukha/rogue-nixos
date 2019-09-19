@@ -249,7 +249,8 @@
 
   services.nextcloud.enable = true;
   services.nextcloud.hostName = "testing";
-  services.nextcloud.config.adminpassFile = /etc/nixos/private/secrets/nextcloud-admin.pass;
+  services.nextcloud.config.adminuser = "Anton-Latukha";
+  services.nextcloud.config.adminpassFile = "/etc/nixos/private/secrets/nextcloud-admin.pass";
   services.nextcloud.nginx.enable = true;
   services.nextcloud.home = "/var/www/nextcloud";
   services.nextcloud.autoUpdateApps.enable = true;
@@ -260,8 +261,6 @@
   services.nextcloud.config.dbuser = "nextcloud";
   services.nextcloud.config.dbpassFile = "/etc/nixos/private/secrets/nextcloud-db.pass";
   services.nextcloud.config.dbtableprefix = "oc_";
-  services.nextcloud.config.adminuser = "aborsu";
-  services.nextcloud.config.adminpassFile = "/etc/nixos/private/secrets/nextcloud-admin.pass";
   # services.nextcloud.config.extraTrustedDomains = [
   # ];
 
