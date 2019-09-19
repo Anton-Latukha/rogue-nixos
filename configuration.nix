@@ -252,7 +252,6 @@
   services.nextcloud.config.adminpassFile = /etc/nixos/private/secrets/nextcloud-admin.pass;
   services.nextcloud.nginx.enable = true;
   services.nextcloud.home = "/var/www/nextcloud";
-  services.nextcloud.nginx.enable = true;
   services.nextcloud.autoUpdateApps.enable = true;
   services.nextcloud.config.dbtype = "pgsql";
   services.nextcloud.config.dbname = "nextcloud";
