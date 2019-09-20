@@ -93,7 +93,7 @@
   ];
   # services.netdata.enable = true;
   services.geoclue2.enable = true;
-  services.localtime.enablea = true;
+  services.localtime.enable = true;
   services.redshift.enable = true;
   services.redshift.provider = "geoclue";
   services.rpcbind.enable = true;
