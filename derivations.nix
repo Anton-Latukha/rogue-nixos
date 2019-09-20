@@ -249,7 +249,6 @@ in {
     plasma-nm
     kate
     ksysguard
-    kdeconnect
     # redshift-plasma-applet # Use the service setting
     plasma-pa
     kdeApplications.dolphin-plugins
@@ -280,6 +279,10 @@ in {
     ## Remote
     x2goclient
     remmina
+
+    ## Integrations
+    kdeconnect
+    nextcloud-client
 
     ## Multimedia & Media
     ffmpeg-full
