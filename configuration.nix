@@ -265,4 +265,5 @@
     "*.*.*.*"
   ];
 
+  security.pam.services.pyro.enableKwallet = true;
 }
