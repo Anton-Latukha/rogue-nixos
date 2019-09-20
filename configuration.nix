@@ -266,4 +266,9 @@
   ];
 
   security.pam.services.pyro.enableKwallet = true;
+
+  programs.tmux.keyMode = "vi";
+
+  services.ihaskell.enable = true;
+
 }
