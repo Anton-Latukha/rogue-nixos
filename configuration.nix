@@ -269,6 +269,6 @@
 
   programs.tmux.keyMode = "vi";
 
-  services.ihaskell.enable = true;
+  # services.ihaskell.enable = true;    # NOTE: 2019-09-21: Was broken due deps not ported to latest GHC
 
 }
