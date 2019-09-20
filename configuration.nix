@@ -75,7 +75,7 @@
   programs.fish.enable = true;
   # programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
 
-  services.emacs.emable = true;
+  services.emacs.enable = true;
   services.haveged.enable = true;
   services.openssh.enable = true;
   services.openssh.allowSFTP = false;
