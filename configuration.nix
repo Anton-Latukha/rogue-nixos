@@ -262,7 +262,7 @@
   services.nextcloud.config.dbpassFile = "/etc/nixos/private/secrets/nextcloud-db.pass";
   services.nextcloud.config.dbtableprefix = "oc_";
   services.nextcloud.config.extraTrustedDomains = [
-    *.*.*.*
+    "*.*.*.*"
   ];
 
 }
