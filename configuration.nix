@@ -95,7 +95,7 @@
   services.geoclue2.enable = true;
   services.localtime.enable = true;
   services.redshift.enable = true;
-  services.redshift.provider = "geoclue";
+  services.redshift.provider = "geoclue2";
   services.rpcbind.enable = true;
   services.avahi.enable = true; # For Pulseaudio networking
   services.xserver.enable = true;
