@@ -163,6 +163,7 @@ in {
     zeal    #	A simple offline API documentation browser
     plantuml
     graphviz    # Also needed for Emacs PlantUML
+    wakatime
 
     ### Python
     # python36Packages.pylint    # FIXME: 2019-03-10: Not passing self-test
