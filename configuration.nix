@@ -93,9 +93,9 @@
   ];
   # services.netdata.enable = true;
   services.geoclue2.enable = true;
-  # services.redshift.enable = true;
-  # services.redshift.latitude = "50.4";
-  # services.redshift.longitude = "30.5";
+  services.localtime.enablea = true;
+  services.redshift.enable = true;
+  services.redshift.provider = "geoclue";
   services.rpcbind.enable = true;
   services.avahi.enable = true; # For Pulseaudio networking
   services.xserver.enable = true;
