@@ -15,7 +15,7 @@ let
   # pkgs = import <nixpkgs> { config = import ./config.nix; };
 
 keepass-with-plugins = pkgs.keepass.override {
-    plugins = [ keepassrpc ];
+    plugins = [ pkgs.keepass-keepassrpc ];
 };
 
 in {
