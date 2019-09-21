@@ -14,6 +14,10 @@ let
   # Import overrrides:
   # pkgs = import <nixpkgs> { config = import ./config.nix; };
 
+keepass-with-plugins = pkgs.keepass.override {
+    plugins = [ keepass-keepassrpc ];
+};
+
 in {
   environment.systemPackages = with pkgs; [
 
@@ -214,7 +218,7 @@ in {
     # GUI
     anki
     gparted
-    keepass
+    keepass-with-plugins
     wine    # FIXME: 2019-07-16: qt-base i632 does not compile https://github.com/NixOS/nixpkgs/issues/63829
     tilix
     catfish
