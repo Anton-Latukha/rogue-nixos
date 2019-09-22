@@ -270,7 +270,7 @@
 
   # services.ihaskell.enable = true;    # NOTE: 2019-09-21: Was broken due deps not ported to latest GHC
   services.jupyter.enable = true;
-  services.jupyter.port = 8888;
+  services.jupyter.port = 8880;
   services.jupyter.group = "users";
   services.jupyter.notebookDir = "~/src/notebooks/";
   services.jupyter.user = "pyro";
