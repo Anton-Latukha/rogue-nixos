@@ -270,9 +270,9 @@
 
   # services.ihaskell.enable = true;    # NOTE: 2019-09-21: Was broken due deps not ported to latest GHC
   services.jupyter.enable = true;
-  services.jupyter.group = "pyro";
-  services.jupyter.notebookDir = "~/src/notebooks/";
-  services.jupyter.user = "pyro";
+  services.jupyter.group = "users";
+  services.jupyter.notebookDir = "/home/pyro/src/notebooks/";
+  services.jupyter.user = "jupyter";
   services.jupyter.user = [
     "open('/etc/nixos/private/secrets/jupyter.pass', 'r', encoding='utf8').read().strip()"
   ];
