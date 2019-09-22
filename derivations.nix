@@ -345,6 +345,7 @@ in {
     inkscape
     gimp
     imagemagick
+    kcolorchooser
 
     # Previously unstable packages
     jdupes
