@@ -215,6 +215,9 @@ in {
     ## CSS
     csslint
 
+    ## Node
+    nodejs
+
     ## Deps
     networkmanager
 
