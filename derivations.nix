@@ -212,6 +212,9 @@ in {
     ## JS
     yarn
 
+    ## CSS
+    csslint
+
     ## Deps
     networkmanager
 
