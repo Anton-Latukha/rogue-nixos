@@ -57,7 +57,6 @@
   # ];
   # security.sudo.extraConfig = "pyro ALL=(ALL:ALL) SETENV: ALL NOPASSWD: /run/current-system/sw/bin/mount.nfs 192.168.88.50:/mnt/stor";
   # security.hideProcessInformation = true;
-
   # Select internationalisation properties.
   # i18n = {
   #   consoleFont = "Lat2-Terminus16";
@@ -270,5 +269,9 @@
   programs.tmux.keyMode = "vi";
 
   # services.ihaskell.enable = true;    # NOTE: 2019-09-21: Was broken due deps not ported to latest GHC
+  services.jupyter.enable = true;
+  services.jupyter.group = "pyro";
+  services.jupyter.notebookDir = "~/src/notebooks/";
+  services.jupyter.user = pyro;
 
 }
