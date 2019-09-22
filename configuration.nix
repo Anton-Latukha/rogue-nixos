@@ -272,6 +272,6 @@
   services.jupyter.enable = true;
   services.jupyter.group = "pyro";
   services.jupyter.notebookDir = "~/src/notebooks/";
-  services.jupyter.user = pyro;
+  services.jupyter.user = "pyro";
 
 }
