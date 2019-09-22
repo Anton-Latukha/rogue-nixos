@@ -274,5 +274,5 @@
   services.jupyter.group = "pyro";
   services.jupyter.notebookDir = "~/src/notebooks/";
   services.jupyter.user = "pyro";
-  services.jupyter.password = "open('/etc/nixos/private/secrets/jupyter.pass', 'r', encoding='utf8').read().strip()";
+  services.jupyter.password = "'sha1:02ea7ec9a0f5:6ac01fe3450b0de07726f336efbb4ec094a75314'";
 }
