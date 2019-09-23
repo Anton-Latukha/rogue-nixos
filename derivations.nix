@@ -169,7 +169,7 @@ in {
     plantuml
     graphviz    # Also needed for Emacs PlantUML
     wakatime
-    mathematica
+    # mathematica needs downloaded mathematica
 
     ### Python
     # python36Packages.pylint    # FIXME: 2019-03-10: Not passing self-test
