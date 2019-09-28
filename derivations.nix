@@ -187,7 +187,7 @@ in {
     ### Haskell
     ghc
     cabal-install
-    cabal2nix
+    # cabal2nix    # FIXME: 2019-09-28: Does not compile curently.
     # stack2nix    # 2019-06-21: FIXME: Does not compile.
     (all-hies.selection { selector = p: { inherit (p) ghc865 ghc864; }; })
 
