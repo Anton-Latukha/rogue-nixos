@@ -325,6 +325,7 @@ in {
     mpv
     kodi
     vlc
+    syncplay
 
     #### Audio
     deadbeef
