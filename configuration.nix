@@ -7,7 +7,7 @@
   hostId = builtins.readFile "${etcDir}/hostId";
 
 #### All kind of paths
-  etcDir = "/etc"
+  etcDir = "/etc";
   nixOsDir = "${etcDir}/nixos";
   serviceDir = "${nixOsDir}/service";
   hostDir = "${nixOsDir}/host";
