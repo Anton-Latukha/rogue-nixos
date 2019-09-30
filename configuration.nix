@@ -14,7 +14,7 @@ in
 
 let
 
-  with hostIdSet; confDirSet = {
+  confDirSet = {
 
 #### All kind of paths
 
