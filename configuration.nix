@@ -9,7 +9,7 @@
   };
 #### All kind of paths
 
-  dirs = {
+  with id; dirs = {
 
     etcDir = "/etc";
     nixOsDir = "${etcDir}/nixos";
@@ -17,7 +17,7 @@
     hostDir = "${nixOsDir}/host";
     curHostDir = "${hostDir}/${hostId}";
 
-  };
+  }
 
 #### Importing host configuration
   imports = [ "${curHostDir}/configuration.nix" ];
