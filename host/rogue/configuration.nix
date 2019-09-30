@@ -1,6 +1,6 @@
-{ config, pkgs, lib, options, ... }:{
+{ config, pkgs, lib, options, curHostDir ... }:{
 
-  inherit curHostDir;
+  # inherit curHostDir;
 
   imports = [
 
