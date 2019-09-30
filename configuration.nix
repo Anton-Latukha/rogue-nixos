@@ -26,7 +26,7 @@
     loader.systemd-boot.enable = true;
     loader.grub.enable = true;
     loader.grub.version = 2;
-    loader.grub.default = 2; # boot entry index in list
+    loader.grub.default = 0; # boot entry index in list
     loader.grub.extraPrepareConfig = "GRUB_CMDLINE_LINUX_DEFAULT='acpi_osi='";
     loader.grub.useOSProber = true;
 
