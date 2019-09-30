@@ -1,4 +1,4 @@
-{ config, pkgs, lib, options, curHostDir ... }:{
+{ config, pkgs, lib, options, ... }:{
 
   # inherit curHostDir;
 
