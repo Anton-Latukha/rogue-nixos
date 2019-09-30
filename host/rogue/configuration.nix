@@ -1,5 +1,7 @@
 { config, pkgs, lib, options, ... }:{
 
+  inherit curHostDir;
+
   imports = [
 
     # Include the results of the hardware scan.
