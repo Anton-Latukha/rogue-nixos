@@ -17,10 +17,12 @@ portableConfSet = {
 
 in
 
+with portableConfSet;
+
 {
 
 #### Importing host configuration
 
-  with portableConfSet; imports = [ "${curHostDir}/configuration.nix" ];
+  imports = [ "${curHostDir}/configuration.nix" ];
 
 }
