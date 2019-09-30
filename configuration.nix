@@ -13,7 +13,7 @@ portableConfSet = {
   hostDir = "${nixOsDir}/host";
   hostId = builtins.readFile "${etcDir}/hostId";
   curHostDir = "${hostDir}/${hostId}";
-  }
+  };
 
 in
 
