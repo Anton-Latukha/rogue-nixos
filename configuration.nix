@@ -20,19 +20,13 @@
 
   ];
 
-  boot = {
-
-    #kernelPackages = pkgs.linuxPackages_4_15;
-    loader.systemd-boot.enable = true;
-    loader.grub.enable = true;
-    loader.grub.version = 2;
-    loader.grub.default = 0; # boot entry index in list
-    loader.grub.extraPrepareConfig = "GRUB_CMDLINE_LINUX_DEFAULT='acpi_osi='";
-    loader.grub.useOSProber = true;
-
-    loader.grub.device = "/dev/sda"; # or "nodev" for efi only
-
-  };
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.grub.enable = true;
+  boot.loader.grub.version = 2;
+  boot.loader.grub.default = 0; # boot entry index in list
+  boot.loader.grub.extraPrepareConfig = "GRUB_CMDLINE_LINUX_DEFAULT='acpi_osi='";
+  boot.loader.grub.useOSProber = true;
+  boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
   nix.autoOptimiseStore = true;    # Autodeduplicate files in store
   #nix.useSandbox = true;
