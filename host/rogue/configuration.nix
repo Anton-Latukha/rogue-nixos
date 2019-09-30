@@ -22,9 +22,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.grub.extraPrepareConfig = "GRUB_CMDLINE_LINUX_DEFAULT='acpi_osi='";
   boot.loader.efi.canTouchEfiVariables = true;
-  # boot.kernelPackages = pkgs.linuxPackages_4_15;
-  # boot.kernelPackages = pkgs.linuxPackages_latest; nvidia requires 4.9
-  # boot.extraModulePackages = with pkgs; [ linuxPackages_4_15.acpi_call ]; # Used to turn-off nvidia
   boot.kernelParams = [
     "pti=off" "spectre_v2=off" "l1tf=off" "nospec_store_bypass_disable" "no_stf_barrier"
   ];
@@ -34,7 +31,7 @@
   nix.autoOptimiseStore = true;    # Autodeduplicate files in store
   nix.nixPath =
     options.nix.nixPath.default ++
-    [ "nixpkgs-overlays=/etc/nixos/overlays/" ];
+    [ "nixpkgs-overlays=/etc/nixos/host/rogue/overlays/" ];
   nix.useSandbox = true;
   # nix.buildCores = 1;    # Multithreading
 
@@ -63,9 +60,6 @@
   # };
 
   time.timeZone = "Europe/Kiev";
-
-  # List packages installed in system profile. To search by name, run:
-  # $ nix-env -qaP | grep wget
 
   programs.bash.enableCompletion = true;
   programs.mtr.enable = true;
