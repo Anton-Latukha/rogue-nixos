@@ -15,7 +15,7 @@ portableConfSet = {
   curHostDir = "${hostDir}/${hostId}";
   };
 
-in
+in;
 
 with portableConfSet;
 
