@@ -1,20 +1,9 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-{ config, pkgs, lib, options, ... }:
+{ config, pkgs, lib, options, ... }:{
 
-let
-
-  hostIdSet = {
-    hostId = builtins.readFile "${etcDir}/hostId";
-  };
-
-
-in
-
-let
-
-  confDirSet = {
+  hostId = builtins.readFile "${etcDir}/hostId";
 
 #### All kind of paths
 
@@ -23,14 +12,22 @@ let
   serviceDir = "${nixOsDir}/service";
   hostDir = "${nixOsDir}/host";
   curHostDir = "${hostDir}/${hostId}";
-  };
 
-in
-
-{
 
 #### Importing host configuration
 
-  imports = [ "${curHostDir}/configuration.nix" ];
+  let
+
+    hostId = hostId;
+
+    #### All kind of paths
+
+    etcDir = etcDir;
+    nixOsDir = nixOsDir;
+    serviceDir = serviceDir;
+    hostDir = hostDir;
+    curHostDir = curHostDir;
+
+  in imports = [ "${curHostDir}/configuration.nix" ];
 
 }
