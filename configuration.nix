@@ -12,7 +12,7 @@
   nixOsDir = "${etcDir}/nixos";
   serviceDir = "${nixOsDir}/service";
   hostDir = "${nixOsDir}/host";
-  curHostDir = "${hostDir}/${hostId}";
+  curHostDir = ''${hostDir}/${hostId}'';
 
 
 #### Importing host configuration
