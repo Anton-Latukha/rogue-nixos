@@ -3,7 +3,6 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 { config, pkgs, lib, options, ... }:{
 
-  hostId = builtins.readFile "${etcDir}/hostId";
 
 #### All kind of paths
 
@@ -11,11 +10,12 @@
   nixOsDir = "${etcDir}/nixos";
   serviceDir = "${nixOsDir}/service";
   hostDir = "${nixOsDir}/host";
+  hostId = builtins.readFile "${etcDir}/hostId";
   curHostDir = "${hostDir}/${hostId}";
 
 
 #### Importing host configuration
 
-  imports = [ "${curHostDir}/configuration.nix" ];
+  imports = [ "${curHostDir}/configuration.nix" ]
 
 }
