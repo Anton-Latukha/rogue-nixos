@@ -6,7 +6,7 @@
 
   id = {
     hostId = builtins.readFile "${etcDir}/hostId";
-  }
+  };
 #### All kind of paths
   with id; dirs = {
 
