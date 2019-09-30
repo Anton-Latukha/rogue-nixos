@@ -15,7 +15,7 @@
     hostDir = "${nixOsDir}/host";
     curHostDir = "${hostDir}/${hostId}";
 
-  }
+  };
 
 #### Importing host configuration
   imports = [ "${curHostDir}/configuration.nix" ];
