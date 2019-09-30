@@ -8,7 +8,8 @@
     hostId = builtins.readFile "${etcDir}/hostId";
   };
 #### All kind of paths
-  with id; dirs = {
+
+  dirs = {
 
     etcDir = "/etc";
     nixOsDir = "${etcDir}/nixos";
