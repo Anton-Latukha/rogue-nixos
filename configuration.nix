@@ -9,6 +9,11 @@ let
     hostId = builtins.readFile "${etcDir}/hostId";
   };
 
+
+in
+
+let
+
   with hostIdSet; confDirSet = {
 
 #### All kind of paths
@@ -26,6 +31,6 @@ in
 
 #### Importing host configuration
 
-  with ConfDirSet; imports = [ "${curHostDir}/configuration.nix" ];
+  with confDirSet; imports = [ "${curHostDir}/configuration.nix" ];
 
 }
