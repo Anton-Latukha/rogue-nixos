@@ -15,10 +15,6 @@ portableConfSet = {
   curHostDir = "${hostDir}/${hostId}";
   };
 
-in;
-
-with portableConfSet;
-
 {
 
 #### Importing host configuration

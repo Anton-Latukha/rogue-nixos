@@ -5,16 +5,16 @@
   imports = [
 
     # Include the results of the hardware scan.
-    "./hardware-configuration.nix"
+    ./hardware-configuration.nix
 
     # Include all derivations
-    "./derivations.nix"
+    ./derivations.nix
 
-    "./deduplication.nix"
+    ./deduplication.nix
 
-    # "${curHostDir}./rollback.nix"
+    # ${curHostDir}./rollback.nix
 
-    "./cachix.nix"
+    ./cachix.nix
 
   ];
 
