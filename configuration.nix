@@ -4,10 +4,11 @@
 
 { config, pkgs, lib, options, ... }:{
 
-  hostId = builtins.readFile "${etcDir}/hostId";
-
+  id = {
+    hostId = builtins.readFile "${etcDir}/hostId";
+  }
 #### All kind of paths
-  dirs = {
+  with id; dirs = {
 
     etcDir = "/etc";
     nixOsDir = "${etcDir}/nixos";
@@ -18,6 +19,6 @@
   };
 
 #### Importing host configuration
-  imports = [ "${curHostDir}/configuration.nix" ];
+  with dirs; imports = [ "${curHostDir}/configuration.nix" ];
 
 }
