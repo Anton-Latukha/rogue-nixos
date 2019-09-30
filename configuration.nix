@@ -4,8 +4,11 @@
 
 { config, pkgs, lib, options, ... }:{
 
-  host-id = builtins.readFile "/etc/host-id";
+  etc = "/etc"
+  hostId = builtins.readFile "${etc}/hostId";
+  nixOsPath = "${etc}/nixos"
+  servicePath = "${nixOsPath}/service"
 
-  import "./hosts/${host-id}/configuration.nix";
+  import "./hosts/${hostId}/configuration.nix";
 
 }
