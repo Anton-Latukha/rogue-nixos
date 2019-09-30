@@ -20,6 +20,6 @@
   };
 
 #### Importing host configuration
-  with dirs; imports = [ "${curHostDir}/configuration.nix" ];
+  imports = [ "${curHostDir}/configuration.nix" ];
 
 }
