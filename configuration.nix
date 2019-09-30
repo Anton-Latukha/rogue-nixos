@@ -31,6 +31,6 @@ in
 
 #### Importing host configuration
 
-  with confDirSet; imports = [ "${curHostDir}/configuration.nix" ];
+  imports = [ "${curHostDir}/configuration.nix" ];
 
 }
