@@ -41,15 +41,11 @@
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
-  programs = {
 
-    bash.enableCompletion = true;
-    mtr.enable = true;
-    fish.enable = true;
-    java.enable = true;
-
-  };
-
+  programs.bash.enableCompletion = true;
+  programs.mtr.enable = true;
+  programs.fish.enable = true;
+  programs.java.enable = true;
 
   # List services that you want to enable:
   services = {
