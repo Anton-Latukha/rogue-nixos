@@ -2,21 +2,20 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, options, ... }:
-
-let
+{ config, pkgs, lib, options, ... }:{
 
   hostId = builtins.readFile "${etcDir}/hostId";
 
 #### All kind of paths
-  etcDir = "/etc";
-  nixOsDir = "${etcDir}/nixos";
-  serviceDir = "${nixOsDir}/service";
-  hostDir = "${nixOsDir}/host";
-  curHostDir = "${hostDir}/${hostId}";
-in
+  dirs = {
 
-{
+    etcDir = "/etc";
+    nixOsDir = "${etcDir}/nixos";
+    serviceDir = "${nixOsDir}/service";
+    hostDir = "${nixOsDir}/host";
+    curHostDir = "${hostDir}/${hostId}";
+
+  }
 
 #### Importing host configuration
   imports = [ "${curHostDir}/configuration.nix" ];
