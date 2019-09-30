@@ -1,6 +1,18 @@
 { config, pkgs, lib, options, ... }:{
 
-  # inherit curHostDir;
+
+  hostId = builtins.readFile "${etcDir}/hostId";
+
+#### All kind of paths
+
+  etcDir = "/etc";
+  nixOsDir = "${etcDir}/nixos";
+  serviceDir = "${nixOsDir}/service";
+  hostDir = "${nixOsDir}/host";
+  curHostDir = "${hostDir}/${hostId}";
+
+
+#### Importing host configuration
 
   imports = [
 

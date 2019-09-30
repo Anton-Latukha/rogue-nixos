@@ -4,22 +4,19 @@
 
 { config, pkgs, lib, options, ... }:{
 
-  id = {
-    hostId = builtins.readFile "${etcDir}/hostId";
-  };
+  hostId = builtins.readFile "${etcDir}/hostId";
+
 #### All kind of paths
 
-  with id; dirs = {
+  etcDir = "/etc";
+  nixOsDir = "${etcDir}/nixos";
+  serviceDir = "${nixOsDir}/service";
+  hostDir = "${nixOsDir}/host";
+  curHostDir = "${hostDir}/${hostId}";
 
-    etcDir = "/etc";
-    nixOsDir = "${etcDir}/nixos";
-    serviceDir = "${nixOsDir}/service";
-    hostDir = "${nixOsDir}/host";
-    curHostDir = "${hostDir}/${hostId}";
-
-  }
 
 #### Importing host configuration
+
   imports = [ "${curHostDir}/configuration.nix" ];
 
 }
