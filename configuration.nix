@@ -5,7 +5,6 @@
 
 let
 
-portableConfSet = {
 #### All kind of paths
   etcDir = "/etc";
   nixOsDir = "${etcDir}/nixos";
@@ -13,8 +12,8 @@ portableConfSet = {
   hostDir = "${nixOsDir}/host";
   hostId = builtins.readFile "${etcDir}/hostId";
   curHostDir = "${hostDir}/${hostId}";
-  };
 
+in
 {
 
 #### Importing host configuration
