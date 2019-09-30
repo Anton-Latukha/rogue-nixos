@@ -4,6 +4,8 @@
 
 { config, pkgs, lib, options, ... }:{
 
+  host-id = builtins.readFile "/etc/host-id";
+
   imports = [
 
     # Include the results of the hardware scan.
