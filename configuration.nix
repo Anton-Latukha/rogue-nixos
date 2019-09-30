@@ -10,8 +10,8 @@
   etcDir = "/etc"
   nixOsDir = "${etcDir}/nixos";
   serviceDir = "${nixOsDir}/service";
-  hostDir = "${nixOsDir}/host"
-  curHostDir = "${hostDir}/${hostId}"
+  hostDir = "${nixOsDir}/host";
+  curHostDir = "${hostDir}/${hostId}";
 
 #### Importing host configuration
   import "${curHostDir}/configuration.nix";
