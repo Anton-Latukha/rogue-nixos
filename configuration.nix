@@ -29,7 +29,6 @@
   boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
   nix.autoOptimiseStore = true;    # Autodeduplicate files in store
-  #nix.useSandbox = true;
 
   nixpkgs.config.allowUnfree = true;
 
