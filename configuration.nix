@@ -7,6 +7,7 @@
   host-id = builtins.readFile "/etc/host-id";
 
   imports = [
+  import "./hosts/${host-id}/configuration.nix";
 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
