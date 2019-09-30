@@ -1,32 +1,20 @@
 { config, pkgs, lib, options, ... }:{
 
-
-  hostId = builtins.readFile "${etcDir}/hostId";
-
-#### All kind of paths
-
-  etcDir = "/etc";
-  nixOsDir = "${etcDir}/nixos";
-  serviceDir = "${nixOsDir}/service";
-  hostDir = "${nixOsDir}/host";
-  curHostDir = "${hostDir}/${hostId}";
-
-
 #### Importing host configuration
 
   imports = [
 
     # Include the results of the hardware scan.
-    "${curHostDir}/hardware-configuration.nix"
+    "./hardware-configuration.nix"
 
     # Include all derivations
-    "${curHostDir}/derivations.nix"
+    "./derivations.nix"
 
-    "${curHostDir}/deduplication.nix"
+    "./deduplication.nix"
 
     # "${curHostDir}./rollback.nix"
 
-    "${curHostDir}/cachix.nix"
+    "./cachix.nix"
 
   ];
 

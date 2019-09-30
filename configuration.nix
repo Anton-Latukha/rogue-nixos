@@ -16,18 +16,6 @@
 
 #### Importing host configuration
 
-  let
-
-    hostId = hostId;
-
-    #### All kind of paths
-
-    etcDir = etcDir;
-    nixOsDir = nixOsDir;
-    serviceDir = serviceDir;
-    hostDir = hostDir;
-    curHostDir = curHostDir;
-
-  in imports = [ "${curHostDir}/configuration.nix" ];
+  imports = [ "${curHostDir}/configuration.nix" ];
 
 }
