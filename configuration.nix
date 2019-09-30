@@ -6,7 +6,7 @@
 let
 
 #### All kind of paths
-  etcDir = "/etc";
+  etcDir = builtins.readFile ../etcDir;
   nixOsDir = "${etcDir}/nixos";
   serviceDir = "${nixOsDir}/service";
   hostDir = "${nixOsDir}/host";
