@@ -1,4 +1,12 @@
-{ config, pkgs, lib, options, ... }:{
+{ config, pkgs, lib, options, ... }:
+
+let
+
+  secretDir = "/secret";
+
+in
+
+{
 
 #### Importing host configuration
 
@@ -31,7 +39,7 @@
   nix.autoOptimiseStore = true;    # Autodeduplicate files in store
   nix.nixPath =
     options.nix.nixPath.default ++
-    [ "nixpkgs-overlays=/etc/nixos/host/rogue/overlays/" ];
+    [ "nixpkgs-overlays=/etc/nixos/host/rogue /overlays/" ];
   nix.useSandbox = true;
   # nix.buildCores = 1;    # Multithreading
 
