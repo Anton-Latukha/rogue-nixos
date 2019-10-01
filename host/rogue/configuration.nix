@@ -196,7 +196,6 @@ in
   hardware.cpu.intel.updateMicrocode = true;
   hardware.enableAllFirmware = true;
   hardware.opengl.driSupport32Bit = true; # Enable 32bit acceleration
-  hardware.pulseaudio.enable = true;
 
   virtualisation.docker.enable = true;
   virtualisation.docker.liveRestore = true;
