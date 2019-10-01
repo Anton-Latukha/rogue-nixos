@@ -14,7 +14,7 @@ in
 
     <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
 
-    ../../all.nix
+    ../all.nix
 
     # Include all derivations
     ./derivations.nix
@@ -65,8 +65,6 @@ in
 
   swapDevices = [ ];
 
-  hardware.cpu.intel.updateMicrocode = true;
-  hardware.enableAllFirmware = true;
   hardware.opengl.driSupport32Bit = true; # Enable 32bit acceleration
 
   powerManagement.cpuFreqGovernor = "powersave";
@@ -85,23 +83,17 @@ in
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
-  boot.loader.grub.extraPrepareConfig = "GRUB_CMDLINE_LINUX_DEFAULT='acpi_osi='";
+  boot.loader.grub.extraPrepareConfig = "GRUB_CMDLINE_LINUX_DEFAULT='acpi_osi='";    # Be silent in responce to BIOS on request what OS is running (often BIOS disables functionality if it detects Linux)
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelParams = [
     "pti=off" "spectre_v2=off" "l1tf=off" "nospec_store_bypass_disable" "no_stf_barrier"
   ];
-  boot.cleanTmpDir = true;  # Clean /tmp on boot
-  boot.tmpOnTmpfs = true;  # /tmp on ram drive
 
   nix.maxJobs = lib.mkDefault 8;
-  nix.autoOptimiseStore = true;    # Autodeduplicate files in store
   nix.nixPath =
     options.nix.nixPath.default ++
     [ "nixpkgs-overlays=/etc/nixos/host/rogue /overlays/" ];
-  nix.useSandbox = true;
   # nix.buildCores = 1;    # Multithreading
-
-  nixpkgs.config.allowUnfree = true;
 
   security.rngd.enable = true;
   # NOTE: 2019-03-11: Somehow does not parse sudoers file
@@ -128,9 +120,13 @@ in
   time.timeZone = "Europe/Kiev";
 
   programs.bash.enableCompletion = true;
-  programs.fish.enable = true;
   programs.mtr.enable = true;
   # programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
+  programs.java.enable = true;
+  programs.kbdlight.enable = true;
+  programs.light.enable = true;
+  programs.wavemon.enable = true;
+  programs.mosh.enable = true;
 
   services.emacs.defaultEditor = true;
   services.emacs.enable = true;
@@ -155,12 +151,8 @@ in
   # services.ipfs.enable = true;
   # services.xserver.windowManager.xmonad.enable = true;
   # services.xserver.windowManager.xmonad.enableContribAndExtras = true;
-  location.provider = "geoclue2";
   services.avahi.enable = true; # For Pulseaudio networking
   services.fstrim.enable = true;             # Periodic trim of the filesystem with util-linux fstrim service
-  services.fwupd.enable = true;
-  services.geoclue2.enable = true;
-  services.localtime.enable = true;
   services.printing.enable = true; # Enable CUPS to print documents.
   services.redshift.brightness.night = "0.5";
   services.redshift.enable = true;
@@ -172,7 +164,6 @@ in
   services.xserver.layout = "us";
   services.xserver.libinput.enable = true;         # Enable touchpad support.
   services.xserver.videoDrivers = [ "nvidia" ];    # Proprietary nVidia driver
-
 
   services.hoogle.enable = true;
   services.hoogle.port = 8080;
@@ -254,23 +245,6 @@ in
     "kvm"
     "ipfs"
   ];
-
-  users.motd = ''
-
-
-                                                               ==    ##   ##    
-  {}            {}        __                                    ===   ## ##     
- {}              {}       \ \ ___                            ========== ##   /  
- {}              {}        \ \\  \  _____         ->             ##      ## //  
- {}              {}         \ \\  \ \____\      ->->->         ##          //   
-{}                {}        / //   \  ____     ->->->->   ######          //////
- {}              {}        / // /\  \ \____\    ->->->       ## \\       //     
- {}              {}       /_//_/  \__\            ->        ##  /\\ ########### 
- {}              {}                                            // \\    ##      
-  {}            {}                                            //   \\    ##     
-
-
-  '';
 
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database
