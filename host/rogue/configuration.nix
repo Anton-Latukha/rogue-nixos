@@ -244,7 +244,7 @@ in
   services.nextcloud.enable = true;
   services.nextcloud.hostName = "testing";
   services.nextcloud.config.adminuser = "Anton-Latukha";
-  services.nextcloud.config.adminpassFile = "${secret}/nextcloud-admin.pass";
+  services.nextcloud.config.adminpassFile = "${secretDir}/nextcloud-admin.pass";
   services.nextcloud.nginx.enable = true;
   services.nextcloud.home = "/var/www/nextcloud";
   services.nextcloud.autoUpdateApps.enable = true;
@@ -253,7 +253,7 @@ in
   services.nextcloud.config.dbhost = "localhost";
   services.nextcloud.config.dbport = 5432;
   services.nextcloud.config.dbuser = "nextcloud";
-  services.nextcloud.config.dbpassFile = "${secret}/nextcloud-db.pass";
+  services.nextcloud.config.dbpassFile = "${secretDir}/nextcloud-db.pass";
   services.nextcloud.config.dbtableprefix = "oc_";
   services.nextcloud.config.extraTrustedDomains = [
     "*.*.*.*"
