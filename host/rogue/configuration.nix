@@ -14,6 +14,8 @@ in
 
     <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
 
+    ../../all.nix
+
     # Include all derivations
     ./derivations.nix
 
@@ -54,16 +56,19 @@ in
   };
 
 
-   fileSystems."/home/pyro/hosts/ubu/stor" = {
-     device = "192.168.88.50:/mnt/stor";
-     fsType = "nfs";
-     # Do not mount automatically, allow mount by local user, does not fail if not mounted
-     options = [ "noauto" "user" "nolock" "async" "noacl" "nocto" "noatime" "nodiratime" "nofail"];
-   };
+  fileSystems."/home/pyro/hosts/ubu/stor" = {
+    device = "192.168.88.50:/mnt/stor";
+    fsType = "nfs";
+    # Do not mount automatically, allow mount by local user, does not fail if not mounted
+    options = [ "noauto" "user" "nolock" "async" "noacl" "nocto" "noatime" "nodiratime" "nofail"];
+  };
 
   swapDevices = [ ];
 
-  nix.maxJobs = lib.mkDefault 8;
+  hardware.cpu.intel.updateMicrocode = true;
+  hardware.enableAllFirmware = true;
+  hardware.opengl.driSupport32Bit = true; # Enable 32bit acceleration
+
   powerManagement.cpuFreqGovernor = "powersave";
   hardware.pulseaudio.package = pkgs.pulseaudioFull;
   hardware.pulseaudio.enable = true;
@@ -88,6 +93,7 @@ in
   boot.cleanTmpDir = true;  # Clean /tmp on boot
   boot.tmpOnTmpfs = true;  # /tmp on ram drive
 
+  nix.maxJobs = lib.mkDefault 8;
   nix.autoOptimiseStore = true;    # Autodeduplicate files in store
   nix.nixPath =
     options.nix.nixPath.default ++
@@ -122,16 +128,16 @@ in
   time.timeZone = "Europe/Kiev";
 
   programs.bash.enableCompletion = true;
-  programs.mtr.enable = true;
   programs.fish.enable = true;
+  programs.mtr.enable = true;
   # programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
 
+  services.emacs.defaultEditor = true;
   services.emacs.enable = true;
   services.emacs.install = true;
-  services.emacs.defaultEditor = true;
   services.haveged.enable = true;
-  services.openssh.enable = true;
   services.openssh.allowSFTP = false;
+  services.openssh.enable = true;
   services.openssh.passwordAuthentication = false;
   services.openssh.hostKeys = [
     {
@@ -145,27 +151,27 @@ in
     }
   ];
   # services.netdata.enable = true;
-  services.geoclue2.enable = true;
-  services.localtime.enable = true;
-  services.redshift.enable = true;
-  services.redshift.brightness.night = "0.5";
-  location.provider = "geoclue2";
-  services.rpcbind.enable = true;
-  services.avahi.enable = true; # For Pulseaudio networking
-  services.xserver.enable = true;
-  services.xserver.layout = "us";
-  services.xserver.videoDrivers = [ "nvidia" ];    # Proprietary nVidia driver
-  services.xserver.libinput.enable = true;         # Enable touchpad support.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true; # Enable the KDE Desktop Environment.
+  # services.ipfs.autoMount = true;
+  # services.ipfs.enable = true;
   # services.xserver.windowManager.xmonad.enable = true;
   # services.xserver.windowManager.xmonad.enableContribAndExtras = true;
+  location.provider = "geoclue2";
+  services.avahi.enable = true; # For Pulseaudio networking
   services.fstrim.enable = true;             # Periodic trim of the filesystem with util-linux fstrim service
-  services.printing.enable = true; # Enable CUPS to print documents.
   services.fwupd.enable = true;
+  services.geoclue2.enable = true;
+  services.localtime.enable = true;
+  services.printing.enable = true; # Enable CUPS to print documents.
+  services.redshift.brightness.night = "0.5";
+  services.redshift.enable = true;
+  services.rpcbind.enable = true;
   services.teamviewer.enable = true;
-  # services.ipfs.enable = true;
-  # services.ipfs.autoMount = true;
+  services.xserver.desktopManager.plasma5.enable = true; # Enable the KDE Desktop Environment.
+  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.enable = true;
+  services.xserver.layout = "us";
+  services.xserver.libinput.enable = true;         # Enable touchpad support.
+  services.xserver.videoDrivers = [ "nvidia" ];    # Proprietary nVidia driver
 
 
   services.hoogle.enable = true;
@@ -193,9 +199,6 @@ in
   #  enable = true;
   #  group = "video";
   #};
-  hardware.cpu.intel.updateMicrocode = true;
-  hardware.enableAllFirmware = true;
-  hardware.opengl.driSupport32Bit = true; # Enable 32bit acceleration
 
   virtualisation.docker.enable = true;
   virtualisation.docker.liveRestore = true;
