@@ -206,6 +206,7 @@ in {
     stellarium
 	  latte-dock
     digikam
+    exiftool
 
     ## Office
     libreoffice # FIXME: 2018-12-06: -fresh Does not compile on nixos-unstable
