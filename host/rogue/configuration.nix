@@ -305,7 +305,7 @@ in
   services.jupyter.password = "'sha1:02ea7ec9a0f5:6ac01fe3450b0de07726f336efbb4ec094a75314'";
 
   environment.sessionVariables = {
-    SSH_AUTH_SOCK = "$XDG_RUNTIME_DIR"'/keeagent.socket'
+    SSH_AUTH_SOCK = "$XDG_RUNTIME_DIR"'/keepass-ssh-agent.socket';
   };
 
 }
