@@ -356,7 +356,7 @@ in {
     ### Images Create
     inkscape
     gimp
-    imagemagick
+    imagemagickBig
     kcolorchooser
 
     # Previously unstable packages

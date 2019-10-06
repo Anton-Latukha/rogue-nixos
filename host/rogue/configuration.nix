@@ -307,5 +307,6 @@ in
   environment.sessionVariables = {
     SSH_AUTH_SOCK = "\"$XDG_RUNTIME_DIR\"/keepass-ssh-agent.socket";
   };
+  programs.ssh.startAgent = true;
 
 }
