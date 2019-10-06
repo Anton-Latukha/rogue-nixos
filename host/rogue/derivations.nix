@@ -142,6 +142,9 @@ in {
     alsaTools    # Additional Tools to Utils
     psmisc    # A set of small useful utilities that use the proc filesystem (such as fuser, killall and pstree)
     gnupg
+    tdlib    # Official Telegram library Emacs Telega.el build upon
+    gperf    # HACK: 2019-10-07: Seems like Emacs Telega requires it?
+    cmake    # HACK: 2019-10-07: Seems like Emacs Telega requires it?
 
     dos2unix    # Convert Windows special text symbols to Unix
 
