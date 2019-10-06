@@ -156,7 +156,7 @@ in {
     ghc
     # haskell.compiler.ghc802 # FIXME: 2018-04-24 `intero` and `ghc-mod` do not compile/support 8.2.2 still
     cabal-install
-    cabal2nix
+    # cabal2nix
     # FIXME: 2018-06-22: Dows not compile in nixos-unstable:
     # [7 of 7] Compiling Stack2nix        ( src/Stack2nix.hs, dist/build/Stack2nix.o )
     # src/Stack2nix.hs:37:48: error:
@@ -313,7 +313,7 @@ in {
     fwupd    # FIXME: No fwupd.service
     jdupes
     # viber
-    teamviewer
+    # teamviewer
 
     ## Games
     openmw
