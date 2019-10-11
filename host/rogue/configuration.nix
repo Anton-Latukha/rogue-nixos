@@ -135,17 +135,17 @@ in
   services.openssh.allowSFTP = false;
   services.openssh.enable = true;
   services.openssh.passwordAuthentication = false;
-  services.openssh.hostKeys = [
-    {
-      path = "/home/pyro/.ssh/id_rsa";
-      type = "rsa";
-      bits = 4096;
-    }
-    {
-      path = "/home/pyro/.ssh/id_ed25519";
-      type = "ed25519";
-    }
-  ];
+  # services.openssh.hostKeys = [
+  #   {
+  #     path = "/home/pyro/.ssh/id_rsa";
+  #     type = "rsa";
+  #     bits = 4096;
+  #   }
+  #   {
+  #     path = "/home/pyro/.ssh/id_ed25519";
+  #     type = "ed25519";
+  #   }
+  # ];
   # services.netdata.enable = true;
   # services.ipfs.autoMount = true;
   # services.ipfs.enable = true;
@@ -307,6 +307,6 @@ in
   environment.sessionVariables = {
     SSH_AUTH_SOCK = "\"$XDG_RUNTIME_DIR\"/keepass-ssh-agent.socket";
   };
-  programs.ssh.startAgent = true;
+  # programs.ssh.startAgent = true; # FIXME: This does not binds to cutom user available socket
 
 }
