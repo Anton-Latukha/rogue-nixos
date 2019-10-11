@@ -68,8 +68,8 @@ in {
     winusb
     unetbootin
     ripgrep
-    sqlite
-    sqliteman
+    # sqlite
+    # sqliteman
     cdrtools # Highly portable CD/DVD/BluRay command line recording software
     lzma
     tree
