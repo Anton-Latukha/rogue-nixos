@@ -257,6 +257,7 @@ in {
     djvulibre
     gwenview
     feh
+    openjpeg
 
     ### Office libraries
     hunspell
