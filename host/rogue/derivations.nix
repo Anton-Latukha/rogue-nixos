@@ -255,6 +255,8 @@ in {
     kdeApplications.okular
     gImageReader
     djvulibre
+    gwenview
+    feh
 
     ### Office libraries
     hunspell
