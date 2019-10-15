@@ -254,6 +254,7 @@ in {
     djvu2pdf
     kdeApplications.okular
     gImageReader
+    djvulibre
 
     ### Office libraries
     hunspell
