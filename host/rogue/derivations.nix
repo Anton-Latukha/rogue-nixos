@@ -257,7 +257,8 @@ in {
     djvulibre
     gwenview
     feh
-    openjpeg
+    openjpeg    # Open-source JPEG 2000 codec
+    nomacs
 
     ### Office libraries
     hunspell
