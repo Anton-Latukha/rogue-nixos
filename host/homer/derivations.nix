@@ -278,7 +278,7 @@ in {
     ### Media Consume
     youtube-dl
     googleearth
-    qgis
+    # qgis
 
     #### Video
     smplayer
