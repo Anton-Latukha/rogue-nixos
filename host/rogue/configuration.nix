@@ -283,14 +283,14 @@ in
   services.nextcloud.config.dbuser = "nextcloud";
   services.nextcloud.config.dbpassFile = "${secretDir}/nextcloud-db.pass";
   services.nextcloud.config.dbtableprefix = "oc_";
+  services.nextcloud.caching.apcu = true;
+  services.nextcloud.caching.redis = true;
   services.nextcloud.config.extraTrustedDomains = [
     "*.*.*.*"
   ];
   # services.nextcloud.home = "/btrfs/midimportant/nextcloud";
   # services.nextcloud.config.overwriteProtocol = "https";
   # services.nextcloud.https = true;
-  # services.nextcloud.caching.apcu = true;
-  # services.nextcloud.caching.redis = true;
 
   security.pam.services.pyro.enableKwallet = true;
 
