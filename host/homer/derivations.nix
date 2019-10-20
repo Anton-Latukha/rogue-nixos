@@ -337,6 +337,10 @@ in {
     # nethack
 
     # Custom local packages
+
+    wakatime
+    nextcloud-client
+
   ];
 }
 
