@@ -1,12 +1,18 @@
 { config, pkgs, ... }:
 
 let
+
   # You need to update nondefault channel with: `nix-channel --update unstable`
   unstable = import <unstable> {
-  # pass the nixpkgs config to the unstable alias
-  # to ensure `allowUnfree = true;` is propagated:
-  config = config.nixpkgs.config;
-};
+    # pass the nixpkgs config to the unstable alias
+    # to ensure `allowUnfree = true;` is propagated:
+    config = config.nixpkgs.config;
+  };
+
+  stable = import <stable> {
+    config = config.nixpkgs.config;
+  };
+
 in {
   environment.systemPackages = with pkgs; [
 
@@ -340,6 +346,10 @@ in {
 
     wakatime
     nextcloud-client
+
+    jdk
+    micro
+    qgis
 
   ];
 }

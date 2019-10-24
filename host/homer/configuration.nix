@@ -32,6 +32,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  nixpkgs.config.allowBroken = true;
+
   # Set your time zone.
   time.timeZone = "Europe/Kiev";
 
