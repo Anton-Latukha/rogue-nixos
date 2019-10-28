@@ -350,6 +350,7 @@ in {
     jdk
     micro
     qgis
+    python37Packages.matplotlib
 
   ];
 }
