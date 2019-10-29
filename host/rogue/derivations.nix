@@ -73,7 +73,7 @@ in {
     cdrtools # Highly portable CD/DVD/BluRay command line recording software
     lzma
     tree
-    testdisk-photorec
+    testdisk
     asciinema
     wmctrl # interact with a EWMH/NetWM compatible X Window Manager.
     exiftool
