@@ -97,7 +97,7 @@
   networking.networkmanager.enable = true;
 
   hardware.cpu.intel.updateMicrocode = true;
-  hardware.enableAllFirmware = true;
+  # hardware.enableAllFirmware = true;
   # Enable 32bit acceleration
   hardware.opengl.driSupport32Bit = true;
   hardware.pulseaudio.enable = true;
