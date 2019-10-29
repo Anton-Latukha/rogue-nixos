@@ -309,4 +309,6 @@ in
   };
   # programs.ssh.startAgent = true; # FIXME: This does not binds to cutom user available socket
 
+  services.btrfs.autoScrub.enable = true;    # Check data against metagate. BTRFS devs recommend 1m period, which is default period in NixOS.
+
 }

@@ -389,6 +389,8 @@ in {
 
     # Tiling life time
     # xmonad-with-packages
+    openxcom
+
   ];
 }
 
