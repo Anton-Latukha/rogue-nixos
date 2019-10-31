@@ -4,7 +4,7 @@
 
   hardware.cpu.intel.updateMicrocode = true;
   # hardware.enableAllFirmware = true;    # FIXME: 2019-11-01: Was not building due to: https://github.com/NixOS/nixpkgs/issues/71952 aka "error: cannot download osxupd10.11.5.dmg from any mirror"
-  enableRedistributableFirmware = true
+  enableRedistributableFirmware = true;
 
   boot.cleanTmpDir = true;  # Clean /tmp on boot
   boot.tmpOnTmpfs = true;  # /tmp on ram drive
