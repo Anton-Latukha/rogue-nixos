@@ -244,6 +244,7 @@ in
     "vboxusers"
     "kvm"
     "ipfs"
+    "cdrom"
   ];
 
   # This value determines the NixOS release with which your system is to be
@@ -310,5 +311,9 @@ in
   # programs.ssh.startAgent = true; # FIXME: This does not binds to cutom user available socket
 
   services.btrfs.autoScrub.enable = true;    # Check data against metagate. BTRFS devs recommend 1m period, which is default period in NixOS.
+
+  programs.cdemu.enable = true;
+  programs.cdemu.group = "cdrom";
+  programs.cdemu.gui = true;
 
 }

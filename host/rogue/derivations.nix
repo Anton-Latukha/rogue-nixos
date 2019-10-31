@@ -391,8 +391,6 @@ in {
     # xmonad-with-packages
     openxcom
 
-    gcdemu
-
   ];
 }
 
