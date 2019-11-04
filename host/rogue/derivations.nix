@@ -393,6 +393,12 @@ in {
 
     masterpdfeditor
 
+    pinentry
+
+    pinentry-emacs
+
+    pinentry-qt
+
   ];
 }
 
