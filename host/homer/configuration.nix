@@ -88,6 +88,9 @@
   # Daemon must turn off after not needed
   services.fwupd.enable = true;
 
+  services.system-config-printer.enable = true;
+  programs.system-config-printer.enable = true;
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
