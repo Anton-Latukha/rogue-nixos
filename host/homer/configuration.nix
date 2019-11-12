@@ -90,6 +90,7 @@
 
   services.system-config-printer.enable = true;
   programs.system-config-printer.enable = true;
+  services.printing.drivers = with pkgs; [ pkgs.canon-cups-ufr2 ];
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
