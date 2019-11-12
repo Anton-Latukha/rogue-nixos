@@ -353,6 +353,8 @@ in {
     python37Packages.matplotlib
     skanlite    # KDE Scanning util
     xsane    # Utility for easy scanner access protocol
+    gnome3.simple-scan
+
   ];
 }
 
