@@ -83,7 +83,7 @@
   services.fstrim.enable = true;             # Periodic trim of the filesystem with util-linux fstrim service
 
   # Enable CUPS to print documents.
-  # services.printing.enable = true;
+  services.printing.enable = true;
 
   # Daemon must turn off after not needed
   services.fwupd.enable = true;
