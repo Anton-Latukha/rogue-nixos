@@ -351,8 +351,8 @@ in {
     micro
     qgis
     python37Packages.matplotlib
-    skanlite
-
+    skanlite    # KDE Scanning util
+    xsane    # Utility for easy scanner access protocol
   ];
 }
 
