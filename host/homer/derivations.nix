@@ -351,6 +351,7 @@ in {
     micro
     qgis
     python37Packages.matplotlib
+    skanlite
 
   ];
 }
