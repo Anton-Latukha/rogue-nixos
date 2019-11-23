@@ -225,8 +225,6 @@ in
 
     ];
   fonts.fontconfig.enable = true;
-  fonts.fontconfig.ultimate.enable = true;
-  fonts.fontconfig.ultimate.substitutions = "combi";
   fonts.fontconfig.defaultFonts.monospace = [ "Inconsolata LGC" "Iconsolata" ];
 
   users.extraUsers.pyro.isNormalUser = true;
