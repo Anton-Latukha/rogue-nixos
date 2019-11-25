@@ -172,4 +172,7 @@
   # should.
   system.stateVersion = "18.03"; # Did you read the comment?
 
+  services.earlyoom.enable = true;  # Out-Of-Memory Killer
+  services.earlyoom.useKernelOOMKiller = true;
+
 }
