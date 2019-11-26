@@ -121,10 +121,6 @@
   fonts.enableGhostscriptFonts = true;
   fonts.fonts = with pkgs; [ hack-font source-code-pro liberation_ttf inconsolata-lgc ];
   fonts.fontconfig.enable = true;
-  fonts.fontconfig.ultimate = { # Formerly known as Infinality. Provides many font-specific rendering tweaks and customizable settings.
-    enable = true;
-    substitutions = "combi";
-  };
   fonts.fontconfig.defaultFonts = {
     monospace = [ "Inconsolata LGC" "Iconsolata" ];
   };
