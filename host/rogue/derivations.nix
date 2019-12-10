@@ -67,7 +67,7 @@ in {
     telnet
     winusb
     unetbootin
-    ripgrep
+    ripgrep-all
     # sqlite
     # sqliteman
     cdrtools # Highly portable CD/DVD/BluRay command line recording software
