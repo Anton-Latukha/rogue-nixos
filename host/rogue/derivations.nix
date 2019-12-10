@@ -399,6 +399,8 @@ in {
 
     pinentry-qt
 
+    luajitPackages.digestif  # Code analyzer for TeX.
+
   ];
 }
 
