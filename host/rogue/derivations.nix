@@ -398,9 +398,10 @@ in {
     pinentry-emacs
 
     pinentry-qt
-    
+
     lua53Packages.digestif  # Code analyzer for TeX.
 
+    rubber
   ];
 }
 
