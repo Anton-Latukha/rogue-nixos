@@ -398,8 +398,8 @@ in {
     pinentry-emacs
 
     pinentry-qt
-
-    luajitPackages.digestif  # Code analyzer for TeX.
+    
+    lua53Packages.digestif  # Code analyzer for TeX.
 
   ];
 }
