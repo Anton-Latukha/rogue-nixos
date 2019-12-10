@@ -402,6 +402,9 @@ in {
     lua53Packages.digestif  # Code analyzer for TeX.
 
     rubber
+
+    tectonic
+
   ];
 }
 
