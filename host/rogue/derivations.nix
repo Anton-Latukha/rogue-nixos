@@ -67,6 +67,7 @@ in {
     telnet
     winusb
     unetbootin
+    ripgrep
     ripgrep-all
     # sqlite
     # sqliteman
