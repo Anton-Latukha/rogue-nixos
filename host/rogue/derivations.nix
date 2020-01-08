@@ -200,6 +200,7 @@ in {
 
     #### Haskell packages
     haskellPackages.ghcid    # Mini IDE for Haskell
+    haskellPackages.hscolour
     haskellPackages.apply-refact
     haskellPackages.stylish-haskell    # Haskell code prettifier
     haskellPackages.hlint
