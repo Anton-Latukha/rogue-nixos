@@ -57,7 +57,7 @@ in
 
 
   fileSystems."/home/pyro/hosts/ubu/stor" = {
-    device = "192.168.88.50:/mnt/stor";
+    device = "192.168.88.5:/mnt/stor";
     fsType = "nfs";
     # Do not mount automatically, allow mount by local user, does not fail if not mounted
     options = [ "noauto" "user" "nolock" "async" "noacl" "nocto" "noatime" "nodiratime" "nofail"];
