@@ -246,7 +246,7 @@ in {
     kdeFrameworks.syntax-highlighting
     kwayland-integration
     filelight
-    ark    p7zip    	unar
+    ark    p7zip
     kdeApplications.spectacle
     kdeApplications.kcalutils
     kdeFrameworks.kcmutils
