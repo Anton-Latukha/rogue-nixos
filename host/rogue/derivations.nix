@@ -117,6 +117,7 @@ in {
     gnuplot    # Org+GNU Plot
     texlive.combined.scheme-full    # FIXME: Trying troubleshoot Org -> LaTeX -> PDF
     pandoc
+    librsvg    # Render SVG files using cairo (for Org export to PDF)
     zip    # Was requested for Org -> ODT
     unzip     # Was requested for Org -> ODT
     fcrackzip    # Well, to sprinkle crack on it
