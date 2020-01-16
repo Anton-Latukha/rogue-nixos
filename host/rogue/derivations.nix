@@ -118,6 +118,7 @@ in {
     texlive.combined.scheme-full    # FIXME: Trying troubleshoot Org -> LaTeX -> PDF
     pandoc
     librsvg    # Render SVG files using cairo (for Org export to PDF)
+    wkhtmltopdf    # Render HTML into PDF using Qt WebKit rendering engine
     zip    # Was requested for Org -> ODT
     unzip     # Was requested for Org -> ODT
     fcrackzip    # Well, to sprinkle crack on it
