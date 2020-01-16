@@ -39,6 +39,7 @@ in {
     fzf
     bat
     prettyping
+    bandwhich
     gitAndTools.diff-so-fancy
     fd
     ncdu
