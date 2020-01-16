@@ -39,7 +39,7 @@ in {
     fzf
     bat
     prettyping
-    bandwhich
+    bandwhich    # Display current network utilization by process, connection and remote IP/hostname
     gitAndTools.diff-so-fancy
     fd
     ncdu
