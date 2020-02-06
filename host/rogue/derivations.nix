@@ -260,9 +260,6 @@ in {
     gImageReader
     djvulibre
     gwenview
-    feh
-    openjpeg    # Open-source JPEG 2000 codec
-    nomacs
 
     ### Office libraries
     hunspell
@@ -330,6 +327,7 @@ in {
     libopus
     opusTools
     opusfile
+    fdk_aac
     flac
     audacity
     wavegain
@@ -361,7 +359,10 @@ in {
     chromaprint    # For AcoustID fpcalc fingerprinting
 
     ## Images
-    gnome3.eog
+    # gnome3.eog
+    # feh    # Image viewer configurable from CLI
+    openjpeg    # Open-source JPEG 2000 codec
+    # nomacs
 
     ### Images Create
     inkscape
