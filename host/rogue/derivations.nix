@@ -257,6 +257,7 @@ in {
     scribus
     djvu2pdf
     kdeApplications.okular
+    bookworm
     gImageReader
     djvulibre
     gwenview
