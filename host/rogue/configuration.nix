@@ -8,8 +8,7 @@ in
 
 {
 
-  #  2020-02-19: NOTE: Haskell pretty-printer was marked as broken, temporarily living on the edge
-  nixpkgs.config.allowBroken = true;
+  # nixpkgs.config.allowBroken = true;
 
 #### Importing host configuration
 
