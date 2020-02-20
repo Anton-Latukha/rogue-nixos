@@ -206,7 +206,8 @@ in {
     haskellPackages.ghcid    # Mini IDE for Haskell
     haskellPackages.hscolour
     haskellPackages.apply-refact
-    haskellPackages.stylish-haskell    # Haskell code prettifier
+    #  2020-02-20: NOTE: Was marked as broken
+    # haskellPackages.stylish-haskell    # Haskell code prettifier
     haskellPackages.hlint
     haskellPackages.hspec
     # haskellPackages.hasktags # FIXME: 2018-06-22: Does not compile on nixos-unstable ### Failure in: 2:16.hs:0:these were not found tests/Test.hs:39 expected: ["t2","t3","t4","t5"] but got: []
