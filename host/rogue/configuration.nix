@@ -167,8 +167,9 @@ in
   services.xserver.libinput.enable = true;         # Enable touchpad support.
   services.xserver.videoDrivers = [ "nvidia" ];    # Proprietary nVidia driver
 
-  services.hoogle.enable = true;
-  services.hoogle.port = 8080;
+  #  2020-02-20: NOTE: Trying build without Hoogle
+  # services.hoogle.enable = true;
+  # services.hoogle.port = 8080;
 
   networking.firewall.enable = false;
   networking.firewall.allowedTCPPorts = [
