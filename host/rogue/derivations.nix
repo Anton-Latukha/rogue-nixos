@@ -304,7 +304,7 @@ in {
     tor-browser-bundle-bin
 
     ### Messengers
-    pidgin
+    # pidgin
     skype
     tdesktop
 
@@ -341,7 +341,7 @@ in {
     #### Video
     smplayer
     mpv
-    kodi
+    # kodi
     vlc
     syncplay
 
