@@ -303,6 +303,7 @@ in {
 
     ## Internet
     firefox
+    plasma-browser-integration
     chromium
     qbittorrent
     tor-browser-bundle-bin
