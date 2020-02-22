@@ -121,6 +121,7 @@ in {
     libpgf
     pgf_graphics
     pgfplots
+    qtikz
     pandoc
     librsvg    # Render SVG files using cairo (for Org export to PDF)
     wkhtmltopdf    # Render HTML into PDF using Qt WebKit rendering engine
