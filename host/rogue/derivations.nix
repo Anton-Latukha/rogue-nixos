@@ -118,6 +118,9 @@ in {
     gnuplot    # Org+GNU Plot
     texlive.combined.scheme-full    # FIXME: Trying troubleshoot Org -> LaTeX -> PDF
     tikzit    # LaTeX framework for drawind diagrams, has UI allowing literally draw
+    libpgf
+    pgf_graphics
+    pgfplots
     pandoc
     librsvg    # Render SVG files using cairo (for Org export to PDF)
     wkhtmltopdf    # Render HTML into PDF using Qt WebKit rendering engine
@@ -358,7 +361,7 @@ in {
     avidemux
     mkvtoolnix
     mediainfo-gui
-    unstable.handbrake
+    handbrake
     chromaprint    # For AcoustID fpcalc fingerprinting
 
     ## Images
