@@ -384,6 +384,7 @@ in {
     teamviewer
 
     ## Games
+    dwarf-fortress-packages.dwarf-fortress-full
     # freeciv_gtk
     # dwarf-fortress
     # dwarf-fortress-packages.dwarf-fortress-unfuck
