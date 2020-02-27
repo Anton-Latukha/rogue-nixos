@@ -60,6 +60,7 @@ in {
     # python36Packages.glances    # NOTE: 2018-12-31: Dep is broken
     # python27Packages.virtual-display    # FIXME: 2019-03-10: Fix build
     python27Packages.namebench
+    python38Packages.pygments
     appimage-run
 
     zsync
