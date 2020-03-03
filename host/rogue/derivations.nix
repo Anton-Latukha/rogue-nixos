@@ -116,6 +116,7 @@ in {
 
     # Console
     emacs
+    proselint    # Linter for prose (text)
     gnuplot    # Org+GNU Plot
     texlive.combined.scheme-full    # FIXME: Trying troubleshoot Org -> LaTeX -> PDF
     tikzit    # LaTeX framework for drawind diagrams, has UI allowing literally draw
