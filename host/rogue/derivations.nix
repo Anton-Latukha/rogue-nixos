@@ -117,6 +117,21 @@ in {
     # Console
     emacs
     proselint    # Linter for prose (text)
+    nodePackages.textlint
+    nodePackages.textlint-plugin-latex
+    nodePackages.textlint-rule-abbr-within-parentheses
+    nodePackages.textlint-rule-alex
+    nodePackages.textlint-rule-common-misspellings
+    nodePackages.textlint-rule-diacritics
+    nodePackages.textlint-rule-en-max-word-count
+    nodePackages.textlint-rule-max-comma
+    nodePackages.textlint-rule-no-start-duplicated-conjunction
+    nodePackages.textlint-rule-period-in-list-item
+    nodePackages.textlint-rule-stop-words
+    nodePackages.textlint-rule-terminology
+    nodePackages.textlint-rule-unexpanded-acronym
+    nodePackages.textlint-rule-write-good
+
     gnuplot    # Org+GNU Plot
     texlive.combined.scheme-full    # FIXME: Trying troubleshoot Org -> LaTeX -> PDF
     tikzit    # LaTeX framework for drawind diagrams, has UI allowing literally draw
