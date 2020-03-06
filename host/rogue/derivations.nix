@@ -438,6 +438,8 @@ in {
 
     tectonic
 
+    notify-send
+
   ];
 }
 
