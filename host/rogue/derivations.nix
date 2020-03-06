@@ -438,7 +438,7 @@ in {
 
     tectonic
 
-    notify-send
+    libnotify
 
   ];
 }
