@@ -219,7 +219,7 @@ in {
     libreoffice # FIXME: 2018-12-06: -fresh Does not compile on nixos-unstable
     calibre
     kdeApplications.okular
-    kdeApplications.kcalcore
+    # kdeApplications.kcalcore
 
     ### Office libraries
     # hunspell # FIXME: 2018-12-06: Does not compile on nixos-unstable
