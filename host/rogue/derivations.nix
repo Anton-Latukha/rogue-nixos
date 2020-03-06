@@ -421,7 +421,7 @@ in {
     # Custom local packages
 
     # Tiling life time
-    # xmonad-with-packages
+    xmonad-with-packages
     openxcom
 
     masterpdfeditor
