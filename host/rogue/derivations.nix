@@ -321,6 +321,8 @@ in {
     ## Internet
     firefox
     plasma-browser-integration
+    xdg-desktop-portal    # Desktop integration portals for sandboxed apps (for Firefox use of Dolphin file picker)
+    plasma5.xdg-desktop-portal-kde    # Desktop integration portals for sandboxed apps (for Firefox use of Dolphin file picker)
     chromium
     qbittorrent
     tor-browser-bundle-bin
