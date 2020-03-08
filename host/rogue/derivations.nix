@@ -13,6 +13,7 @@ let
 
   # Import overrrides:
   # pkgs = import <nixpkgs> { config = import ./config.nix; };
+  pkgs.emacs.override { imagemagick = pkgs.imagemagickBig; }
 
 keepass-with-plugins = pkgs.keepass.override {
     plugins = [
