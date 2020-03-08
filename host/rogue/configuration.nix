@@ -94,7 +94,7 @@ in
   nix.maxJobs = lib.mkDefault 8;
   nix.nixPath =
     options.nix.nixPath.default ++
-    [ "nixpkgs-overlays=/etc/nixos/host/rogue /overlays/" ];
+    [ "nixpkgs-overlays=/etc/nixos/host/rogue/overlays/" ];
   # nix.buildCores = 1;    # Multithreading
 
   security.rngd.enable = true;
