@@ -15,12 +15,12 @@ let
   # pkgs = import <nixpkgs> { config = import ./config.nix; };
   pkgs.emacs.override { imagemagick = pkgs.imagemagickBig; };
 
-keepass-with-plugins = pkgs.keepass.override {
-    plugins = [
-      pkgs.keepass-keeagent
-      pkgs.keepass-keepassrpc
-    ];
-};
+  keepass-with-plugins = pkgs.keepass.override {
+      plugins = [
+        pkgs.keepass-keeagent
+        pkgs.keepass-keepassrpc
+      ];
+  };
 
 in {
   environment.systemPackages = with pkgs; [
