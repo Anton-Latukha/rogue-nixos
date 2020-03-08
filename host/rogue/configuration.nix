@@ -322,7 +322,7 @@ in
       emacs = super.emacs.override {
         imagemagick = pkgs.imagemagickBig;
       };
-    });
-  ]
+    })
+  ];
 
 }
