@@ -317,5 +317,12 @@ in
   programs.cdemu.enable = true;
   programs.cdemu.group = "cdrom";
   programs.cdemu.gui = true;
+  nixpkgs.overlays = [
+    (self: super: {
+      emacs = super.emacs.override {
+        imagemagick = pkgs.imagemagickBig;
+      };
+    });
+  ]
 
 }
