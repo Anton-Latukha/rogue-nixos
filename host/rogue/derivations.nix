@@ -171,6 +171,7 @@ in {
     gperf    # HACK: 2019-10-07: Seems like Emacs Telega requires it?
     cmake    # HACK: 2019-10-07: Seems like Emacs Telega requires it?
     gcc    # HACK: 2019-10-07: Seems like Emacs Telega requires it?
+    libtgvoip    # For telega VoIP
 
     dos2unix    # Convert Windows special text symbols to Unix
 
