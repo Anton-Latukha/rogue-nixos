@@ -137,6 +137,7 @@ in {
     tikzit    # LaTeX framework for drawind diagrams, has UI allowing literally draw
     libpgf
     pgf_graphics
+    poppler_utils    # A PDF rendering utils & library. Has info util pdffonts
     pgfplots
     qtikz
     pandoc
