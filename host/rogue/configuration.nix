@@ -225,7 +225,7 @@ in
     noto-fonts-emoji
     noto-fonts-extra
     unidings    #  Glyphs and Icons for blocks of The Unicode Standard
-
+    xits-math    # Fonts for Scientific and Technical Information eXchange,  a version of STIX fonts enhanced with the OpenType MATH table
 
     ];
   fonts.fontconfig.enable = true;
