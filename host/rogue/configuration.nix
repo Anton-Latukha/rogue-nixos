@@ -234,6 +234,7 @@ in
   fonts.fontconfig.enable = true;
   fonts.fontconfig.defaultFonts.monospace = [ "Inconsolata LGC" "Iconsolata" ];
 
+  xdg.portal.enable = true;    # Xdg desktop integration
   users.extraUsers.pyro.isNormalUser = true;
   users.extraUsers.pyro.uid = 1000;
   users.extraUsers.pyro.home = "/home/pyro";
