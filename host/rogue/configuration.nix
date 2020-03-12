@@ -121,6 +121,7 @@ in
 
   time.timeZone = "Europe/Kiev";
 
+  programs.fish.enable = true;
   programs.bash.enableCompletion = true;
   programs.mtr.enable = true;
   # programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
