@@ -234,6 +234,9 @@ in
   fonts.fontconfig.enable = true;
   fonts.fontconfig.defaultFonts.monospace = [ "Inconsolata LGC" "Iconsolata" ];
 
+  systemd.services.user@1000.environment = {    # Setup environment for my user
+    XDG_DATA_HOME = "/home/pyro/.local/share"
+  };
   xdg.portal.enable = true;    # Xdg desktop integration
   xdg.portal.gtkUsePortal = true;    # Force GTK apps use local portal for filechooser etc.
   users.defaultUserShell = "pkgs.fish";
