@@ -241,6 +241,7 @@ in
   users.extraUsers.pyro.uid = 1000;
   users.extraUsers.pyro.home = "/home/pyro";
   users.extraUsers.pyro.description = "Anton Latukha";
+  users.extraUsers.pyro.useDefaultShell = true;
   users.extraUsers.pyro.extraGroups = [
     "wheel"
     "networkmanager"
