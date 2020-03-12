@@ -138,6 +138,7 @@ in {
     libpgf
     pgf_graphics
     poppler_utils    # A PDF rendering utils & library. Has info util pdffonts
+    diff-pdf     # Text and pixel-comparison of PDFs
     pgfplots
     qtikz
     pandoc
