@@ -235,6 +235,7 @@ in
   fonts.fontconfig.defaultFonts.monospace = [ "Inconsolata LGC" "Iconsolata" ];
 
   xdg.portal.enable = true;    # Xdg desktop integration
+  xdg.portal.gtkUsePortal = true;    # Force GTK apps use local portal for filechooser etc.
   users.extraUsers.pyro.isNormalUser = true;
   users.extraUsers.pyro.uid = 1000;
   users.extraUsers.pyro.home = "/home/pyro";
