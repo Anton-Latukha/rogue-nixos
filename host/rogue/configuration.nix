@@ -227,6 +227,7 @@ in
     unidings    #  Glyphs and Icons for blocks of The Unicode Standard
     xits-math    # Fonts for Scientific and Technical Information eXchange,  a version of STIX fonts enhanced with the OpenType MATH table
     cm_unicode    # Computer Modern classical default Donald Knuth. Extended with Unicode and converted to OTF
+    ibm-plex    # IBM Plex font, the font for and of the company
 
     ];
   fonts.fontconfig.enable = true;
