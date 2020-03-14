@@ -133,6 +133,7 @@ in {
     nodePackages.textlint-rule-write-good
 
     gnuplot    # Org+GNU Plot
+    drawio    # Free Software tool to drawing and exporting all kinds of diagrams
     texlive.combined.scheme-full    # FIXME: Trying troubleshoot Org -> LaTeX -> PDF
     tikzit    # LaTeX framework for drawind diagrams, has UI allowing literally draw
     libpgf
