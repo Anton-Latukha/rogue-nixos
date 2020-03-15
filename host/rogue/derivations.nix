@@ -140,6 +140,7 @@ in {
     pgf_graphics
     poppler_utils    # A PDF rendering utils & library. Has info util pdffonts
     pdf2svg    # For Emacs Luapdf2svg
+    image_optim
     diff-pdf     # Text and pixel-comparison of PDFs
     pgfplots
     qtikz
