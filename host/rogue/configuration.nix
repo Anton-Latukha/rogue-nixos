@@ -325,6 +325,7 @@ options snd-hda-intel model=asus-g752
   services.btrfs.autoScrub.enable = true;    # Check data against metagate. BTRFS devs recommend 1m period, which is default period in NixOS.
 
   services.acpid.enable = true; #  2020-03-19: NOTE: Deamon for registerin & reacting to ACPI evens cross-portable.
+  services.acpid.logEvents = true; #  2020-03-19: NOTE: Log all events
 
   programs.cdemu.enable = true;
   programs.cdemu.group = "cdrom";
