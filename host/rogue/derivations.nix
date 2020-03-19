@@ -62,6 +62,7 @@ in {
     python27Packages.namebench
     python38Packages.pygments
     appimage-run
+    acpid                       #  2020-03-19: NOTE: daemon for delivering ACPI events
 
     zsync
     acoustidFingerprinter
