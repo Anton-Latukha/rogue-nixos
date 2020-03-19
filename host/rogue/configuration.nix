@@ -328,6 +328,7 @@ options snd-hda-intel model=asus-mode5
   services.acpid.logEvents = true; #  2020-03-19: NOTE: Log all events
 
   services.fwupd.enable = true;
+  hardware.enableAllFirmware = true;
 
   programs.cdemu.enable = true;
   programs.cdemu.group = "cdrom";
