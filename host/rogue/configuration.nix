@@ -327,6 +327,8 @@ options snd-hda-intel model=asus-mode5
   services.acpid.enable = true; #  2020-03-19: NOTE: Deamon for registerin & reacting to ACPI evens cross-portable.
   services.acpid.logEvents = true; #  2020-03-19: NOTE: Log all events
 
+  services.fwupd.enable = true;
+
   programs.cdemu.enable = true;
   programs.cdemu.group = "cdrom";
   programs.cdemu.gui = true;
