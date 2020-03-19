@@ -76,6 +76,9 @@ in
   hardware.pulseaudio.tcp.enable = true;
   security.rtkit.enable = true;
   sound.enableOSSEmulation = true;
+  sound.extraConfig = ''
+options snd-hda-intel model=model=asus-g752
+    '';
   hardware.pulseaudio.zeroconf.discovery.enable = true;
 #  hardware.pulseaudio.extraConfig = ''
 #    load-module module-null-sink sink_name=rtp
