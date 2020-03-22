@@ -136,7 +136,6 @@ in {
     gnuplot    # Org+GNU Plot
     drawio    # Free Software tool to drawing and exporting all kinds of diagrams
     texlive.combined.scheme-full    # FIXME: Trying troubleshoot Org -> LaTeX -> PDF
-    tikzit    # LaTeX framework for drawind diagrams, has UI allowing literally draw
     libpgf
     pgf_graphics
     poppler_utils    # A PDF rendering utils & library. Has info util pdffonts
