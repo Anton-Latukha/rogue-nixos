@@ -143,7 +143,6 @@ in {
     image_optim
     diff-pdf     # Text and pixel-comparison of PDFs
     pgfplots
-    qtikz
     pandoc
     librsvg    # Render SVG files using cairo (for Org export to PDF)
     wkhtmltopdf    # Render HTML into PDF using Qt WebKit rendering engine
