@@ -61,6 +61,7 @@ in {
     # python27Packages.virtual-display    # FIXME: 2019-03-10: Fix build
     python27Packages.namebench
     python38Packages.pygments
+    pythonPackages.youtube-dl    # For gPodder yt-dl extension.
     appimage-run
     acpid                       #  2020-03-19: NOTE: daemon for delivering ACPI events
 
