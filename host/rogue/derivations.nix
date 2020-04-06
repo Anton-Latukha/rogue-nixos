@@ -449,6 +449,8 @@ in {
 
     libnotify
 
+    libtool    # For compilation of Emacs vterm package
+
   ];
 }
 
