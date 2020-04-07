@@ -358,6 +358,7 @@ in {
     #   speechdSupport = true;
     #   })
     # mumble_overlay # FIXME: Normal Mumble hangs on start.
+    pulseeffects                    #  Limiter, compressor, reverberation, equalizer and auto volume effects for Pulseaudio applications
     libopus
     opusTools
     opusfile
