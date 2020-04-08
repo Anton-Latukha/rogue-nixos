@@ -452,6 +452,8 @@ in {
 
     libtool    # For compilation of Emacs vterm package
 
+    jitsi    # For calls with Lesa
+
   ];
 }
 
