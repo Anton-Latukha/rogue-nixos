@@ -125,6 +125,7 @@ in {
 
     # Console
     emacs
+    pkgsf59d835e.emacsPackages.telega
     proselint    # Linter for prose (text)
     nodePackages.textlint
     nodePackages.textlint-plugin-latex
