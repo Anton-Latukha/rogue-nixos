@@ -355,6 +355,8 @@ in {
     xsane    # Utility for easy scanner access protocol
     gnome3.simple-scan
 
+    freecad
+
   ];
 }
 
