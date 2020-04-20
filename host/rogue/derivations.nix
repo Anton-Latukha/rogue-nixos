@@ -9,6 +9,13 @@ let
   config = config.nixpkgs.config;
 };
 
+  pkgsf59d835e = import (pkgs.fetchFromGitHub {  # Holds working `emacsPackages.telega`
+    owner = "NixOS";
+    repo = "nixpkgs";
+    rev = "f59d835e5bb412a55165f392eeb1ad236b6a09b6";
+    sha256 = "12q3s12rzjdi1h215akd6fp15zwy056spx5mmipbmw9wd2ac4fcq";
+  }) {};
+
   all-hies = import (fetchTarball "https://github.com/infinisil/all-hies/tarball/master") {};  # Hasakell IDE Engine prebuild
 
   # Import overrrides:
