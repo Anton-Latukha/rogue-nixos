@@ -345,6 +345,7 @@ in {
     ### Messengers
     # pidgin
     skype
+    teams    # Microsoft Teams
     tdesktop
 
     ## zoom-us # FIXME: 2019-08-02: Installation script tried to modify Qt settings, so had no permissions.
