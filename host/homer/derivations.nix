@@ -290,7 +290,6 @@ in {
     #### Video
     smplayer
     mpv
-    kodi
     vlc
 
     #### Audio
