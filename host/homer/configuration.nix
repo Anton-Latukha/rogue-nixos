@@ -27,6 +27,7 @@
   boot.loader.grub.extraPrepareConfig = "GRUB_CMDLINE_LINUX_DEFAULT='acpi_osi='";
   boot.loader.grub.useOSProber = true;
   boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
+  boot.supportedFilesystems = [ "zfs" ];
 
   nix.autoOptimiseStore = true;    # Autodeduplicate files in store
 
