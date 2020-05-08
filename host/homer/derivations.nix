@@ -53,6 +53,7 @@ in {
     # telnet
     winusb
     # unetbootin
+    fd
     ripgrep
     # sqlite
     # sqliteman
