@@ -33,7 +33,7 @@
 #    size = 4096;
 #  } ];
 
-  nix.maxJobs = lib.mkDefault 2;
+  nix.maxJobs = lib.mkDefault 4;
   powerManagement.cpuFreqGovernor = "performance";
 
   hardware.pulseaudio.package = pkgs.pulseaudioFull;
