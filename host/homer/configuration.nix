@@ -100,6 +100,7 @@
   networking.firewall.enable = false;
   networking.hostName = "homer"; # Define your hostname.
   networking.networkmanager.enable = true;
+  networking.hostId = "df43c232";    # Seems like ZFS requires this ID
 
   hardware.cpu.intel.updateMicrocode = true;
   # hardware.enableAllFirmware = true;
