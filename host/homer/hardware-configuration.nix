@@ -40,6 +40,7 @@
   hardware.pulseaudio.enable = true;
   hardware.pulseaudio.systemWide = true;
   hardware.pulseaudio.tcp.enable = true;
+  hardware.pulseaudio.tcp.anonymousClients.allowAll = true;
   security.rtkit.enable = true;
   sound.enableOSSEmulation = true;
   hardware.pulseaudio.zeroconf.discovery.enable = true;
