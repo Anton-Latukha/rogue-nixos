@@ -280,6 +280,7 @@ in {
     catfish
     redshift
     gsmartcontrol
+    sqlite
     sqlitebrowser
     gnome3.cheese
     gnome3.dconf
