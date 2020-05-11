@@ -428,6 +428,7 @@ in {
     # dwarf-fortress-packages.dfhack
     # xonotic
     # freeorion # FIXME: 2018-06-22: nixos-unstable compile error
+    # openxcom
 
     ### Games garage
     # hedgewars    # FIXME: It does not launch
@@ -441,7 +442,6 @@ in {
 
     # Tiling life time
     xmonad-with-packages
-    openxcom
 
     masterpdfeditor
 
