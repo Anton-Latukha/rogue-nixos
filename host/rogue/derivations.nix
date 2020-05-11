@@ -288,6 +288,7 @@ in {
 	  # latte-dock
     digikam
     # gitkraken
+    bleachbit
 
     ## Office
     libreoffice-still
