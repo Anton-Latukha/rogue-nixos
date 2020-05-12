@@ -255,7 +255,6 @@ in {
     # haskellPackages.aeson # Required by hakyll&website
     # haskellPackages.haddock # FIXME: 2018-04-05 Doesn't compile
     # haskellPackages.universum
-    # haskellPackages.serokell-util
     haskellPackages.statistics
     haskellPackages.structured-haskell-mode
 
