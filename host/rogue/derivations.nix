@@ -162,6 +162,7 @@ in {
     git
     git-crypt    # store secrets inside
     gitstats
+    haskellPackages.krank    # Tool lints comments in the code and tracks issue statuses
     mr    # Myrepos tool
     sshfs
     # unoconv    # Convert between any document format supported by LibreOffice/OpenOffice
