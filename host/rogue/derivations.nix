@@ -259,6 +259,8 @@ in {
     haskellPackages.statistics
     haskellPackages.structured-haskell-mode
 
+    discord
+
     ## JS
     yarn
 
