@@ -341,5 +341,9 @@ options snd-hda-intel model=asus-mode5
       };
     })
   ];
+  #  2020-05-27: NOTE: p7zip become abandoned
+  nixpkgs.config.permittedInsecurePackages = [
+    "p7zip-16.02"
+  ];
 
 }
