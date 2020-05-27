@@ -249,7 +249,7 @@ in {
     haskellPackages.hspec
     # haskellPackages.hasktags # FIXME: 2018-06-22: Does not compile on nixos-unstable ### Failure in: 2:16.hs:0:these were not found tests/Test.hs:39 expected: ["t2","t3","t4","t5"] but got: []
     haskellPackages.hoogle
-    haskellPackages.hindent
+    # haskellPackages.hindent #  2020-05-27: NOTE: Marked broken
     # haskellPackages.dante # FIXME: No Nix package
     # haskellPackages.intero # Intero is for Stack
     # haskellPackages.hakyll # Static webpage generator
