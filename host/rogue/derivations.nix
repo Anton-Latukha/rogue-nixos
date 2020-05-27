@@ -327,8 +327,8 @@ in {
     kdeFrameworks.syntax-highlighting
     kwayland-integration
     filelight
-    ark    p7zip
-    ## unar ## TODO: compile problems
+    ark
+    unar
     kdeApplications.spectacle
     kdeApplications.kcalutils
     kdeFrameworks.kcmutils

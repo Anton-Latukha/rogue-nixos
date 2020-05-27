@@ -283,6 +283,7 @@ options snd-hda-intel model=asus-mode5
   '';
 
   services.nextcloud.enable = true;
+  services.nextcloud.package = pkgs.nextcloud18;
   services.nextcloud.hostName = "testing";
   services.nextcloud.config.adminuser = "Anton-Latukha";
   services.nextcloud.config.adminpassFile = "${secretDir}/nextcloud-admin.pass";
