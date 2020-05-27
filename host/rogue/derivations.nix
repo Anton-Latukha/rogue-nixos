@@ -327,8 +327,8 @@ in {
     kdeFrameworks.syntax-highlighting
     kwayland-integration
     filelight
-    # ark
-    # unar
+    ark
+    unar
     kdeApplications.spectacle
     kdeApplications.kcalutils
     kdeFrameworks.kcmutils
