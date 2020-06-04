@@ -258,6 +258,7 @@ in {
     # haskellPackages.universum
     haskellPackages.statistics
     haskellPackages.structured-haskell-mode
+    haskellPackages.haskell-ci # Scripts and instructions for using CI services (e.g. Travis CI or Appveyor) with multiple GHC configurations
 
     discord
 
