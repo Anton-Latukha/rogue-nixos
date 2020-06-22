@@ -346,7 +346,8 @@ in {
     plasma5.xdg-desktop-portal-kde    # Desktop integration portals for sandboxed apps (for Firefox use of Dolphin file picker)
     chromium
     qbittorrent
-    tor-browser-bundle-bin
+    # tor-browser-bundle-bin      #  2020-06-22: NOTE: Bundles is not in the mirror
+
 
     ### Messengers
     # pidgin
