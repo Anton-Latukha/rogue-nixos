@@ -9,6 +9,14 @@ let
   config = config.nixpkgs.config;
 };
 
+  # You need to update nondefault channel with: `nix-channel --update nixpkgs-unstable`
+  nixpkgs-unstable = import <nixpkgs-unstable> {
+
+  # Pass the nixpkgs config to the unstable alias
+  # to ensure `allowUnfree = true;` is propagated:
+  config = config.nixpkgs.config;
+};
+
   # pkgsf59d835e = import (pkgs.fetchFromGitHub {  # Holds working `emacsPackages.telega`
   #   owner = "NixOS";
   #   repo = "nixpkgs";
@@ -21,10 +29,10 @@ let
   # Import overrrides:
   # pkgs = import <nixpkgs> { config = import ./config.nix; };
 
-  keepass-with-plugins = pkgs.keepass.override {
+  keepass-with-plugins = nixpkgs-unstable.pkgs.keepass.override {
       plugins = [
-        pkgs.keepass-keeagent
-        pkgs.keepass-keepassrpc
+        nixpkgs-unstable.pkgs.keepass-keeagent
+        nixpkgs-unstable.pkgs.keepass-keepassrpc
       ];
   };
 
