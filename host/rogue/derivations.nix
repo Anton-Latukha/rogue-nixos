@@ -240,27 +240,6 @@ in {
     # stack2nix    # 2019-06-21: FIXME: Does not compile.
     (all-hies.selection { selector = p: { inherit (p) ghc882 ghc865 ; }; }) #  2020-05-11: NOTE: ghc883 does not work cause of stack2nix is deprecated
 
-    #### Haskell packages
-    haskellPackages.ghcid    # Mini IDE for Haskell
-    haskellPackages.hscolour
-    haskellPackages.apply-refact
-    #  2020-02-20: NOTE: Was marked as broken
-    # haskellPackages.stylish-haskell    # Haskell code prettifier
-    haskellPackages.hlint
-    haskellPackages.hspec
-    # haskellPackages.hasktags # FIXME: 2018-06-22: Does not compile on nixos-unstable ### Failure in: 2:16.hs:0:these were not found tests/Test.hs:39 expected: ["t2","t3","t4","t5"] but got: []
-    haskellPackages.hoogle
-    # haskellPackages.hindent #  2020-05-27: NOTE: Marked broken
-    # haskellPackages.dante # FIXME: No Nix package
-    # haskellPackages.intero # Intero is for Stack
-    # haskellPackages.hakyll # Static webpage generator
-    # haskellPackages.aeson # Required by hakyll&website
-    # haskellPackages.haddock # FIXME: 2018-04-05 Doesn't compile
-    # haskellPackages.universum
-    haskellPackages.statistics
-    haskellPackages.structured-haskell-mode
-    haskellPackages.haskell-ci # Scripts and instructions for using CI services (e.g. Travis CI or Appveyor) with multiple GHC configurations
-
     discord
 
     ## JS
@@ -470,6 +449,30 @@ in {
 
     jitsi    # For calls with Lesa
 
-  ];
+  ] ++ [
+
+    #### Haskell packages
+    haskellPackages.ghcid    # Mini IDE for Haskell
+    haskellPackages.hscolour
+    haskellPackages.apply-refact
+    #  2020-02-20: NOTE: Was marked as broken
+    # haskellPackages.stylish-haskell    # Haskell code prettifier
+    haskellPackages.hlint
+    haskellPackages.hspec
+    # haskellPackages.hasktags # FIXME: 2018-06-22: Does not compile on nixos-unstable ### Failure in: 2:16.hs:0:these were not found tests/Test.hs:39 expected: ["t2","t3","t4","t5"] but got: []
+    haskellPackages.hoogle
+    # haskellPackages.hindent #  2020-05-27: NOTE: Marked broken
+    # haskellPackages.dante # FIXME: No Nix package
+    # haskellPackages.intero # Intero is for Stack
+    # haskellPackages.hakyll # Static webpage generator
+    # haskellPackages.aeson # Required by hakyll&website
+    # haskellPackages.haddock # FIXME: 2018-04-05 Doesn't compile
+    # haskellPackages.universum
+    haskellPackages.statistics
+    haskellPackages.structured-haskell-mode
+    haskellPackages.haskell-ci # Scripts and instructions for using CI services (e.g. Travis CI or Appveyor) with multiple GHC configurations
+  ]
+
+  ;
 }
 
