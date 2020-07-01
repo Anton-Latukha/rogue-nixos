@@ -346,4 +346,7 @@ options snd-hda-intel model=asus-mode5
     "p7zip-16.02"
   ];
 
+  #  NOTE: Allow FUSEs (SSHFS) use non-root account
+  programs.fuse.userAllowOther = true;
+
 }
