@@ -22,10 +22,10 @@ let
   # Import overrrides:
   # pkgs = import <nixpkgs> { config = import ./config.nix; };
 
-  keepass-with-plugins = pkgs.keepass.override {
+  keepass-with-plugins = nixpkgs-unstable.pkgs.keepass.override {
       plugins = [
-        pkgs.keepass-keeagent
-        pkgs.keepass-keepassrpc
+        nixpkgs-unstable.pkgs.keepass-keeagent
+        nixpkgs-unstable.pkgs.keepass-keepassrpc
       ];
   };
 
