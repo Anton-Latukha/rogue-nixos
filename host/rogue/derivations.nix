@@ -9,22 +9,23 @@ let
   config = config.nixpkgs.config;
 };
 
-  # pkgsf59d835e = import (pkgs.fetchFromGitHub {  # Holds working `emacsPackages.telega`
-  #   owner = "NixOS";
-  #   repo = "nixpkgs";
-  #   rev = "f59d835e5bb412a55165f392eeb1ad236b6a09b6";
-  #   sha256 = "12q3s12rzjdi1h215akd6fp15zwy056spx5mmipbmw9wd2ac4fcq";
-  # }) {};
+  # You need to update nondefault channel with: `nix-channel --update nixpkgs-unstable`
+  nixpkgs-unstable = import <nixpkgs-unstable> {
+
+  # Pass the nixpkgs config to the unstable alias
+  # to ensure `allowUnfree = true;` is propagated:
+  config = config.nixpkgs.config;
+};
 
   all-hies = import (fetchTarball "https://github.com/infinisil/all-hies/tarball/master") {};  # Hasakell IDE Engine prebuild
 
   # Import overrrides:
   # pkgs = import <nixpkgs> { config = import ./config.nix; };
 
-  keepass-with-plugins = pkgs.keepass.override {
+  keepass-with-plugins = nixpkgs-unstable.pkgs.keepass.override {
       plugins = [
-        pkgs.keepass-keeagent
-        pkgs.keepass-keepassrpc
+        nixpkgs-unstable.pkgs.keepass-keeagent
+        nixpkgs-unstable.pkgs.keepass-keepassrpc
       ];
   };
 
@@ -68,7 +69,7 @@ in {
     # python27Packages.virtual-display    # FIXME: 2019-03-10: Fix build
     python27Packages.namebench
     python38Packages.pygments
-    pythonPackages.youtube-dl    # For gPodder yt-dl extension.
+    nixpkgs-unstable.pkgs.pythonPackages.youtube-dl    # For gPodder yt-dl extension.
     appimage-run
     acpid                       #  2020-03-19: NOTE: daemon for delivering ACPI events
 
@@ -162,6 +163,7 @@ in {
     git
     git-crypt    # store secrets inside
     gitstats
+    haskellPackages.krank    # Tool lints comments in the code and tracks issue statuses
     mr    # Myrepos tool
     sshfs
     # unoconv    # Convert between any document format supported by LibreOffice/OpenOffice
@@ -236,28 +238,9 @@ in {
     cabal-install
     cabal2nix    # FIXME: 2019-09-28: Does not compile curently.
     # stack2nix    # 2019-06-21: FIXME: Does not compile.
-    (all-hies.selection { selector = p: { inherit (p) ghc865 ghc864; }; })
+    (all-hies.selection { selector = p: { inherit (p) ghc882 ghc865 ; }; }) #  2020-05-11: NOTE: ghc883 does not work cause of stack2nix is deprecated
 
-    #### Haskell packages
-    haskellPackages.ghcid    # Mini IDE for Haskell
-    haskellPackages.hscolour
-    haskellPackages.apply-refact
-    #  2020-02-20: NOTE: Was marked as broken
-    # haskellPackages.stylish-haskell    # Haskell code prettifier
-    haskellPackages.hlint
-    haskellPackages.hspec
-    # haskellPackages.hasktags # FIXME: 2018-06-22: Does not compile on nixos-unstable ### Failure in: 2:16.hs:0:these were not found tests/Test.hs:39 expected: ["t2","t3","t4","t5"] but got: []
-    haskellPackages.hoogle
-    haskellPackages.hindent
-    # haskellPackages.dante # FIXME: No Nix package
-    # haskellPackages.intero # Intero is for Stack
-    # haskellPackages.hakyll # Static webpage generator
-    # haskellPackages.aeson # Required by hakyll&website
-    # haskellPackages.haddock # FIXME: 2018-04-05 Doesn't compile
-    # haskellPackages.universum
-    # haskellPackages.serokell-util
-    haskellPackages.statistics
-    haskellPackages.structured-haskell-mode
+    discord
 
     ## JS
     yarn
@@ -280,6 +263,7 @@ in {
     catfish
     redshift
     gsmartcontrol
+    sqlite
     sqlitebrowser
     gnome3.cheese
     gnome3.dconf
@@ -288,6 +272,7 @@ in {
 	  # latte-dock
     digikam
     # gitkraken
+    bleachbit
 
     ## Office
     libreoffice-still
@@ -323,8 +308,8 @@ in {
     kdeFrameworks.syntax-highlighting
     kwayland-integration
     filelight
-    ark    p7zip
-    ## unar ## TODO: compile problems
+    ark
+    unar
     kdeApplications.spectacle
     kdeApplications.kcalutils
     kdeFrameworks.kcmutils
@@ -340,7 +325,8 @@ in {
     plasma5.xdg-desktop-portal-kde    # Desktop integration portals for sandboxed apps (for Firefox use of Dolphin file picker)
     chromium
     qbittorrent
-    tor-browser-bundle-bin
+    # tor-browser-bundle-bin      #  2020-06-22: NOTE: Bundles is not in the mirror
+
 
     ### Messengers
     # pidgin
@@ -428,6 +414,7 @@ in {
     # dwarf-fortress-packages.dfhack
     # xonotic
     # freeorion # FIXME: 2018-06-22: nixos-unstable compile error
+    # openxcom
 
     ### Games garage
     # hedgewars    # FIXME: It does not launch
@@ -441,7 +428,6 @@ in {
 
     # Tiling life time
     xmonad-with-packages
-    openxcom
 
     masterpdfeditor
 
@@ -463,6 +449,30 @@ in {
 
     jitsi    # For calls with Lesa
 
-  ];
+  ] ++ [
+
+    #### Haskell packages
+    haskellPackages.ghcid    # Mini IDE for Haskell
+    haskellPackages.hscolour
+    haskellPackages.apply-refact
+    #  2020-02-20: NOTE: Was marked as broken
+    # haskellPackages.stylish-haskell    # Haskell code prettifier
+    haskellPackages.hlint
+    haskellPackages.hspec
+    # haskellPackages.hasktags # FIXME: 2018-06-22: Does not compile on nixos-unstable ### Failure in: 2:16.hs:0:these were not found tests/Test.hs:39 expected: ["t2","t3","t4","t5"] but got: []
+    haskellPackages.hoogle
+    # haskellPackages.hindent #  2020-05-27: NOTE: Marked broken
+    # haskellPackages.dante # FIXME: No Nix package
+    # haskellPackages.intero # Intero is for Stack
+    # haskellPackages.hakyll # Static webpage generator
+    # haskellPackages.aeson # Required by hakyll&website
+    # haskellPackages.haddock # FIXME: 2018-04-05 Doesn't compile
+    # haskellPackages.universum
+    haskellPackages.statistics
+    haskellPackages.structured-haskell-mode
+    haskellPackages.haskell-ci # Scripts and instructions for using CI services (e.g. Travis CI or Appveyor) with multiple GHC configurations
+  ]
+
+  ;
 }
 

@@ -160,7 +160,7 @@ options snd-hda-intel model=asus-mode5
   services.avahi.enable = true; # For Pulseaudio networking
   services.fstrim.enable = true;             # Periodic trim of the filesystem with util-linux fstrim service
   services.printing.enable = true; # Enable CUPS to print documents.
-  services.redshift.brightness.night = "1";
+  services.redshift.brightness.night = "0.8";
   services.redshift.enable = true;
   services.rpcbind.enable = true;
   services.teamviewer.enable = true;
@@ -283,6 +283,7 @@ options snd-hda-intel model=asus-mode5
   '';
 
   services.nextcloud.enable = true;
+  services.nextcloud.package = pkgs.nextcloud18;
   services.nextcloud.hostName = "testing";
   services.nextcloud.config.adminuser = "Anton-Latukha";
   services.nextcloud.config.adminpassFile = "${secretDir}/nextcloud-admin.pass";
@@ -340,5 +341,12 @@ options snd-hda-intel model=asus-mode5
       };
     })
   ];
+  #  2020-05-27: NOTE: p7zip become abandoned
+  nixpkgs.config.permittedInsecurePackages = [
+    "p7zip-16.02"
+  ];
+
+  #  NOTE: Allow FUSEs (SSHFS) use non-root account
+  programs.fuse.userAllowOther = true;
 
 }
