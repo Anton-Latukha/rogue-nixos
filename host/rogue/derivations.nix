@@ -163,7 +163,6 @@ in {
     git
     git-crypt    # store secrets inside
     gitstats
-    haskellPackages.krank    # Tool lints comments in the code and tracks issue statuses
     mr    # Myrepos tool
     sshfs
     # unoconv    # Convert between any document format supported by LibreOffice/OpenOffice
@@ -449,29 +448,31 @@ in {
 
     jitsi    # For calls with Lesa
 
-  ] ++ [
+  ] ++ (with haskellPackages; [
 
     #### Haskell packages
-    haskellPackages.ghcid    # Mini IDE for Haskell
-    haskellPackages.hscolour
-    haskellPackages.apply-refact
+    ghcid    # Mini IDE for Haskell
+    hscolour
+    apply-refact
     #  2020-02-20: NOTE: Was marked as broken
-    # haskellPackages.stylish-haskell    # Haskell code prettifier
-    haskellPackages.hlint
-    haskellPackages.hspec
-    # haskellPackages.hasktags # FIXME: 2018-06-22: Does not compile on nixos-unstable ### Failure in: 2:16.hs:0:these were not found tests/Test.hs:39 expected: ["t2","t3","t4","t5"] but got: []
-    haskellPackages.hoogle
-    # haskellPackages.hindent #  2020-05-27: NOTE: Marked broken
-    # haskellPackages.dante # FIXME: No Nix package
-    # haskellPackages.intero # Intero is for Stack
-    # haskellPackages.hakyll # Static webpage generator
-    # haskellPackages.aeson # Required by hakyll&website
-    # haskellPackages.haddock # FIXME: 2018-04-05 Doesn't compile
-    # haskellPackages.universum
-    haskellPackages.statistics
-    haskellPackages.structured-haskell-mode
-    haskellPackages.haskell-ci # Scripts and instructions for using CI services (e.g. Travis CI or Appveyor) with multiple GHC configurations
-  ]
+    # stylish-haskell    # Haskell code prettifier
+    hlint
+    hspec
+    # hasktags # FIXME: 2018-06-22: Does not compile on nixos-unstable ### Failure in: 2:16.hs:0:these were not found tests/Test.hs:39 expected: ["t2","t3","t4","t5"] but got: []
+    hoogle
+    # hindent #  2020-05-27: NOTE: Marked broken
+    # dante # FIXME: No Nix package
+    # intero # Intero is for Stack
+    # hakyll # Static webpage generator
+    # aeson # Required by hakyll&website
+    # haddock # FIXME: 2018-04-05 Doesn't compile
+    # universum
+    statistics
+    structured-haskell-mode
+    haskell-ci # Scripts and instructions for using CI services (e.g. Travis CI or Appveyor) with multiple GHC configurations
+    # ghc-vis    #  2020-07-04: NOTE: Was broken
+    krank    # Tool lints comments in the code and tracks issue statuses
+  ])
 
   ;
 }
