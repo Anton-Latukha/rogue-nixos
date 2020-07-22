@@ -421,7 +421,7 @@ in {
     # Tiling life time
     xmonad-with-packages
 
-    masterpdfeditor
+    # masterpdfeditor             #  2020-07-22: NOTE: Builder terminated
 
     pinentry
 
