@@ -73,7 +73,7 @@ in {
     winusb
     unetbootin
     ripgrep
-    ripgrep-all
+    # ripgrep-all  #  2020-07-22: NOTE: Compiler build was hanging on build lock wait.
     # sqlite
     # sqliteman
     cdrtools # Highly portable CD/DVD/BluRay command line recording software
@@ -397,7 +397,7 @@ in {
     teamviewer
 
     ## Games
-    dwarf-fortress-packages.dwarf-fortress-full
+    # dwarf-fortress-packages.dwarf-fortress-full
     # freeciv_gtk
     # dwarf-fortress
     # dwarf-fortress-packages.dwarf-fortress-unfuck
