@@ -1,13 +1,6 @@
 { config, pkgs, ... }:
 
 let
-  # You need to update nondefault channel with: `nix-channel --update unstable`
-  unstable = import <unstable> {
-
-  # Pass the nixpkgs config to the unstable alias
-  # to ensure `allowUnfree = true;` is propagated:
-  config = config.nixpkgs.config;
-};
 
   # You need to update nondefault channel with: `nix-channel --update nixpkgs-unstable`
   nixpkgs-unstable = import <nixpkgs-unstable> {
