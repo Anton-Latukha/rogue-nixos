@@ -188,8 +188,8 @@ in {
     terraform-provider-libvirt    # -plugin-dir /run/current-system/bin/
 
     ## Virtualization
-    docker
-    docker_compose
+    # docker
+    # docker_compose
     qemu
     libvirt
     #libguestfs    # Tools for accessing and modifying virtual machine disk images NOTE: Compiles every time
