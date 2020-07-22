@@ -5,10 +5,10 @@ let
   # You need to update nondefault channel with: `nix-channel --update nixpkgs-unstable`
   nixpkgs-unstable = import <nixpkgs-unstable> {
 
-  # Pass the nixpkgs config to the unstable alias
-  # to ensure `allowUnfree = true;` is propagated:
-  config = config.nixpkgs.config;
-};
+    # Pass the nixpkgs config to the unstable alias
+    # to ensure `allowUnfree = true;` is propagated:
+    config = config.nixpkgs.config;
+  };
 
   all-hies = import (fetchTarball "https://github.com/infinisil/all-hies/tarball/master") {};  # Hasakell IDE Engine prebuild
 
