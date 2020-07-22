@@ -376,7 +376,7 @@ in {
     ### Media Create
     avidemux
     mkvtoolnix
-    mediainfo-gui               #  2020-07-22: NOTE: Mediainfo still uses deprecated version of gst-plugins-base 0.12
+    # mediainfo-gui               #  2020-07-22: NOTE: Mediainfo still uses deprecated version of gst-plugins-base 0.12
     handbrake
     chromaprint    # For AcoustID fpcalc fingerprinting
 
