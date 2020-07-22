@@ -63,7 +63,7 @@ in {
     python27Packages.namebench
     python38Packages.pygments
     nixpkgs-unstable.pkgs.pythonPackages.youtube-dl    # For gPodder yt-dl extension.
-    appimage-run
+    # appimage-run                                       #  2020-07-22: NOTE: Dependends on deprecated gst-plugins-base
     acpid                       #  2020-03-19: NOTE: daemon for delivering ACPI events
 
     zsync
