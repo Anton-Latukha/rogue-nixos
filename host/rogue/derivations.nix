@@ -229,8 +229,6 @@ in {
     ghc
     cabal-install
     cabal2nix    # FIXME: 2019-09-28: Does not compile curently.
-    # stack2nix    # 2019-06-21: FIXME: Does not compile.
-    (all-hies.selection { selector = p: { inherit (p) ghc882 ghc865 ; }; }) #  2020-05-11: NOTE: ghc883 does not work cause of stack2nix is deprecated
 
     discord
 
