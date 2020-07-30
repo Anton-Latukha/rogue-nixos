@@ -326,7 +326,7 @@ in {
 
     ### Messengers
     # pidgin
-    nixos-stable.skype          #  2020-07-30: NOTE: Possibility of Skype login bug-out right before the interview
+    skype          #  2020-07-30: NOTE: Possibility of Skype login bug-out right before the interview
     teams    # Microsoft Teams
     tdesktop
     zoom-us
