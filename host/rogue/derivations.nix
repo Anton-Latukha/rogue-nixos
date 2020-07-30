@@ -326,7 +326,7 @@ in {
 
     ### Messengers
     # pidgin
-    skype
+    nixos-stable.skype
     teams    # Microsoft Teams
     tdesktop
     zoom-us
