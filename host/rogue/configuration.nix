@@ -349,4 +349,6 @@ options snd-hda-intel model=asus-mode5
   #  NOTE: Allow FUSEs (SSHFS) use non-root account
   programs.fuse.userAllowOther = true;
 
+  services.gnome3.gnome-keyring.enable = true;  # NOTE: Enabling only to make Skype save login into it
+
 }
