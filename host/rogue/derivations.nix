@@ -263,6 +263,7 @@ in {
     sqlitebrowser
     gnome3.cheese
     gnome3.dconf
+    gnome3.seahorse
     wireshark
     stellarium
 	  # latte-dock
