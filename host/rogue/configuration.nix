@@ -203,7 +203,7 @@ options snd-hda-intel model=asus-mode5
   virtualisation.docker.liveRestore = true;
   # virtualisation.docker.extraOptions = "--experimental=true";
   # virtualisation.docker.listenOptions = [ "/var/run/docker.sock" "0.0.0.0:2376" ];
-  virtualisation.docker.listenOptions = [ "/run/docker.sock" "0.0.0.0:2376" ];
+  virtualisation.docker.listenOptions = [ "/var/run/docker.sock" "0.0.0.0:2376" ];
   virtualisation.libvirtd.enable = true;
 
   virtualisation.virtualbox.host.enable = true;
