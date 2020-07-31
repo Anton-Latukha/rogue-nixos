@@ -203,6 +203,7 @@ in {
     ### Cloud Virtualization
     awscli
     google-cloud-sdk
+    travis    # CLI tool
 
     ## Development Programming
     shellcheck
