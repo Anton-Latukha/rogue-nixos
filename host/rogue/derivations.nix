@@ -472,6 +472,8 @@ in {
     haskell-ci # Scripts and instructions for using CI services (e.g. Travis CI or Appveyor) with multiple GHC configurations
     # ghc-vis    #  2020-07-04: NOTE: Was broken
     krank    # Tool lints comments in the code and tracks issue statuses
+
+    hnix
   ])
 
   ;
