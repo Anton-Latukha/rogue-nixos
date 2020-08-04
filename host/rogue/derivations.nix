@@ -272,6 +272,7 @@ in {
     # gitkraken
     bleachbit
     qgis
+    slack
 
     ## Office
     libreoffice-still
