@@ -271,6 +271,7 @@ in {
     digikam
     # gitkraken
     bleachbit
+    qgis
 
     ## Office
     libreoffice-still
