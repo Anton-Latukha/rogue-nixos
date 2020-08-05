@@ -194,7 +194,7 @@ in {
     terraform-provider-libvirt    # -plugin-dir /run/current-system/bin/
 
     ## Virtualization
-    docker
+    # docker
     # docker_compose
     qemu
     libvirt
