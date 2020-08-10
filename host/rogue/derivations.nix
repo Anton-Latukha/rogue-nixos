@@ -264,7 +264,7 @@ in {
     sqlitebrowser
     gnome3.cheese
     gnome3.dconf
-    gnome3.seahorse
+    gnome3.seahorse    # Skype uses it for login
     wireshark
     stellarium
 	  # latte-dock
