@@ -434,9 +434,7 @@ in {
     # masterpdfeditor             #  2020-07-22: NOTE: Builder terminated
 
     pinentry
-
     pinentry-emacs
-
     pinentry-qt
 
     lua53Packages.digestif  # Code analyzer for TeX.
