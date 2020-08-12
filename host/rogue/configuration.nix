@@ -21,7 +21,7 @@ in
     # Include all derivations
     ./derivations.nix
 
-    ./deduplication.nix
+    # ./deduplication.nix    # Hardlinks do not work the way I expected, they arbitrary collapse file permissions
 
     # ${curHostDir}./rollback.nix
 
