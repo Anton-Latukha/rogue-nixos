@@ -353,7 +353,7 @@ options snd-hda-intel model=asus-mode5
   services.tor.enable = true;
   services.tor.client.enable = true;
   services.tor.relay.enable = true;
-  services.tor.relay.role = "private-bridge";
+  services.tor.relay.role = "bridge";
   services.tor.relay.port = 143;
 
 }
