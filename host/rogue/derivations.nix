@@ -475,6 +475,8 @@ in {
     krank    # Tool lints comments in the code and tracks issue statuses
 
     hnix
+
+    thunderbird
   ])
 
   ;
