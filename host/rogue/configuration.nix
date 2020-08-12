@@ -288,7 +288,6 @@ options snd-hda-intel model=asus-mode5
   services.nextcloud.hostName = "testing";
   services.nextcloud.config.adminuser = "Anton-Latukha";
   services.nextcloud.config.adminpassFile = "${secretDir}/nextcloud-admin.pass";
-  services.nextcloud.nginx.enable = true;
   services.nextcloud.home = "/var/www/nextcloud";
   services.nextcloud.autoUpdateApps.enable = true;
   services.nextcloud.config.dbtype = "pgsql";
