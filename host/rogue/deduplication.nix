@@ -2,9 +2,6 @@
 
 let
   # Provide NixOS-Unstable channel
-  ## FIXME: Delete after `jdupes` is in stable NixOS channel
-  ## HACK: Throw unstable channel manually
-  unstable = import (fetchTarball {url = https://github.com/NixOS/nixpkgs-channels/archive/nixos-unstable.tar.gz;}) {};
 
   # TODO: supply string out of dedup
   dedupFolders = "/root /tmp";
