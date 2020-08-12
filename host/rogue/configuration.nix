@@ -351,5 +351,6 @@ options snd-hda-intel model=asus-mode5
   programs.fuse.userAllowOther = true;
 
   services.gnome3.gnome-keyring.enable = true;  # NOTE: Enabling only to make Skype save login into it
+  services.tor.enable = true;
 
 }
