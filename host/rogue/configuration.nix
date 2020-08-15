@@ -356,4 +356,6 @@ options snd-hda-intel model=asus-mode5
   services.tor.relay.role = "bridge";
   services.tor.relay.port = 143;
 
+  virtualisation.lxd.enable = true;
+
 }
