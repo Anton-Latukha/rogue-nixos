@@ -358,4 +358,6 @@ options snd-hda-intel model=asus-mode5
 
   virtualisation.lxd.enable = true;
 
+  services.journald.extraConfig = "SystemMaxUse=2G";
+
 }
