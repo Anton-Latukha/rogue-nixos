@@ -478,6 +478,8 @@ in {
     zlib                        #  2020-08-15: To Cabal build HNix
 
     thunderbird
+
+    element-desktop
   ])
 
   ;
