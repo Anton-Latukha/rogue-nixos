@@ -152,7 +152,6 @@ options snd-hda-intel model=asus-mode5
   #     type = "ed25519";
   #   }
   # ];
-  # services.netdata.enable = true;
   # services.ipfs.autoMount = true;
   # services.ipfs.enable = true;
   # services.xserver.windowManager.xmonad.enable = true;
@@ -201,9 +200,7 @@ options snd-hda-intel model=asus-mode5
 
   virtualisation.docker.enable = true;
   virtualisation.docker.liveRestore = true;
-  # virtualisation.docker.extraOptions = "--experimental=true";
   virtualisation.docker.listenOptions = [ "/var/run/docker.sock" "0.0.0.0:2376" ];
-  # virtualisation.docker.listenOptions = [ "/var/run/docker.sock" ];
   virtualisation.libvirtd.enable = true;
 
   virtualisation.virtualbox.host.enable = true;
@@ -302,9 +299,6 @@ options snd-hda-intel model=asus-mode5
   services.nextcloud.config.extraTrustedDomains = [
     "*.*.*.*"
   ];
-  # services.nextcloud.home = "/btrfs/midimportant/nextcloud";
-  # services.nextcloud.config.overwriteProtocol = "https";
-  # services.nextcloud.https = true;
 
   security.pam.services.pyro.enableKwallet = true;
 
