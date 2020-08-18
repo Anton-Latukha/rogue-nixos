@@ -35,7 +35,6 @@ in {
 
     ### System CLIs
     fish
-    zsh
     dash
 
     #### System CLIs additions
@@ -45,11 +44,9 @@ in {
     htop
     fzf
     bat
-    prettyping
     bandwhich    # Display current network utilization by process, connection and remote IP/hostname
     gitAndTools.diff-so-fancy
     fd
-    ncdu
     tldr
     noti
 
@@ -66,17 +63,14 @@ in {
     zstd
     # python36Packages.glances    # NOTE: 2018-12-31: Dep is broken
     # python27Packages.virtual-display    # FIXME: 2019-03-10: Fix build
-    python27Packages.namebench
     python38Packages.pygments
     nixpkgs-unstable.pkgs.pythonPackages.youtube-dl    # For gPodder yt-dl extension.
     # appimage-run                                       #  2020-07-22: NOTE: Dependends on deprecated gst-plugins-base
-    acpid                       #  2020-03-19: NOTE: daemon for delivering ACPI events
 
     zsync
     acoustidFingerprinter
     mc
     telnet
-    winusb
     unetbootin
     ripgrep
     # ripgrep-all  #  2020-07-22: NOTE: Compiler build was hanging on build lock wait.
@@ -157,11 +151,10 @@ in {
     wkhtmltopdf    # Render HTML into PDF using Qt WebKit rendering engine
     zip    # Was requested for Org -> ODT
     unzip     # Was requested for Org -> ODT
-    fcrackzip    # Well, to sprinkle crack on it
     neovim
     git
     git-crypt    # store secrets inside
-    gitstats
+    gitstats    # Generate Git statistics
     mr    # Myrepos tool
     sshfs
     # unoconv    # Convert between any document format supported by LibreOffice/OpenOffice
@@ -174,8 +167,6 @@ in {
     lshw
     python3
     gtypist    # GNU typist
-    gitstats    # Generate Git statistics
-    cowsay
     alsaUtils
     alsaTools    # Additional Tools to Utils
     psmisc    # A set of small useful utilities that use the proc filesystem (such as fuser, killall and pstree)
@@ -255,7 +246,7 @@ in {
     anki
     gparted
     keepass-with-plugins
-    wine    # FIXME: 2019-07-16: qt-base i632 does not compile https://github.com/NixOS/nixpkgs/issues/63829
+    wine
     tilix
     catfish
     redshift
@@ -280,7 +271,6 @@ in {
     scribus
     djvu2pdf
     kdeApplications.okular
-    bookworm
     gImageReader
     djvulibre
     gwenview
@@ -316,7 +306,6 @@ in {
     krename
     xfce.tumbler
     kdeFrameworks.kdesu
-    akregator
 
     ## Internet
     firefox
@@ -378,7 +367,6 @@ in {
     deadbeef
     spotify
     picard
-    cmus    # CLI music player
     # audaciousQt5
     clementine
     gpodder
@@ -402,29 +390,8 @@ in {
     imagemagickBig
     kcolorchooser
 
-    # Previously unstable packages
     jdupes
     teamviewer
-
-    ## Games
-    # dwarf-fortress-packages.dwarf-fortress-full
-    # freeciv_gtk
-    # dwarf-fortress
-    # dwarf-fortress-packages.dwarf-fortress-unfuck
-    # dwarf-fortress-packages.dwarf-therapist
-    # dwarf-fortress-packages.phoebus-theme
-    # dwarf-fortress-packages.dfhack
-    # xonotic
-    # freeorion # FIXME: 2018-06-22: nixos-unstable compile error
-    # openxcom
-
-    ### Games garage
-    # hedgewars    # FIXME: It does not launch
-    # dwarf-fortress-packages.dwarf-fortress-unfuck    # FIXME: Does not work. Investigate how to use.
-    # dwarf-fortress-packages.phoebus-theme    # FIXME: Does not work. Investigate how to use.
-    # dwarf-fortress-packages.dfhack    # FIXME: Does not work. Investigate how to use.
-    # wesnoth    # Booring game
-    # nethack
 
     # Custom local packages
 
@@ -447,7 +414,18 @@ in {
 
     libtool    # For compilation of Emacs vterm package
 
-    jitsi    # For calls with Lesa
+    #### Good disabled utils
+
+    # zsh
+    # prettyping
+    # ncdu    # Ergonomic NCurses visual disc usage
+    # python27Packages.namebench
+    # acpid                       #  2020-03-19: NOTE: daemon for delivering ACPI events
+    # winusb
+    # fcrackzip    # Well, to sprinkle crack on it
+    # cowsay
+    # cmus    # CLI music player
+    # jitsi    # For calls with Lesa
 
   ] ++ (with haskellPackages; [
 
