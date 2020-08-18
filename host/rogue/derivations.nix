@@ -414,6 +414,9 @@ in {
 
     libtool    # For compilation of Emacs vterm package
 
+
+    zlib                        #  2020-08-15: To Cabal build HNix
+
     #### Good disabled utils
 
     # zsh
@@ -453,7 +456,6 @@ in {
     krank    # Tool lints comments in the code and tracks issue statuses
 
     hnix
-    zlib                        #  2020-08-15: To Cabal build HNix
 
     thunderbird
 
