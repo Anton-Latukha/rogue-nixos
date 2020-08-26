@@ -16,8 +16,6 @@ let
     config = config.nixpkgs.config;
   };
 
-  all-hies = import (fetchTarball "https://github.com/infinisil/all-hies/tarball/master") {};  # Hasakell IDE Engine prebuild
-
   # Import overrrides:
   # pkgs = import <nixpkgs> { config = import ./config.nix; };
 
@@ -430,6 +428,10 @@ in {
     # cmus    # CLI music player
     # jitsi    # For calls with Lesa
 
+    thunderbird
+
+    element-desktop
+
   ] ++ (with haskellPackages; [
 
     #### Haskell packages
@@ -457,9 +459,7 @@ in {
 
     hnix
 
-    thunderbird
-
-    element-desktop
+    haskell-language-server
   ])
 
   ;
