@@ -22,16 +22,10 @@
     options = [ "noatime" ];
   };
 
-  # fileSystems."/win" = {
-  #   device = "/dev/disk/by-uuid/01D443E2FABF7BF0";
-  #   fsType = "ntfs";
-  #   options = [ "noatime" "nofail" ];
-  # };
-
-  fileSystems."/ubu" = {
-    device = "/dev/disk/by-uuid/cd57c403-5dc6-49b5-8a40-b04660d6021f";
-    fsType = "btrfs";
-    options = [ "noatime" "nofail" "compress=zstd" ];
+  fileSystems."/win" = {
+    device = "/dev/disk/by-uuid/01D443E2FABF7BF0";
+    fsType = "ntfs";
+    options = [ "noatime" "nofail" ];
   };
 
 #  swapDevices = [ {
