@@ -45,8 +45,14 @@ in
     options = [ "noatime" ];
   };
 
-  fileSystems."/win" = {
-    device = "/dev/sda4";
+  # fileSystems."/win" = {
+  #   device = "/dev/sda4";
+  #   fsType = "btrfs";
+  #   options = [ "noatime" "nofail" "compress=zstd" ];
+  # };
+
+  fileSystems."/ubu" = {
+    device = "/dev/disk/by-uuid/cd57c403-5dc6-49b5-8a40-b04660d6021f";
     fsType = "btrfs";
     options = [ "noatime" "nofail" "compress=zstd" ];
   };
