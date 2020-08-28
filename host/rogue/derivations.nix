@@ -26,6 +26,17 @@ let
       ];
   };
 
+  # Taken from https://youtu.be/G9yiJ7d5LeI?t=1113
+  myHaskellProject = libProf: self: super:
+    with pkgs.haskell.lib;
+    let load = relPath: attr: (self.callPacakge (builtins.toPath ("~/src/haskell/" ++ relPath)) attr);
+    in rec {
+      hnix = load "hnix" {};
+      hnix-store = load "hnix-store" {};
+      krank = load "krank" {};
+      zen = load "zen" {};
+    };
+
 in {
   environment.systemPackages = with pkgs; [
 

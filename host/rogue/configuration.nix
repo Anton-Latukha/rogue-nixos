@@ -47,14 +47,14 @@ in
 
   fileSystems."/win" = {
     device = "/dev/sda4";
-    fsType = "ntfs";
-    options = [ "noatime" "nofail" ];
+    fsType = "btrfs";
+    options = [ "noatime" "nofail" "compress=zstd" ];
   };
 
   fileSystems."/btrfs" = {
     device = "/dev/sda5";
     fsType = "btrfs";
-    options = [ "noatime" "nofail" "compress=zstd"];
+    options = [ "noatime" "nofail" "compress=zstd" ];
   };
 
 
