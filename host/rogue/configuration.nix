@@ -255,6 +255,7 @@ options snd-hda-intel model=asus-mode5
     "kvm"
     "ipfs"
     "cdrom"
+    "lxd"
   ];
 
   # This value determines the NixOS release with which your system is to be
