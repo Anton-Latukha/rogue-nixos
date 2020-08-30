@@ -9,12 +9,12 @@ let
     # to ensure `allowUnfree = true;` is propagated:
     config = config.nixpkgs.config;
   };
-  nixpkgs-unstable = import <nixpkgs-unstable> {
+  #nixpkgs-unstable = import <nixpkgs-unstable> {
 
-    # Pass the nixpkgs config to the unstable alias
-    # to ensure `allowUnfree = true;` is propagated:
-    config = config.nixpkgs.config;
-  };
+   # # Pass the nixpkgs config to the unstable alias
+   # # to ensure `allowUnfree = true;` is propagated:
+   # config = config.nixpkgs.config;
+  #};
 
   # Import overrrides:
   # pkgs = import <nixpkgs> { config = import ./config.nix; };
@@ -72,7 +72,7 @@ in {
     # python36Packages.glances    # NOTE: 2018-12-31: Dep is broken
     # python27Packages.virtual-display    # FIXME: 2019-03-10: Fix build
     python38Packages.pygments
-    nixpkgs-unstable.pkgs.pythonPackages.youtube-dl    # For gPodder yt-dl extension.
+    # nixpkgs-unstable.pkgs.pythonPackages.youtube-dl    # For gPodder yt-dl extension.
     # appimage-run                                       #  2020-07-22: NOTE: Dependends on deprecated gst-plugins-base
 
     zsync
@@ -441,6 +441,8 @@ in {
     thunderbird
 
     element-desktop
+
+    multibootusb
 
   ] ++ (with haskellPackages; [
 
