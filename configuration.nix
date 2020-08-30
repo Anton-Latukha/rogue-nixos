@@ -95,7 +95,10 @@ options snd-hda-intel model=asus-mode5
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.grub.extraPrepareConfig = "GRUB_CMDLINE_LINUX_DEFAULT='acpi_osi='";    # Be silent in responce to BIOS on request what OS is running (often BIOS disables functionality if it detects Linux)
+  boot.loader.grub.efiSupport = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub.useOSProber = true;
+  boot.loader.grub.splashMode = "normal";
   boot.kernelParams = [
     "pti=off" "spectre_v2=off" "l1tf=off" "nospec_store_bypass_disable" "no_stf_barrier"
   ];
