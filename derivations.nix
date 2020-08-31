@@ -449,8 +449,6 @@ in {
 
     debootstrap
 
-    master.haskell-language-server #  2020-08-31: NOTE: 0.2.0 did not worked (some Setup.hs issue), `master` had 0.3.0 version
-
   ] ++ (with haskellPackages; [
 
     #### Haskell packages
@@ -477,6 +475,9 @@ in {
     krank    # Tool lints comments in the code and tracks issue statuses
 
     hnix
+
+    master.pkgs.haskellPackages.haskell-language-server #  2020-08-31: NOTE: 0.2.0 did not worked (some Setup.hs issue), `master` had 0.3.0 version
+
   ])
 
   ;
