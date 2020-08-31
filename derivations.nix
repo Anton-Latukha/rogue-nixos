@@ -2,13 +2,16 @@
 
 let
 
-  # You need to update nondefault channel with: `nix-channel --update channel`
-  nixos-stable = import <nixos-stable> {
-
+  configSet = {
     # Pass the nixpkgs config to the unstable alias
     # to ensure `allowUnfree = true;` is propagated:
     config = config.nixpkgs.config;
   };
+
+  master = import (builtins.fetchTarball "https://github.com/NixOS/nixpkgs/archive/master.tar.gz") configSet;
+
+  # You need to update nondefault channel with: `nix-channel --update channel`
+  nixos-stable = import <nixos-stable> configSet;
   #nixpkgs-unstable = import <nixpkgs-unstable> {
 
    # # Pass the nixpkgs config to the unstable alias
