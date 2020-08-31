@@ -476,7 +476,7 @@ in {
 
     hnix
 
-    master.haskell-language-server
+    master.haskell-language-server #  2020-08-31: NOTE: 0.2.0 did not worked (some Setup.hs issue), `master` had 0.3.0 version
   ])
 
   ;
