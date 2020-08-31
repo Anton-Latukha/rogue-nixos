@@ -476,7 +476,7 @@ in {
 
     hnix
 
-    haskell-language-server
+    master.haskell-language-server
   ])
 
   ;
