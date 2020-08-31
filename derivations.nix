@@ -444,6 +444,8 @@ in {
 
     multibootusb
 
+    debootstrap
+
   ] ++ (with haskellPackages; [
 
     #### Haskell packages
