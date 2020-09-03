@@ -480,6 +480,8 @@ in {
 
     ghcide
 
+    pretty-simple
+
   ])
 
   ;
