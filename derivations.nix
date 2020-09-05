@@ -449,6 +449,8 @@ in {
 
     debootstrap
 
+    gephi
+
   ] ++ (with haskellPackages; [
 
     #### Haskell packages
