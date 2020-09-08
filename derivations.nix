@@ -451,6 +451,8 @@ in {
 
     gephi
 
+    perl    #  2020-09-08: required by git diff
+
   ] ++ (with haskellPackages; [
 
     #### Haskell packages
