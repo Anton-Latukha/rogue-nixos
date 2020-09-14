@@ -486,6 +486,8 @@ in {
 
     pretty-simple
 
+    haskell-language-server
+
   ])
 
   ;
