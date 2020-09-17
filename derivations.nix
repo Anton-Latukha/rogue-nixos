@@ -273,7 +273,7 @@ in {
     digikam
     # gitkraken
     bleachbit
-    qgis
+    # qgis
     slack
 
     ## Office
