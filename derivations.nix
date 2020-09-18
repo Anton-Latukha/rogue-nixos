@@ -372,7 +372,7 @@ in {
     mpv
     # kodi
     vlc
-    syncplay
+    nixos-stable.syncplay
 
     #### Audio
     deadbeef
