@@ -453,6 +453,8 @@ in {
 
     perl    #  2020-09-08: required by git diff
 
+    rnix-lsp                        #  2020-09-19: NOTE: Trying to make Emacs lsp-mode work for Nix
+
   ] ++ (with haskellPackages; [
 
     #### Haskell packages
