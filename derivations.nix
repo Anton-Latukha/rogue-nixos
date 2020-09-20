@@ -490,6 +490,8 @@ in {
 
     haskell-language-server
 
+    summoner
+
   ])
 
   ;
