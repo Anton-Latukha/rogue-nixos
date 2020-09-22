@@ -490,7 +490,7 @@ in {
 
     haskell-language-server
 
-    summoner
+    # summoner
 
   ])
 
