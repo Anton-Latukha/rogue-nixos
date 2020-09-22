@@ -460,7 +460,7 @@ in {
     #### Haskell packages
     ghcid    # Mini IDE for Haskell
     hscolour
-    apply-refact
+    # apply-refact
     #  2020-02-20: NOTE: Was marked as broken
     # stylish-haskell    # Haskell code prettifier
     hlint
