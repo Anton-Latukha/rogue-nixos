@@ -460,7 +460,7 @@ in {
     #### Haskell packages
     ghcid    # Mini IDE for Haskell
     hscolour
-    # apply-refact
+    apply-refact
     #  2020-02-20: NOTE: Was marked as broken
     # stylish-haskell    # Haskell code prettifier
     hlint
@@ -478,7 +478,7 @@ in {
     structured-haskell-mode
     haskell-ci # Scripts and instructions for using CI services (e.g. Travis CI or Appveyor) with multiple GHC configurations
     # ghc-vis    #  2020-07-04: NOTE: Was broken
-    krank    # Tool lints comments in the code and tracks issue statuses
+    # krank    # Tool lints comments in the code and tracks issue statuses
 
     hnix
 
