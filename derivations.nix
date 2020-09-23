@@ -455,6 +455,8 @@ in {
 
     rnix-lsp                        #  2020-09-19: NOTE: Trying to make Emacs lsp-mode work for Nix
 
+    libxcb
+
   ] ++ (with haskellPackages; [
 
     #### Haskell packages
@@ -492,8 +494,7 @@ in {
 
     # summoner
 
-  ])
+  ]);
 
-  ;
 }
 
