@@ -455,11 +455,6 @@ in {
 
     rnix-lsp                        #  2020-09-19: NOTE: Trying to make Emacs lsp-mode work for Nix
 
-    xorg.libxcb                      #  2020-09-23: NOTE: Was required by Calibre start.
-    xorg.xcbproto
-    xorg.xcbutil
-    xorg.libXinerama
-
   ] ++ (with haskellPackages; [
 
     #### Haskell packages
