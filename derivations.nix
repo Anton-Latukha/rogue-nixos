@@ -492,6 +492,8 @@ in {
 
     # summoner
 
+    nixfmt
+
   ]);
 
 }
