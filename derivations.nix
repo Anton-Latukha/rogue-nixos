@@ -478,7 +478,7 @@ in {
     structured-haskell-mode
     haskell-ci # Scripts and instructions for using CI services (e.g. Travis CI or Appveyor) with multiple GHC configurations
     # ghc-vis    #  2020-07-04: NOTE: Was broken
-    # krank    # Tool lints comments in the code and tracks issue statuses
+    # krank # Tool lints comments in the code and tracks issue statuses #  2020-09-24: NOTE: Was not compiling
 
     hnix
 
@@ -490,7 +490,7 @@ in {
 
     haskell-language-server
 
-    # summoner
+    summoner
 
     nixfmt
 
