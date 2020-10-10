@@ -219,7 +219,7 @@ options snd-hda-intel model=asus-mode5
   services.urxvtd.package = true;
 
   fonts.enableDefaultFonts = true; # Enable a basic set of fonts providing several font styles and families and reasonable coverage of Unicode.
-  fonts.enableFontDir = true; # Whether to create a directory with links to all fonts in /run/current-system/sw/share/X11-fonts
+  fonts.fontDir.enable = true; # Whether to create a directory with links to all fonts in /run/current-system/sw/share/X11-fonts
   fonts.enableGhostscriptFonts = true;
   fonts.fonts = with pkgs; [
 
@@ -291,7 +291,7 @@ options snd-hda-intel model=asus-mode5
   '';
 
   services.nextcloud.enable = true;
-  services.nextcloud.package = pkgs.nextcloud19;
+  services.nextcloud.package = pkgs.nextcloud20;
   services.nextcloud.hostName = "testing";
   services.nextcloud.config.adminuser = "Anton-Latukha";
   services.nextcloud.config.adminpassFile = "${secretDir}/nextcloud-admin.pass";
