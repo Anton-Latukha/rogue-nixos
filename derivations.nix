@@ -482,7 +482,7 @@ in {
 
     hnix
 
-    master.pkgs.haskellPackages.ghc8101.haskell-language-server #  2020-08-31: NOTE: 0.2.0 did not worked (some Setup.hs issue), `master` had 0.3.0 version
+    master.pkgs.haskell.packages.ghc8101.haskell-language-server #  2020-08-31: NOTE: 0.2.0 did not worked (some Setup.hs issue), `master` had 0.3.0 version
 
     ghcide
 
