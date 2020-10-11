@@ -455,6 +455,7 @@ in {
 
     rnix-lsp                        #  2020-09-19: NOTE: Trying to make Emacs lsp-mode work for Nix
 
+
   ] ++ (with haskellPackages; [
 
     #### Haskell packages
@@ -488,11 +489,13 @@ in {
 
     pretty-simple
 
-    haskell-language-server
+    # haskell-language-server
 
     summoner
 
     nixfmt
+
+    niv    # Dependency management tool for the Nix projects
 
   ]);
 
