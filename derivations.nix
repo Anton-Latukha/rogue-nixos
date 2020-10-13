@@ -496,6 +496,7 @@ in {
     nixfmt
 
     niv    # Dependency management tool for the Nix projects
+    lorri  # Nix-shell replacement
 
   ]);
 
