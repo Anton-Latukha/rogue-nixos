@@ -335,6 +335,7 @@ in {
     teams    # Microsoft Teams
     tdesktop
     zoom-us
+    wire-desktop
 
     ## zoom-us # FIXME: 2019-08-02: Installation script tried to modify Qt settings, so had no permissions.
 
@@ -462,18 +463,15 @@ in {
     ghcid    # Mini IDE for Haskell
     hscolour
     apply-refact
-    #  2020-02-20: NOTE: Was marked as broken
     # stylish-haskell    # Haskell code prettifier
     hlint
     hspec
     # hasktags # FIXME: 2018-06-22: Does not compile on nixos-unstable ### Failure in: 2:16.hs:0:these were not found tests/Test.hs:39 expected: ["t2","t3","t4","t5"] but got: []
     hoogle
-    # hindent #  2020-05-27: NOTE: Marked broken
     # dante # FIXME: No Nix package
     # intero # Intero is for Stack
     # hakyll # Static webpage generator
     # aeson # Required by hakyll&website
-    # haddock # FIXME: 2018-04-05 Doesn't compile
     # universum
     statistics
     structured-haskell-mode
@@ -488,8 +486,6 @@ in {
     ghcide
 
     pretty-simple
-
-    # haskell-language-server
 
     summoner
 
