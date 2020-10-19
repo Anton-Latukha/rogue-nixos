@@ -164,7 +164,7 @@ in {
     unzip     # Was requested for Org -> ODT
     neovim
     git
-    gh    # GitHub CLI
+    gitAndTools.gh    # GitHub CLI
     git-crypt    # store secrets inside
     gitstats    # Generate Git statistics
     mr    # Myrepos tool
